@@ -1,27 +1,31 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
-        <loc>http://sawasawato_blog.github.io/blog/blog/2014/01/28/ababababa/</loc>
+        <loc>http://sawasawato.github.io/blog/2014/01/28/ababababa/</loc>
         <lastmod>2014-01-28T18:05:28+09:00</lastmod>
     </url>
     <url>
-        <loc>http://sawasawato_blog.github.io/blog/blog/2014/01/28/firstpush/</loc>
+        <loc>http://sawasawato.github.io/blog/2014/01/28/firstpush/</loc>
         <lastmod>2014-01-28T18:05:28+09:00</lastmod>
     </url>
     <url>
-        <loc>http://sawasawato_blog.github.io/blog/blog/archives/</loc>
-        <lastmod>2014-01-28T18:05:28+09:00</lastmod>
+        <loc>http://sawasawato.github.io/blog/2014/01/28/aaa/</loc>
+        <lastmod>2014-01-28T23:14:54+09:00</lastmod>
     </url>
     <url>
-        <loc>http://sawasawato_blog.github.io/blog/</loc>
-        <lastmod>2014-01-28T18:05:28+09:00</lastmod>
+        <loc>http://sawasawato.github.io/blog/archives/</loc>
+        <lastmod>2014-01-28T23:14:54+09:00</lastmod>
     </url>
     <url>
-        <loc>http://sawasawato_blog.github.io/blog/robots.txt</loc>
+        <loc>http://sawasawato.github.io/</loc>
+        <lastmod>2014-01-28T23:14:54+09:00</lastmod>
+    </url>
+    <url>
+        <loc>http://sawasawato.github.io/robots.txt</loc>
         <lastmod>2014-01-28T17:26:40+09:00</lastmod>
     </url>
     <url>
-        <loc>http://sawasawato_blog.github.io/blog/test-page/</loc>
+        <loc>http://sawasawato.github.io/test-page/</loc>
         <lastmod>2014-01-28T21:54:48+09:00</lastmod>
     </url>
 </urlset>
