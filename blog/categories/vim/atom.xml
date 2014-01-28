@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Vim | My Octopress Blog]]></title>
+  <title><![CDATA[Category: Vim | Sawasawato Web Hack Blog]]></title>
   <link href="http://sawasawato.github.io/blog/categories/vim/atom.xml" rel="self"/>
   <link href="http://sawasawato.github.io/"/>
-  <updated>2014-01-28T23:55:03+09:00</updated>
+  <updated>2014-01-29T00:02:11+09:00</updated>
   <id>http://sawasawato.github.io/</id>
   <author>
     <name><![CDATA[Sawasawato]]></name>
