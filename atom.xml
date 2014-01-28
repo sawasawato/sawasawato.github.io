@@ -4,7 +4,7 @@
   <title><![CDATA[Sawasawato Web Hack Blog]]></title>
   <link href="http://sawasawato.github.io/atom.xml" rel="self"/>
   <link href="http://sawasawato.github.io/"/>
-  <updated>2014-01-29T00:02:11+09:00</updated>
+  <updated>2014-01-29T00:06:23+09:00</updated>
   <id>http://sawasawato.github.io/</id>
   <author>
     <name><![CDATA[Sawasawato]]></name>
@@ -19,24 +19,6 @@
     <updated>2014-01-28T23:11:39+09:00</updated>
     <id>http://sawasawato.github.io/blog/2014/01/28/aaa</id>
     <content type="html"><![CDATA[<p>かなり面白そう</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[FirstPush]]></title>
-    <link href="http://sawasawato.github.io/blog/2014/01/28/firstpush/"/>
-    <updated>2014-01-28T17:59:37+09:00</updated>
-    <id>http://sawasawato.github.io/blog/2014/01/28/firstpush</id>
-    <content type="html"><![CDATA[<p>Tyanto kaketeruka Huan</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[FirstPush]]></title>
-    <link href="http://sawasawato.github.io/blog/2014/01/28/ababababa/"/>
-    <updated>2014-01-28T17:59:37+09:00</updated>
-    <id>http://sawasawato.github.io/blog/2014/01/28/ababababa</id>
-    <content type="html"><![CDATA[<p>Tyanto kaketeruka Huan</p>
 ]]></content>
   </entry>
   
