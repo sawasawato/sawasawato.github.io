@@ -127,14 +127,306 @@
           
           <div class="row-fluid">
           
-          <a href="/blog/categories/vim/"><span class="badge">Vim</span></a>
+          <a href="/blog/categories/basic/"><span class="badge">Basic</span></a>
           
           </div>
           
     </div>
     <div class="span10 post-container">
-      <h1 class="link"><a href="/blog/2014/01/28/aaa/">GitHubでブログの作成</a></h1>
-      <p>かなり面白そう</p>
+      <h1 class="link"><a href="/blog/2014/01/28/markdown/">GitHubでブログの作成 - markdown markup 違い-</a></h1>
+      <h1>github octopress Markdown</h1>
+
+<p>GitもRubyもやったことない人間が興味本位でOctopressを始めようとしたので、
+驚く位ブログを立ち上げるだけで時間をとられてしまった。<br/>
+後で、導入方法を記述する予定。<br/>
+HTML は特にバリバリ書いているのでわかるものの、Octopress で記事を作成するには Markdown なる記述方法が必要とのこと。
+なので調べてみたことを記述。
+珍しくWikipediaがナンセンスだったので、備忘録がてら記述〜。</p>
+
+<h2>Markdownとは？自分解釈</h2>
+
+<ul>
+<li>軽量マークアップ言語 (結局マークアップ言語のHTMLに直す)</li>
+<li>簡単</li>
+<li>意味付けのテキストが少ない</li>
+<li>class id をつけられない＝結局HTML使うらしい。</li>
+</ul>
+
+
+<h2>Markdown Markup 違い</h2>
+
+<ul>
+<li>Markup &hellip; &lt;タグ>sample&lt;/タグ></li>
+<li>Markdown &hellip; #記号 #h1見出し ##h2見出し 以降記号と表現する。</li>
+</ul>
+
+
+<p>お固い解釈など興味のある方は
+本家へ <a href="http://daringfireball.net/projects/markdown/">http://daringfireball.net/projects/markdown/</a></p>
+
+<hr />
+
+<h2>見出し #h1〜h6</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># 見出しh1
+</span><span class='line'>## 見出し h2
+</span><span class='line'>### 見出し h3
+</span><span class='line'>#### 見出し h4
+</span><span class='line'>##### 見出し h5
+</span><span class='line'>###### 見出し h6</span></code></pre></td></tr></table></div></figure>
+
+
+<h1>見出し h1</h1>
+
+<h2>見出し h2</h2>
+
+<h3>見出し h3</h3>
+
+<h4>見出し h4</h4>
+
+<h5>見出し h5</h5>
+
+<h6>見出し h6</h6>
+
+<hr />
+
+<h2>見出しの別の書き方</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Title1 の下に=
+</span><span class='line'>=
+</span><span class='line'>Title2 の下に-
+</span><span class='line'>-</span></code></pre></td></tr></table></div></figure>
+
+
+<h1>Title1 の下に=</h1>
+
+<h2>Title2 の下に-</h2>
+
+<hr />
+
+<h2>段落 p</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>段落を分けるには改行の後に
+</span><span class='line'>
+</span><span class='line'>空白を入れるだけ。
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>改行するには改行の後に</p>
+
+<p>空白を入れるだけ。</p>
+
+<hr />
+
+<h2>改行 br</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>複数行で改行を入れたい場合は、  
+</span><span class='line'>改行の後に半角スペース2回以上入れる。  
+</span><span class='line'>改行するだけでは、
+</span><span class='line'>改行されないので</span></code></pre></td></tr></table></div></figure>
+
+
+<p>複数行で改行を入れたい場合は、<br/>
+改行の後に半角スペース2回以上入れる。<br/>
+改行するだけでは、
+改行されないので</p>
+
+<hr />
+
+<h2>強調 em strong</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>強調を示す場合は**アスタリスクで囲むか**  
+</span><span class='line'>__アンダースコア__で囲む
+</span><span class='line'>emは＊か＿で一つ囲む  
+</span><span class='line'>strongは ＊か＿で二つ囲む</span></code></pre></td></tr></table></div></figure>
+
+
+<p>強調を示す場合は<strong>アスタリスクで囲むか</strong><br/>
+<strong>アンダースコア</strong>で囲む
+emは＊か＿で一つ囲む<br/>
+strongは ＊か＿で二つ囲む</p>
+
+<hr />
+
+<h2>引用 q</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>&gt; 引用な文章です。
+</span><span class='line'>&gt; &gt; 入れ子にすることもできる。</span></code></pre></td></tr></table></div></figure>
+
+
+<blockquote><p>引用な文章です。</p>
+
+<blockquote><p>入れ子にすることもできる。</p></blockquote></blockquote>
+
+<hr />
+
+<h2>リスト番号なし ul > li</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>リストを示すには*(アスタリスク),-(ハイフン),+(プラス)のどれかを入力し、スペースまたはタブで挿入する。
+</span><span class='line'>* 上下に空白を一つ入れよう
+</span><span class='line'>+ 記号の前後に空白をつけると見れなくなるよ
+</span><span class='line'>- 記号の後にスペースをお忘れなく</span></code></pre></td></tr></table></div></figure>
+
+
+<p>リストを示すには*(アスタリスク),&ndash;(ハイフン),+(プラス)のどれかを入力し、スペースまたはタブで挿入する。</p>
+
+<ul>
+<li>上下に空白を一つ入れよう</li>
+<li>記号の前後に空白をつけると見れなくなるよ</li>
+<li>記号の後にスペースをお忘れなく</li>
+</ul>
+
+
+<hr />
+
+<h2>リスト番号あり ol > li</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>1. item1
+</span><span class='line'>2. item2
+</span><span class='line'>3. item3</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>item1</li>
+<li>item2</li>
+<li>item3</li>
+</ol>
+
+
+<hr />
+
+<h2>リンクを書く</h2>
+
+<ul>
+<li>自動リンク</li>
+<li>インラインリンク</li>
+<li>外部参照リンク</li>
+</ul>
+
+
+<p><a href="http://google.com">http://google.com</a></p>
+
+<h2>inline html</h2>
+
+<p>マークダウンが使えない時は、普通にHTMlを使う。(オイオイ)<br/>
+同様に、Classやid をつけたい時にはhtml方式のタグで書くらしい。<br/>
+それくらい、マークダウンでやりたいところだが、なんだかなー</p>
+
+<h2>コードブロックを書く1</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>コードブロックの書き方
+</span><span class='line'>  スペースを4つつける?   
+</span><span class='line'>  自分の環境だとタブ一つできく</span></code></pre></td></tr></table></div></figure>
+
+
+<p>コードブロックの書き方</p>
+
+<pre><code>スペースを4つつける?   
+自分の環境だとタブ一つできく
+</code></pre>
+
+<hr />
+
+<h2>コードブロックを書く2</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'> ```
+</span><span class='line'>コードを書くときなど、&lt;S+@&gt;の`(バッククオート)
+</span><span class='line'>をつなげた`で文章を囲む。  
+</span><span class='line'>`は二つつなげると"と判断されるよう。この機能じゃまだな。。。
+</span><span class='line'> ```</span></code></pre></td></tr></table></div></figure>
+
+
+<p>コードを書くときなど、&lt;S+@>の<code>(バッククオート)
+をつなげた</code>で文章を囲む。<br/>
+`は二つつなげると&#8221;と判断されるよう。この機能じゃまだな。。。</p>
+
+<hr />
+
+<h2>水平線 hr</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>- を3つつなげる
+</span><span class='line'> ---
+</span><span class='line'>*を3つつなげる
+</span><span class='line'> ***
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>を3つつなげる</li>
+</ul>
+
+
+<hr />
+
+<p>*を3つつなげる</p>
+
+<hr />
+
+<h2>感想</h2>
+
+<p>細かな設定は結局 HTML なるものの、新しい面白い技術。<br/>
+vim + Zencoding を積んでカスタマイズしても、Markdownの方が、楽に文章を書くことができる。<br/>
+割とvimとは相性が良くない方かもだけど、vimrcにスにペッドを書いてもよさそう。<br/>
+とりあえず、スペースの可視化は必須かな〜</p>
+
+<hr />
+
+<h2>参考にさせていただいた偉人の方々 -SpecialThanks-</h2>
+
+<p>ドットインストール 田口さんは偉大w
+<a href="http://dotinstall.com/lessons/basic_markdown">http://dotinstall.com/lessons/basic_markdown</a>
+Quita
+<a href="http://qiita.com/Qiita/items/c686397e4a0f4f11683d">http://qiita.com/Qiita/items/c686397e4a0f4f11683d</a>
+Milk+eaさん
+<a href="http://totora0155.hatenablog.jp/entry/2013/03/11/220213">http://totora0155.hatenablog.jp/entry/2013/03/11/220213</a>
+mimemoさん
+<a href="http://www.miukoba.net/blog/2013/01/05/start-octopress/">http://www.miukoba.net/blog/2013/01/05/start-octopress/</a>
+ゆっくりとさん
+<a href="http://tokkono.cute.coocan.jp/blog/slow/index.php/programming/markdown-skills-for-github-beginners/">http://tokkono.cute.coocan.jp/blog/slow/index.php/programming/markdown-skills-for-github-beginners/</a>
+こじかさん
+<a href="http://kojika17.com/2013/01/starting-markdown.html">http://kojika17.com/2013/01/starting-markdown.html</a></p>
 
       
       
