@@ -4,7 +4,7 @@
   <title><![CDATA[Sawasawato Web Hack Blog]]></title>
   <link href="http://sawasawato.github.io/atom.xml" rel="self"/>
   <link href="http://sawasawato.github.io/"/>
-  <updated>2014-01-31T00:44:24+09:00</updated>
+  <updated>2014-01-31T00:46:18+09:00</updated>
   <id>http://sawasawato.github.io/</id>
   <author>
     <name><![CDATA[Sawasawato]]></name>
@@ -300,16 +300,21 @@ vim + Zencoding を積んでカスタマイズしても、Markdownの方が、�
 <h2>参考にさせていただいた偉人の方々 -SpecialThanks-</h2>
 
 <p>ドットインストール 田口さんは偉大w
-<a href="http://dotinstall.com/lessons/basic_markdown">http://dotinstall.com/lessons/basic_markdown</a>
-Quita
-<a href="http://qiita.com/Qiita/items/c686397e4a0f4f11683d">http://qiita.com/Qiita/items/c686397e4a0f4f11683d</a>
-Milk+eaさん
-<a href="http://totora0155.hatenablog.jp/entry/2013/03/11/220213">http://totora0155.hatenablog.jp/entry/2013/03/11/220213</a>
-mimemoさん
-<a href="http://www.miukoba.net/blog/2013/01/05/start-octopress/">http://www.miukoba.net/blog/2013/01/05/start-octopress/</a>
-ゆっくりとさん
-<a href="http://tokkono.cute.coocan.jp/blog/slow/index.php/programming/markdown-skills-for-github-beginners/">http://tokkono.cute.coocan.jp/blog/slow/index.php/programming/markdown-skills-for-github-beginners/</a>
-こじかさん
+<a href="http://dotinstall.com/lessons/basic_markdown">http://dotinstall.com/lessons/basic_markdown</a></p>
+
+<p>Quita
+<a href="http://qiita.com/Qiita/items/c686397e4a0f4f11683d">http://qiita.com/Qiita/items/c686397e4a0f4f11683d</a></p>
+
+<p>Milk+eaさん
+<a href="http://totora0155.hatenablog.jp/entry/2013/03/11/220213">http://totora0155.hatenablog.jp/entry/2013/03/11/220213</a></p>
+
+<p>mimemoさん
+<a href="http://www.miukoba.net/blog/2013/01/05/start-octopress/">http://www.miukoba.net/blog/2013/01/05/start-octopress/</a></p>
+
+<p>ゆっくりとさん
+<a href="http://tokkono.cute.coocan.jp/blog/slow/index.php/programming/markdown-skills-for-github-beginners/">http://tokkono.cute.coocan.jp/blog/slow/index.php/programming/markdown-skills-for-github-beginners/</a></p>
+
+<p>こじかさん いつも勉強させていただいてます〜
 <a href="http://kojika17.com/2013/01/starting-markdown.html">http://kojika17.com/2013/01/starting-markdown.html</a></p>
 ]]></content>
   </entry>
