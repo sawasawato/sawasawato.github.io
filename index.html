@@ -139,16 +139,16 @@
 <p>GitもRubyもやったことない人間が興味本位でOctopressを始めようとしたので、
 驚く位ブログを立ち上げるだけで時間をとられてしまった。<br/>
 後で、導入方法を記述する予定。<br/>
-HTML は特にバリバリ書いているのでわかるものの、Octopress で記事を作成するには Markdown なる記述方法が必要とのこと。
-なので調べてみたことを記述。
-珍しくWikipediaがナンセンスだったので、備忘録がてら記述〜。</p>
+Octopress で記事を作成するには Markdown なる記述方法が必要とのこと。<br/>
+Markup(HTML)は特にバリバリ書いているのでわかるものの、知らなかったので調べてみたことを記述。
+備忘録がてら記述〜。</p>
 
 <h2>Markdownとは？自分解釈</h2>
 
 <ul>
-<li>軽量マークアップ言語 (結局マークアップ言語のHTMLに直す)</li>
+<li>軽量マークアップ言語 (結局はマークアップ言語のHTMLに直す)</li>
 <li>簡単</li>
-<li>意味付けのテキストが少ない</li>
+<li>少ないテキストでマークアップできる</li>
 <li>class id をつけられない＝結局HTML使うらしい。</li>
 </ul>
 
@@ -256,20 +256,20 @@ HTML は特にバリバリ書いているのでわかるものの、Octopress �
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>強調を示す場合は**アスタリスクで囲むか**  
-</span><span class='line'>__アンダースコア__で囲む
+</pre></td><td class='code'><pre><code class=''><span class='line'>強調を示す場合は**アスタリスク**で囲むか  
+</span><span class='line'>__アンダースコア__で囲む  
 </span><span class='line'>emは＊か＿で一つ囲む  
 </span><span class='line'>strongは ＊か＿で二つ囲む</span></code></pre></td></tr></table></div></figure>
 
 
-<p>強調を示す場合は<strong>アスタリスクで囲むか</strong><br/>
-<strong>アンダースコア</strong>で囲む
+<p>強調を示す場合は<strong>アスタリスク</strong>で囲むか<br/>
+<strong>アンダースコア</strong>で囲む<br/>
 emは＊か＿で一つ囲む<br/>
 strongは ＊か＿で二つ囲む</p>
 
 <hr />
 
-<h2>引用 q</h2>
+<h2>引用 bvockquote</h2>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -291,16 +291,16 @@ strongは ＊か＿で二つ囲む</p>
 <span class='line-number'>4</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>リストを示すには*(アスタリスク),-(ハイフン),+(プラス)のどれかを入力し、スペースまたはタブで挿入する。
 </span><span class='line'>* 上下に空白を一つ入れよう
-</span><span class='line'>+ 記号の前後に空白をつけると見れなくなるよ
-</span><span class='line'>- 記号の後にスペースをお忘れなく</span></code></pre></td></tr></table></div></figure>
+</span><span class='line'>+ 記号の前に空白をつけると見れなくなるよ
+</span><span class='line'>- 記号の後に入れるスペースをお忘れなく</span></code></pre></td></tr></table></div></figure>
 
 
 <p>リストを示すには*(アスタリスク),&ndash;(ハイフン),+(プラス)のどれかを入力し、スペースまたはタブで挿入する。</p>
 
 <ul>
 <li>上下に空白を一つ入れよう</li>
-<li>記号の前後に空白をつけると見れなくなるよ</li>
-<li>記号の後にスペースをお忘れなく</li>
+<li>記号の前に空白をつけると見れなくなるよ</li>
+<li>記号の後に入れるスペースをお忘れなく</li>
 </ul>
 
 
@@ -311,15 +311,18 @@ strongは ＊か＿で二つ囲む</p>
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>1. item1
-</span><span class='line'>2. item2
-</span><span class='line'>3. item3</span></code></pre></td></tr></table></div></figure>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>1. item1 数字は適当でも
+</span><span class='line'>3. item3 順番に表示
+</span><span class='line'>2. item2 されるよ!
+</span><span class='line'>2. item4 便利だね。</span></code></pre></td></tr></table></div></figure>
 
 
 <ol>
-<li>item1</li>
-<li>item2</li>
-<li>item3</li>
+<li>item1 数字は適当でも</li>
+<li>item3 順番に表示</li>
+<li>item2 されるよ!</li>
+<li>item4 便利だね。</li>
 </ol>
 
 
@@ -327,22 +330,58 @@ strongは ＊か＿で二つ囲む</p>
 
 <h2>リンクを書く</h2>
 
-<ul>
-<li>自動リンク</li>
-<li>インラインリンク</li>
-<li>外部参照リンク</li>
-</ul>
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>自動リンク http://sawasawato.github.io/
+</span><span class='line'>
+</span><span class='line'>[インラインリンク](http://sawasawato.github.io/)
+</span><span class='line'>
+</span><span class='line'>[外部参照リンク][1]
+</span><span class='line'>
+</span><span class='line'>[1]:http://sawasawato.github.io/ "Title属性もつけれるよ"</span></code></pre></td></tr></table></div></figure>
 
 
-<p><a href="http://google.com">http://google.com</a></p>
+<p>自動リンク <a href="http://sawasawato.github.io/">http://sawasawato.github.io/</a></p>
 
-<h2>inline html</h2>
+<p><a href="http://sawasawato.github.io/">インラインリンク</a></p>
 
-<p>マークダウンが使えない時は、普通にHTMlを使う。(オイオイ)<br/>
-同様に、Classやid をつけたい時にはhtml方式のタグで書くらしい。<br/>
-それくらい、マークダウンでやりたいところだが、なんだかなー</p>
+<p><a href="pass/sawasawato.img">外部参照リンク</a></p>
 
-<h2>コードブロックを書く1</h2>
+<hr />
+
+<h2>画像を読み込む img</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>![Altタグだよ](pass/sawasawato.img)
+</span><span class='line'>
+</span><span class='line'>![Altタグだよ][1]
+</span><span class='line'>
+</span><span class='line'>[1]:pass/sawasawato.img
+</span><span class='line'>
+</span><span class='line'>[![画像にリンクをはるよ](pass/sawasawato.img)](http://sawasawato.github.io/)
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><img src="pass/sawasawato.img" alt="Altタグだよ" /></p>
+
+<p><img src="pass/sawasawato.img" alt="Altタグだよ" /></p>
+
+<p><a href="http://sawasawato.github.io/"><img src="pass/sawasawato.img" alt="画像にリンクをはるよ" /></a></p>
+
+<hr />
+
+<h2>コードブロックを書く1 pre > code</h2>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -352,15 +391,14 @@ strongは ＊か＿で二つ囲む</p>
 </span><span class='line'>  自分の環境だとタブ一つできく</span></code></pre></td></tr></table></div></figure>
 
 
-<p>コードブロックの書き方</p>
-
-<pre><code>スペースを4つつける?   
+<pre><code>コードブロックの書き方
+スペースを4つつける?   
 自分の環境だとタブ一つできく
 </code></pre>
 
 <hr />
 
-<h2>コードブロックを書く2</h2>
+<h2>コードブロックを書く2 pre (このブログは設定変更中)</h2>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -374,10 +412,6 @@ strongは ＊か＿で二つ囲む</p>
 </span><span class='line'> ```</span></code></pre></td></tr></table></div></figure>
 
 
-<p>コードを書くときなど、&lt;S+@>の<code>(バッククオート)
-をつなげた</code>で文章を囲む。<br/>
-`は二つつなげると&#8221;と判断されるよう。この機能じゃまだな。。。</p>
-
 <hr />
 
 <h2>水平線 hr</h2>
@@ -386,51 +420,78 @@ strongは ＊か＿で二つ囲む</p>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>- を3つつなげる
+</pre></td><td class='code'><pre><code class=''><span class='line'>-を3つつなげる
 </span><span class='line'> ---
 </span><span class='line'>*を3つつなげる
 </span><span class='line'> ***
 </span></code></pre></td></tr></table></div></figure>
 
 
+<p> -を3つつなげる</p>
+
+<hr />
+
+<p> *を3つつなげる</p>
+
+<hr />
+
+<h2>マークダウン記号をエスケープさせる</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>/#</span></code></pre></td></tr></table></div></figure>
+
+
+<p>/#</p>
+
+<hr />
+
+<h2>こういう時は素直にマークアップを使おう</h2>
+
 <ul>
-<li>を3つつなげる</li>
+<li>リンクを<em>ターゲットブランク</em>にしたい</li>
+<li>タグにクラスやIDをつけたい</li>
+<li>ここで紹介された以外のHTMLタグを使いたい</li>
 </ul>
 
 
-<hr />
-
-<p>*を3つつなげる</p>
-
-<hr />
-
 <h2>感想</h2>
 
-<p>細かな設定は結局 HTML なるものの、新しい面白い技術。<br/>
-vim + Zencoding を積んでカスタマイズしても、Markdownの方が、楽に文章を書くことができる。<br/>
+<p>細かな設定は結局 HTML になるものの、新しい面白い技術。<br/>
+vim + Zencoding を積んでカスタマイズしても、Markdownの方が、書くことができる。<br/>
+でも画像の入力が手間かな〜+属性をつけられないので、画像の管理が面倒<br/>
+画像はローカルじゃなくてクラウドで管理してる人が多いみたい<br/>
+あくまでテキストベースなので、float 使ったカラムの変更とかは向かないのがなんかもったいないな〜。<br/>
 割とvimとは相性が良くない方かもだけど、vimrcにスにペッドを書いてもよさそう。<br/>
 とりあえず、スペースの可視化は必須かな〜</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>set list
+</span><span class='line'>set listchars=tab:&gt;-,extends:&lt;,trail:-,eol:&lt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>細かなvimrcの設定が気になる方はこの方を参考に<br/>
+<a href="http://blog.remora.cx/2011/08/display-invisible-characters-on-vim.html">http://blog.remora.cx/2011/08/display-invisible-characters-on-vim.html</a></p>
+
+<p>なんか悔しいけどwこれはEmaxの方が書きやすいかも</p>
 
 <hr />
 
 <h2>参考にさせていただいた偉人の方々 -SpecialThanks-</h2>
 
-<p>ドットインストール 田口さんは偉大w
+<p>ドットインストール 田口さんは偉大w<br/>
 <a href="http://dotinstall.com/lessons/basic_markdown">http://dotinstall.com/lessons/basic_markdown</a></p>
 
-<p>Quita
-<a href="http://qiita.com/Qiita/items/c686397e4a0f4f11683d">http://qiita.com/Qiita/items/c686397e4a0f4f11683d</a></p>
-
-<p>Milk+eaさん
+<p>Milk+eaさん<br/>
 <a href="http://totora0155.hatenablog.jp/entry/2013/03/11/220213">http://totora0155.hatenablog.jp/entry/2013/03/11/220213</a></p>
 
-<p>mimemoさん
+<p>mimemoさん<br/>
 <a href="http://www.miukoba.net/blog/2013/01/05/start-octopress/">http://www.miukoba.net/blog/2013/01/05/start-octopress/</a></p>
 
-<p>ゆっくりとさん
+<p>ゆっくりとさん<br/>
 <a href="http://tokkono.cute.coocan.jp/blog/slow/index.php/programming/markdown-skills-for-github-beginners/">http://tokkono.cute.coocan.jp/blog/slow/index.php/programming/markdown-skills-for-github-beginners/</a></p>
 
-<p>こじかさん いつも勉強させていただいてます〜
+<p>こじかさん いつも勉強させていただいてます〜<br/>
 <a href="http://kojika17.com/2013/01/starting-markdown.html">http://kojika17.com/2013/01/starting-markdown.html</a></p>
 
       
