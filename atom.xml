@@ -4,7 +4,7 @@
   <title><![CDATA[Sawasawato Web Hack Blog]]></title>
   <link href="http://sawasawato.github.io/atom.xml" rel="self"/>
   <link href="http://sawasawato.github.io/"/>
-  <updated>2014-01-31T17:56:18+09:00</updated>
+  <updated>2014-02-03T14:19:18+09:00</updated>
   <id>http://sawasawato.github.io/</id>
   <author>
     <name><![CDATA[Sawasawato]]></name>
@@ -140,16 +140,16 @@ Markup(HTML)は特にバリバリ書いているのでわかるものの、知�
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>強調を示す場合は**アスタリスク**で囲むか  
-</span><span class='line'>__アンダースコア__で囲む  
-</span><span class='line'>emは＊か＿で一つ囲む  
-</span><span class='line'>strongは ＊か＿で二つ囲む</span></code></pre></td></tr></table></div></figure>
+</pre></td><td class='code'><pre><code class=''><span class='line'>強調を示す場合は*(アスタリスク) で囲むか  
+</span><span class='line'>_(アンダースコア) で囲む  
+</span><span class='line'>*em* は＊か＿で一つ囲む  
+</span><span class='line'>__strongは__ ＊か＿で二つ囲む</span></code></pre></td></tr></table></div></figure>
 
 
-<p>強調を示す場合は<strong>アスタリスク</strong>で囲むか<br/>
-<strong>アンダースコア</strong>で囲む<br/>
-emは＊か＿で一つ囲む<br/>
-strongは ＊か＿で二つ囲む</p>
+<p>強調を示す場合は*(アスタリスク) で囲むか<br/>
+_(アンダースコア) で囲む<br/>
+<strong>em</strong> は＊か＿で一つ囲む<br/>
+<strong>strong</strong> は ＊か＿で二つ囲む</p>
 
 <hr />
 

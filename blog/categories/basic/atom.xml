@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Basic | Sawasawato Web Hack Blog]]></title>
   <link href="http://sawasawato.github.io/blog/categories/basic/atom.xml" rel="self"/>
   <link href="http://sawasawato.github.io/"/>
-  <updated>2014-01-31T17:56:18+09:00</updated>
+  <updated>2014-02-03T14:19:18+09:00</updated>
   <id>http://sawasawato.github.io/</id>
   <author>
     <name><![CDATA[Sawasawato]]></name>
@@ -130,15 +130,15 @@ Markup(HTML)は特にバリバリ書いているのでわかるものの、知�
 <h2>強調 em strong</h2>
 
 <p><code>
-強調を示す場合は**アスタリスク**で囲むか  
-__アンダースコア__で囲む  
-emは＊か＿で一つ囲む  
-strongは ＊か＿で二つ囲む
+強調を示す場合は*(アスタリスク) で囲むか  
+_(アンダースコア) で囲む  
+*em* は＊か＿で一つ囲む  
+__strongは__ ＊か＿で二つ囲む
 </code>
-強調を示す場合は<strong>アスタリスク</strong>で囲むか<br/>
-<strong>アンダースコア</strong>で囲む<br/>
-emは＊か＿で一つ囲む<br/>
-strongは ＊か＿で二つ囲む</p>
+強調を示す場合は*(アスタリスク) で囲むか<br/>
+_(アンダースコア) で囲む<br/>
+<strong>em</strong> は＊か＿で一つ囲む<br/>
+<strong>strong</strong> は ＊か＿で二つ囲む</p>
 
 <hr />
 
