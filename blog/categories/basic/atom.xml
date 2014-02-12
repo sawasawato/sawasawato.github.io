@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Basic | Sawasawato Web Hack Blog]]></title>
   <link href="http://sawasawato.github.io/blog/categories/basic/atom.xml" rel="self"/>
   <link href="http://sawasawato.github.io/"/>
-  <updated>2014-02-12T23:59:04+09:00</updated>
+  <updated>2014-02-13T00:00:49+09:00</updated>
   <id>http://sawasawato.github.io/</id>
   <author>
     <name><![CDATA[Sawasawato]]></name>
@@ -300,7 +300,7 @@ _(アンダースコア) で囲む<br/>
 <h2>感想</h2>
 
 <p>細かな設定は結局 HTML になるものの、新しい面白い技術。<br/>
-vim + Zencoding を積んでカスタマイズしても、Markdownの方が、書くことができる。<br/>
+vim + Zencoding = Emmet を積んでカスタマイズしても、Markdownの方が、早く書くことができる。<br/>
 でも画像の入力が手間+属性をつけられないので、画像の管理が面倒<br/>
 画像はローカルじゃなくてクラウドで管理してる人が多いみたい<br/>
 あくまでテキストベースなので、float 使ったカラムの変更とかは向かないのがなんかもったいない。<br/>
@@ -331,7 +331,7 @@ set listchars=tab:&gt;-,extends:&lt;,trail:-,eol:&lt;
 <p>ゆっくりとさん<br/>
 <a href="http://tokkono.cute.coocan.jp/blog/slow/index.php/programming/markdown-skills-for-github-beginners/">http://tokkono.cute.coocan.jp/blog/slow/index.php/programming/markdown-skills-for-github-beginners/</a></p>
 
-<p>こじかさん いつも勉強させていただいてます〜<br/>
+<p>こじかさん いつも勉強させていただいてます<br/>
 <a href="http://kojika17.com/2013/01/starting-markdown.html">http://kojika17.com/2013/01/starting-markdown.html</a></p>
 ]]></content>
   </entry>
