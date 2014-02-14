@@ -4,7 +4,7 @@
   <title><![CDATA[Sawasawato Web Hack Blog]]></title>
   <link href="http://sawasawato.github.io/atom.xml" rel="self"/>
   <link href="http://sawasawato.github.io/"/>
-  <updated>2014-02-13T00:00:49+09:00</updated>
+  <updated>2014-02-14T16:27:46+09:00</updated>
   <id>http://sawasawato.github.io/</id>
   <author>
     <name><![CDATA[Sawasawato]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[sass]]></title>
+    <link href="http://sawasawato.github.io/blog/2014/02/14/sass/"/>
+    <updated>2014-02-14T16:19:42+09:00</updated>
+    <id>http://sawasawato.github.io/blog/2014/02/14/sass</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[GitHubでブログの作成 - markdown markup 違い-]]></title>
