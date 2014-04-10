@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Vim | Sawasawato Web Hack Blog]]></title>
   <link href="http://sawasawato.github.io/blog/categories/vim/atom.xml" rel="self"/>
   <link href="http://sawasawato.github.io/"/>
-  <updated>2014-04-10T13:51:06+09:00</updated>
+  <updated>2014-04-10T14:00:17+09:00</updated>
   <id>http://sawasawato.github.io/</id>
   <author>
     <name><![CDATA[Sawasawato]]></name>
@@ -45,8 +45,9 @@ git + github が必要、ネットワーク必須だけど、半自動でアッ�
 
 <p>gitの導入方法 + github アカウント作成 はこちらの方々を参考に</p>
 
-<p><a href="http://codezine.jp/article/detail/7077  ">http://codezine.jp/article/detail/7077  </a>
-<a href="http://www.backlog.jp/git-guide/">http://www.backlog.jp/git-guide/</a></p>
+<p><a href="http://codezine.jp/article/detail/7077">http://codezine.jp/article/detail/7077</a></p>
+
+<p><a href="http://www.backlog.jp/git-guide/">http://www.backlog.jp/git-guide/</a></p>
 
 <p>とりあえずCUIで操作できるように。</p>
 
