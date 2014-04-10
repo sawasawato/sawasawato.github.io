@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Vim | Sawasawato Web Hack Blog]]></title>
+  <link href="http://sawasawato.github.io/blog/categories/vim/atom.xml" rel="self"/>
+  <link href="http://sawasawato.github.io/"/>
+  <updated>2014-04-10T13:51:06+09:00</updated>
+  <id>http://sawasawato.github.io/</id>
+  <author>
+    <name><![CDATA[Sawasawato]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[vim windows 環境設定]]></title>
+    <link href="http://sawasawato.github.io/blog/2014/04/10/vim/"/>
+    <updated>2014-04-10T13:07:51+09:00</updated>
+    <id>http://sawasawato.github.io/blog/2014/04/10/vim</id>
+    <content type="html"><![CDATA[<h1>windows環境でvimプラグインをneobundle.vimで管理する</h1>
+
+<!-- more -->
+
+
+<p>Gvim + Windows環境 + neobundle.vim で環境設定<br/>
+vim はデフォルトでもかなり強力、プラグイン導入 でより強力になる。もはやエディタの領域を超える。<br/>
+プラグイン管理 はもはやデフォルトになってきている気がする NeoBundle を導入する。<br/>
+NeoBundle が 動かない で困ったので、Win使用でハマッたこと、解決法も記述。<br/>
+git + github が必要、ネットワーク必須だけど、半自動でアップデートができるのが便利すぎる。</p>
+
+<hr />
+
+<h2>GVim のインストール</h2>
+
+<p>KaoriYaバッチ ダウンロード<br/>
+<a href="http://www.kaoriya.net/">http://www.kaoriya.net/</a></p>
+
+<p>KaoriYa vimは インストール不要+ディレクトリの制限がないのがとても嬉しい<br/>
+ストレージ等から落とせばすぐ使える。</p>
+
+<hr />
+
+<h2>git導入</h2>
+
+<p>gitの導入方法 + github アカウント作成 はこちらの方々を参考に</p>
+
+<p><a href="http://codezine.jp/article/detail/7077  ">http://codezine.jp/article/detail/7077  </a>
+<a href="http://www.backlog.jp/git-guide/">http://www.backlog.jp/git-guide/</a></p>
+
+<p>とりあえずCUIで操作できるように。</p>
+
+<hr />
+
+<h2>環境変数PATHにgitコマンドへのパスを追加</h2>
+
+<p><a href="http://next.matrix.jp/config-path-win7.html">http://next.matrix.jp/config-path-win7.html</a></p>
+
+<h3>環境変数PATHにgitコマンドへのパスを追加</h3>
+
+<h3>環境変数PATHにgitコマンドへのパスを追加</h3>
+
+<h3>環境変数PATHにgitコマンドへのパスを追加</h3>
+
+<p>大事なことなので。。。<br/>
+git は cygwin だったり gitbush だけでも使うことはできます。ですが<br/>
+NeoBundle コマンドでのインストールは Winの環境PATHの影響をうける<br/>
+ので、設定をしないと最後の<br/>
+<code>
+:NeoBundleInstall  
+</code>
+コマンドでプラグインインストールができません。</p>
+
+<p>詳細のエラーもはかないので、これでかなりハマりました。。。<br/>
+上記のインストールなど不要なのも影響。</p>
+
+<p>とりあえず vim コマンドプロンプト 起動 できても困らないので設定</p>
+
+<p>mac や unix は関係ない。</p>
+
+<hr />
+
+<h2>neobundle のインストール</h2>
+
+<p>$VIM === ~/.vim === vim.exeのあるディレクトリ<br/>
+パスが分からない人は :echo $VIM 等で調べてみよう</p>
+
+<p>コマンドプロンプト
+<code>
+mkdir %userprofile%\.vim\bundle
+cd %userprofile%\.vim\bundle
+git clone git://github.com/Shougo/neobundle.vim
+</code></p>
+
+<p>$VIM/_vimrc or に以下を追記</p>
+
+<p>```
+&ldquo;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;
+&rdquo; MyFavoritePlugin for vim
+&ldquo;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;
+&rdquo; neobundle
+set nocompatible               &ldquo; Be iMproved
+filetype off                   &rdquo; Required!</p>
+
+<p>if has(&lsquo;vim_starting&rsquo;)
+  set runtimepath+=$VIM\bundle\neobundle.vim
+  call neobundle#rc(expand(&lsquo;$VIM\bundle&rsquo;))
+endif</p>
+
+<p>&ldquo; originalrepos on github
+NeoBundle &lsquo;Shougo/neobundle.vim&rsquo;</p>
+
+<p>/*&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;
+ここ適当に</p>
+
+<p>NeoBundle &lsquo;Shougo/unite.vim&rsquo;
+NeoBundle &lsquo;Shougo/vimproc&rsquo;
+NeoBundle &lsquo;VimClojure&rsquo;
+NeoBundle &lsquo;Shougo/vimshell&rsquo;
+NeoBundle &lsquo;Shougo/neocomplcache&rsquo;
+NeoBundle &lsquo;Shougo/neosnippet&rsquo;
+NeoBundle &lsquo;jpalardy/vim-slime&rsquo;
+NeoBundle &lsquo;scrooloose/syntastic&rsquo;
+NeoBundle &lsquo;scrooloose/nerdtree&rsquo;</p>
+
+<p>&ldquo; web屋必須プラグイン
+NeoBundle &lsquo;mattn/emmet-vim&rsquo;
+NeoBundle &lsquo;tpope/vim-surround&rsquo;
+NeoBundle &lsquo;open-browser.vim&rsquo;
+NeoBundle &lsquo;mattn/webapi-vim&rsquo;
+NeoBundle &lsquo;hail2u/vim-css3-syntax&rsquo;
+NeoBundle &lsquo;taichouchou2/html5.vim&rsquo;
+NeoBundle &lsquo;taichouchou2/vim-javascript&rsquo;
+NeoBundle &lsquo;kchmck/vim-coffee-script&rsquo;
+NeoBundle &lsquo;Lokaltog/vim-easymotion&rsquo;
+NeoBundle &lsquo;tmhedberg/matchit&rsquo;
+NeoBundle &lsquo;tell-k/vim-browsereload-mac&rsquo; MacOnly</p>
+
+<p>&ldquo; 補完
+NeoBundle &lsquo;taichouchou2/vim-rsense&rsquo;</p>
+
+<p>&ldquo;コメント
+NeoBundle &lsquo;tomtom/tcomment_vim&rsquo;
+NeoBundle &lsquo;Shougo/neocomplcache.vim&rsquo;</p>
+
+<p>&ldquo; railsサポート
+NeoBundle &lsquo;taichouchou2/vim-rails&rsquo;
+NeoBundle &lsquo;romanvbabenko/rails.vim&rsquo;
+NeoBundle &lsquo;ujihisa/unite-rake&rsquo;
+NeoBundle &lsquo;basyura/unite-rails&rsquo;</p>
+
+<p>&ldquo; reference環境
+NeoBundle &lsquo;thinca/vim-ref&rsquo;
+NeoBundle &lsquo;taichouchou2/vim-ref-ri&rsquo;
+NeoBundle &lsquo;taq/vim-rspec&rsquo;
+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;*/</p>
+
+<p>filetype plugin indent on     &ldquo; Required!
+syntax on</p>
+
+<p>&ldquo; Installation check.
+if neobundle#exists_not_installed_bundles()
+  echomsg &lsquo;Not installed bundles : &rsquo; .</p>
+
+<pre><code>    \ string(neobundle#get_not_installed_bundle_names())
+</code></pre>
+
+<p>  echomsg &lsquo;Please execute &ldquo;:NeoBundleInstall&rdquo; command.&rsquo;
+  &ldquo;finish
+endif
+```</p>
+
+<hr />
+
+<p>設定したら _vimrc を再度読み込む。Gvim再起動でも良い。<br/>
+後は以下のコマンドで対応</p>
+
+<h2>初回 vim プラグイン インストール</h2>
+
+<p><code>
+:NeoBundleInstall
+</code></p>
+
+<h2>vim プラグイン アップデート</h2>
+
+<p><code>
+:NeoBundleInstall!
+</code></p>
+
+<h2>vim プラグイン クリーン</h2>
+
+<p><code>
+:NeoBundleClean
+</code></p>
+
+<h2>参考にさせていただいた偉人の方々 -SpecialThanks-</h2>
+]]></content>
+  </entry>
+  
+</feed>

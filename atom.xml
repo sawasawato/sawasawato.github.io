@@ -4,7 +4,7 @@
   <title><![CDATA[Sawasawato Web Hack Blog]]></title>
   <link href="http://sawasawato.github.io/atom.xml" rel="self"/>
   <link href="http://sawasawato.github.io/"/>
-  <updated>2014-02-14T16:29:10+09:00</updated>
+  <updated>2014-04-10T13:51:06+09:00</updated>
   <id>http://sawasawato.github.io/</id>
   <author>
     <name><![CDATA[Sawasawato]]></name>
@@ -12,6 +12,261 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[vim windows 環境設定]]></title>
+    <link href="http://sawasawato.github.io/blog/2014/04/10/vim/"/>
+    <updated>2014-04-10T13:07:51+09:00</updated>
+    <id>http://sawasawato.github.io/blog/2014/04/10/vim</id>
+    <content type="html"><![CDATA[<h1>windows環境でvimプラグインをneobundle.vimで管理する</h1>
+
+<!-- more -->
+
+
+<p>Gvim + Windows環境 + neobundle.vim で環境設定<br/>
+vim はデフォルトでもかなり強力、プラグイン導入 でより強力になる。もはやエディタの領域を超える。<br/>
+プラグイン管理 はもはやデフォルトになってきている気がする NeoBundle を導入する。<br/>
+NeoBundle が 動かない で困ったので、Win使用でハマッたこと、解決法も記述。<br/>
+git + github が必要、ネットワーク必須だけど、半自動でアップデートができるのが便利すぎる。</p>
+
+<hr />
+
+<h2>GVim のインストール</h2>
+
+<p>KaoriYaバッチ ダウンロード<br/>
+<a href="http://www.kaoriya.net/">http://www.kaoriya.net/</a></p>
+
+<p>KaoriYa vimは インストール不要+ディレクトリの制限がないのがとても嬉しい<br/>
+ストレージ等から落とせばすぐ使える。</p>
+
+<hr />
+
+<h2>git導入</h2>
+
+<p>gitの導入方法 + github アカウント作成 はこちらの方々を参考に</p>
+
+<p><a href="http://codezine.jp/article/detail/7077  ">http://codezine.jp/article/detail/7077  </a>
+<a href="http://www.backlog.jp/git-guide/">http://www.backlog.jp/git-guide/</a></p>
+
+<p>とりあえずCUIで操作できるように。</p>
+
+<hr />
+
+<h2>環境変数PATHにgitコマンドへのパスを追加</h2>
+
+<p><a href="http://next.matrix.jp/config-path-win7.html">http://next.matrix.jp/config-path-win7.html</a></p>
+
+<h3>環境変数PATHにgitコマンドへのパスを追加</h3>
+
+<h3>環境変数PATHにgitコマンドへのパスを追加</h3>
+
+<h3>環境変数PATHにgitコマンドへのパスを追加</h3>
+
+<p>大事なことなので。。。<br/>
+git は cygwin だったり gitbush だけでも使うことはできます。ですが<br/>
+NeoBundle コマンドでのインストールは Winの環境PATHの影響をうける<br/>
+ので、設定をしないと最後の</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>:NeoBundleInstall  </span></code></pre></td></tr></table></div></figure>
+
+
+<p>コマンドでプラグインインストールができません。</p>
+
+<p>詳細のエラーもはかないので、これでかなりハマりました。。。<br/>
+上記のインストールなど不要なのも影響。</p>
+
+<p>とりあえず vim コマンドプロンプト 起動 できても困らないので設定</p>
+
+<p>mac や unix は関係ない。</p>
+
+<hr />
+
+<h2>neobundle のインストール</h2>
+
+<p>$VIM === ~/.vim === vim.exeのあるディレクトリ<br/>
+パスが分からない人は :echo $VIM 等で調べてみよう</p>
+
+<p>コマンドプロンプト</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>mkdir %userprofile%\.vim\bundle
+</span><span class='line'>cd %userprofile%\.vim\bundle
+</span><span class='line'>git clone git://github.com/Shougo/neobundle.vim</span></code></pre></td></tr></table></div></figure>
+
+
+<p>$VIM/_vimrc or に以下を追記</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>"-------------------------------------------------------------------------
+</span><span class='line'>" MyFavoritePlugin for vim
+</span><span class='line'>"---------------------------------------------------------------------------
+</span><span class='line'>" neobundle
+</span><span class='line'>set nocompatible               " Be iMproved
+</span><span class='line'>filetype off                   " Required!
+</span><span class='line'>
+</span><span class='line'>if has('vim_starting')
+</span><span class='line'>  set runtimepath+=$VIM\bundle\neobundle.vim
+</span><span class='line'>  call neobundle#rc(expand('$VIM\bundle'))
+</span><span class='line'>endif
+</span><span class='line'>
+</span><span class='line'>" originalrepos on github
+</span><span class='line'>NeoBundle 'Shougo/neobundle.vim'
+</span><span class='line'>
+</span><span class='line'>/*------------------------------
+</span><span class='line'>ここ適当に
+</span><span class='line'>
+</span><span class='line'>NeoBundle 'Shougo/unite.vim'
+</span><span class='line'>NeoBundle 'Shougo/vimproc'
+</span><span class='line'>NeoBundle 'VimClojure'
+</span><span class='line'>NeoBundle 'Shougo/vimshell'
+</span><span class='line'>NeoBundle 'Shougo/neocomplcache'
+</span><span class='line'>NeoBundle 'Shougo/neosnippet'
+</span><span class='line'>NeoBundle 'jpalardy/vim-slime'
+</span><span class='line'>NeoBundle 'scrooloose/syntastic'
+</span><span class='line'>NeoBundle 'scrooloose/nerdtree' 
+</span><span class='line'>
+</span><span class='line'>" web屋必須プラグイン
+</span><span class='line'>NeoBundle 'mattn/emmet-vim'
+</span><span class='line'>NeoBundle 'tpope/vim-surround'
+</span><span class='line'>NeoBundle 'open-browser.vim'
+</span><span class='line'>NeoBundle 'mattn/webapi-vim'
+</span><span class='line'>NeoBundle 'hail2u/vim-css3-syntax'
+</span><span class='line'>NeoBundle 'taichouchou2/html5.vim'
+</span><span class='line'>NeoBundle 'taichouchou2/vim-javascript'
+</span><span class='line'>NeoBundle 'kchmck/vim-coffee-script'
+</span><span class='line'>NeoBundle 'Lokaltog/vim-easymotion'
+</span><span class='line'>NeoBundle 'tmhedberg/matchit'
+</span><span class='line'>NeoBundle 'tell-k/vim-browsereload-mac' MacOnly
+</span><span class='line'>
+</span><span class='line'>" 補完
+</span><span class='line'>NeoBundle 'taichouchou2/vim-rsense'
+</span><span class='line'>
+</span><span class='line'>"コメント
+</span><span class='line'>NeoBundle 'tomtom/tcomment_vim'
+</span><span class='line'>NeoBundle 'Shougo/neocomplcache.vim'
+</span><span class='line'>
+</span><span class='line'>" railsサポート
+</span><span class='line'>NeoBundle 'taichouchou2/vim-rails'
+</span><span class='line'>NeoBundle 'romanvbabenko/rails.vim'
+</span><span class='line'>NeoBundle 'ujihisa/unite-rake'
+</span><span class='line'>NeoBundle 'basyura/unite-rails'
+</span><span class='line'>
+</span><span class='line'>" reference環境
+</span><span class='line'>NeoBundle 'thinca/vim-ref'
+</span><span class='line'>NeoBundle 'taichouchou2/vim-ref-ri'
+</span><span class='line'>NeoBundle 'taq/vim-rspec'
+</span><span class='line'>-----------------------------*/
+</span><span class='line'>
+</span><span class='line'>filetype plugin indent on     " Required!
+</span><span class='line'>syntax on
+</span><span class='line'>
+</span><span class='line'>" Installation check.
+</span><span class='line'>if neobundle#exists_not_installed_bundles()
+</span><span class='line'>  echomsg 'Not installed bundles : ' .
+</span><span class='line'>        \ string(neobundle#get_not_installed_bundle_names())
+</span><span class='line'>  echomsg 'Please execute ":NeoBundleInstall" command.'
+</span><span class='line'>  "finish
+</span><span class='line'>endif</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<p>設定したら _vimrc を再度読み込む。Gvim再起動でも良い。<br/>
+後は以下のコマンドで対応</p>
+
+<h2>初回 vim プラグイン インストール</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>:NeoBundleInstall</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>vim プラグイン アップデート</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>:NeoBundleInstall!</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>vim プラグイン クリーン</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>:NeoBundleClean</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>参考にさせていただいた偉人の方々 -SpecialThanks-</h2>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[sass]]></title>
@@ -28,6 +283,9 @@
     <updated>2014-01-28T23:11:39+09:00</updated>
     <id>http://sawasawato.github.io/blog/2014/01/28/markdown</id>
     <content type="html"><![CDATA[<h1>github octopress Markdown</h1>
+
+<!-- more -->
+
 
 <p>GitもRubyもやったことない人間が興味本位でOctopressを始めようとしたので、
 驚く位ブログを立ち上げるだけで時間をとられてしまった。<br/>

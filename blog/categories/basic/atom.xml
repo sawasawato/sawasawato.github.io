@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Basic | Sawasawato Web Hack Blog]]></title>
   <link href="http://sawasawato.github.io/blog/categories/basic/atom.xml" rel="self"/>
   <link href="http://sawasawato.github.io/"/>
-  <updated>2014-02-14T16:29:10+09:00</updated>
+  <updated>2014-04-10T13:51:06+09:00</updated>
   <id>http://sawasawato.github.io/</id>
   <author>
     <name><![CDATA[Sawasawato]]></name>
@@ -14,11 +14,23 @@
 
   
   <entry>
+    <title type="html"><![CDATA[sass]]></title>
+    <link href="http://sawasawato.github.io/blog/2014/02/14/sass/"/>
+    <updated>2014-02-14T16:19:42+09:00</updated>
+    <id>http://sawasawato.github.io/blog/2014/02/14/sass</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[GitHubでブログの作成 - markdown markup 違い-]]></title>
     <link href="http://sawasawato.github.io/blog/2014/01/28/markdown/"/>
     <updated>2014-01-28T23:11:39+09:00</updated>
     <id>http://sawasawato.github.io/blog/2014/01/28/markdown</id>
     <content type="html"><![CDATA[<h1>github octopress Markdown</h1>
+
+<!-- more -->
+
 
 <p>GitもRubyもやったことない人間が興味本位でOctopressを始めようとしたので、
 驚く位ブログを立ち上げるだけで時間をとられてしまった。<br/>
