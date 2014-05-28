@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Sass - Sawasawato Web Hack Blog</title>
+  <title>sass - Sawasawato Web Hack Blog</title>
   <meta name="author" content="Sawasawato">
 
   
@@ -19,17 +19,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://sawasawato.github.io/blog/2014/02/14/sass">
+  <link rel="canonical" href="http://sawasawato.github.io/blog/2014/02/14/sass/">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-  <link href="/atom.xml" rel="alternate" title="Sawasawato Web Hack Blog" type="application/atom+xml">
+   <link href="/stylesheets/data-table.css" media="screen, projection" rel="stylesheet" type="text/css" />
   <script src="/javascripts/modernizr-2.0.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/libs/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/ender.js"></script>
   <script src="/javascripts/octopress.js" type="text/javascript"></script>
-  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
-<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
-<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Sawasawato Web Hack Blog" type="application/atom+xml">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+<!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Lora:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Source+Code+Pro:200,300,400,500,600,700,900' rel='stylesheet' type='text/css'>
+
+
+
 
   
   <script type="text/javascript">
@@ -45,18 +51,15 @@
   </script>
 
 
+  <style>html{background: url("/images/background.png") no-repeat center center fixed;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;}</style>
 </head>
 
 <body   >
   <header role="banner"><hgroup>
-  <h1><a href="/">Sawasawato Web Hack Blog</a></h1>
-  
-    <h2>デザインもプログラムも好きです。でもVimの方がもっと好きです！</h2>
-  
 </hgroup>
 
 </header>
-  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <!-- <nav role="navigation"><ul class="subscription" data-subscription="rss">
   <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
   
 </ul>
@@ -73,7 +76,7 @@
   <li><a href="/blog/archives">Archives</a></li>
 </ul>
 
-</nav>
+</nav> -->
   <div id="main">
     <div id="content">
       <div>
@@ -141,7 +144,7 @@
     
       <div class="sharing">
   
-  <a href="//twitter.com/share" class="twitter-share-button" data-url="http://sawasawato.github.io/blog/2014/02/14/sass/" data-via="sawasawato" data-counturl="http://sawasawato.github.io/blog/2014/02/14/sass/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://sawasawato.github.io/blog/2014/02/14/sass/" data-via="sawasawato" data-counturl="http://sawasawato.github.io/blog/2014/02/14/sass/" >Tweet</a>
   
   
   
@@ -171,24 +174,58 @@
 
 <aside class="sidebar">
   
-    <section>
+    <section id="titles">
+  <a href="http://sawasawato.github.io" title="Sawasawato Web Hack Blog"><img id="logo" src="http://sawasawato.github.io/images/" /></a>
+  <h1 id="site_title"><a href="http://sawasawato.github.io" title="Sawasawato Web Hack Blog">Sawasawato Web Hack Blog</a></h1>
+  <h3 id="site_subtitle">デザインもプログラムも好きです。でもVimの方がもっと好きです！</h3>
+</section>
+
+<section id="menu">
+  <ul>
+    <li><i class="fa fa-home fa-lg"></i><a href="http://sawasawato.github.io"> Home </a></li>
+    <li><i class="fa fa-calendar fa-lg"></i><a href="http://sawasawato.github.io/blog/archives/"> Archives </a></li>
+    <li><i class="fa fa-user fa-lg"></i><a href="http://sawasawato.github.io/about/"> About </a></li>
+    <li><i class="fa fa-rss fa-lg"></i><a href="http://sawasawato.github.io/atom.xml"> Feed </a></li>
+  </ul>
+</section>
+
+<section id="social">
+  
+
+  
+
+  
+
+  
+    <a href="https://github.com/sawasawato" title="sawasawato"><i class="fa fa-github fa-2x"></i></a>
+  
+
+  
+
+  
+    <a href="https://twitter.com/sawasawato" title="sawasawato"><i class="fa fa-twitter fa-2x"></i></a>
+  
+</section>
+
+
+<section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/blog/2014/05/28/octopress-themechange/">Octopress Themechange オクトプレスのテーマ 変更</a>
+        <a href="/blog/2014/05/28/octopress-themechange/">octopress themechange オクトプレスのテーマ 変更</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2014/04/10/vim/">Vim Windows 環境設定</a>
+        <a href="/blog/2014/04/10/vim/">vim windows 環境設定</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2014/02/14/sass/">Sass</a>
+        <a href="/blog/2014/02/14/sass/">sass</a>
       </li>
     
       <li class="post">
-        <a href="/blog/2014/01/28/markdown/">GitHubでブログの作成 - Markdown Markup 違い-</a>
+        <a href="/blog/2014/01/28/markdown/">GitHubでブログの作成 - markdown markup 違い-</a>
       </li>
     
   </ul>
@@ -203,7 +240,7 @@
   <a href="https://github.com/sawasawato">@sawasawato</a> on GitHub
   
   <script type="text/javascript">
-    $(document).ready(function(){
+    $.domReady(function(){
         if (!window.jXHR){
             var jxhr = document.createElement('script');
             jxhr.type = 'text/javascript';
@@ -252,7 +289,7 @@ Included file 'custom/asides/aboutmetwitter.html' not found in _includes directo
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     }());
 </script>
@@ -263,7 +300,7 @@ Included file 'custom/asides/aboutmetwitter.html' not found in _includes directo
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) {return;}
-  js = d.createElement(s); js.id = id; js.async = true;
+  js = d.createElement(s); js.id = id;
   js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>

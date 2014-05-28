@@ -4,7 +4,7 @@
   <title><![CDATA[Sawasawato Web Hack Blog]]></title>
   <link href="http://sawasawato.github.io/atom.xml" rel="self"/>
   <link href="http://sawasawato.github.io/"/>
-  <updated>2014-05-28T23:48:37+09:00</updated>
+  <updated>2014-05-29T00:07:46+09:00</updated>
   <id>http://sawasawato.github.io/</id>
   <author>
     <name><![CDATA[Sawasawato]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Octopress Themechange オクトプレスのテーマ 変更]]></title>
+    <title type="html"><![CDATA[octopress themechange オクトプレスのテーマ 変更]]></title>
     <link href="http://sawasawato.github.io/blog/2014/05/28/octopress-themechange/"/>
     <updated>2014-05-28T23:42:36+09:00</updated>
     <id>http://sawasawato.github.io/blog/2014/05/28/octopress-themechange</id>
@@ -46,7 +46,7 @@ bundle exec が不要でも動く</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Vim Windows 環境設定]]></title>
+    <title type="html"><![CDATA[vim windows 環境設定]]></title>
     <link href="http://sawasawato.github.io/blog/2014/04/10/vim/"/>
     <updated>2014-04-10T13:07:51+09:00</updated>
     <id>http://sawasawato.github.io/blog/2014/04/10/vim</id>
@@ -302,7 +302,7 @@ NeoBundle コマンドでのインストールは Winの環境PATHの影響を�
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Sass]]></title>
+    <title type="html"><![CDATA[sass]]></title>
     <link href="http://sawasawato.github.io/blog/2014/02/14/sass/"/>
     <updated>2014-02-14T16:19:42+09:00</updated>
     <id>http://sawasawato.github.io/blog/2014/02/14/sass</id>
@@ -311,7 +311,7 @@ NeoBundle コマンドでのインストールは Winの環境PATHの影響を�
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[GitHubでブログの作成 - Markdown Markup 違い-]]></title>
+    <title type="html"><![CDATA[GitHubでブログの作成 - markdown markup 違い-]]></title>
     <link href="http://sawasawato.github.io/blog/2014/01/28/markdown/"/>
     <updated>2014-01-28T23:11:39+09:00</updated>
     <id>http://sawasawato.github.io/blog/2014/01/28/markdown</id>
