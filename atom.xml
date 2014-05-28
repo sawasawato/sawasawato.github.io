@@ -4,7 +4,7 @@
   <title><![CDATA[Sawasawato Web Hack Blog]]></title>
   <link href="http://sawasawato.github.io/atom.xml" rel="self"/>
   <link href="http://sawasawato.github.io/"/>
-  <updated>2014-05-28T23:01:53+09:00</updated>
+  <updated>2014-05-28T23:48:37+09:00</updated>
   <id>http://sawasawato.github.io/</id>
   <author>
     <name><![CDATA[Sawasawato]]></name>
@@ -14,7 +14,39 @@
 
   
   <entry>
-    <title type="html"><![CDATA[vim windows 環境設定]]></title>
+    <title type="html"><![CDATA[Octopress Themechange オクトプレスのテーマ 変更]]></title>
+    <link href="http://sawasawato.github.io/blog/2014/05/28/octopress-themechange/"/>
+    <updated>2014-05-28T23:42:36+09:00</updated>
+    <id>http://sawasawato.github.io/blog/2014/05/28/octopress-themechange</id>
+    <content type="html"><![CDATA[<h1>octopressでテーマを変更する</h1>
+
+<p>テーマが全然、変更できないんだが</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git clone git@github.com:bijumon/oct2.git .themes/oct2
+</span><span class='line'>bundle exec rake install['oct2']
+</span><span class='line'>A theme is already installed, proceeding will overwrite existing files. Are you sure? [y/n]
+</span><span class='line'>
+</span><span class='line'>bundle exec rake preview</span></code></pre></td></tr></table></div></figure>
+
+
+<p>テーマをクローンする
+rake installをする</p>
+
+<p>theme is already installed
+などインストールしてるよとか出てこない。</p>
+
+<p>環境によって
+bundle exec が不要でも動く</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Vim Windows 環境設定]]></title>
     <link href="http://sawasawato.github.io/blog/2014/04/10/vim/"/>
     <updated>2014-04-10T13:07:51+09:00</updated>
     <id>http://sawasawato.github.io/blog/2014/04/10/vim</id>
@@ -270,7 +302,7 @@ NeoBundle コマンドでのインストールは Winの環境PATHの影響を�
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[sass]]></title>
+    <title type="html"><![CDATA[Sass]]></title>
     <link href="http://sawasawato.github.io/blog/2014/02/14/sass/"/>
     <updated>2014-02-14T16:19:42+09:00</updated>
     <id>http://sawasawato.github.io/blog/2014/02/14/sass</id>
@@ -279,7 +311,7 @@ NeoBundle コマンドでのインストールは Winの環境PATHの影響を�
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[GitHubでブログの作成 - markdown markup 違い-]]></title>
+    <title type="html"><![CDATA[GitHubでブログの作成 - Markdown Markup 違い-]]></title>
     <link href="http://sawasawato.github.io/blog/2014/01/28/markdown/"/>
     <updated>2014-01-28T23:11:39+09:00</updated>
     <id>http://sawasawato.github.io/blog/2014/01/28/markdown</id>

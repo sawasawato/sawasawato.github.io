@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Ovtopress | Sawasawato Web Hack Blog]]></title>
+  <link href="http://sawasawato.github.io/blog/categories/ovtopress/atom.xml" rel="self"/>
+  <link href="http://sawasawato.github.io/"/>
+  <updated>2014-05-28T23:48:37+09:00</updated>
+  <id>http://sawasawato.github.io/</id>
+  <author>
+    <name><![CDATA[Sawasawato]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Octopress Themechange オクトプレスのテーマ 変更]]></title>
+    <link href="http://sawasawato.github.io/blog/2014/05/28/octopress-themechange/"/>
+    <updated>2014-05-28T23:42:36+09:00</updated>
+    <id>http://sawasawato.github.io/blog/2014/05/28/octopress-themechange</id>
+    <content type="html"><![CDATA[<h1>octopressでテーマを変更する</h1>
+
+<p>テーマが全然、変更できないんだが</p>
+
+<p>```
+git clone git@github.com:bijumon/oct2.git .themes/oct2
+bundle exec rake install[&lsquo;oct2&rsquo;]
+A theme is already installed, proceeding will overwrite existing files. Are you sure? [y/n]</p>
+
+<p>bundle exec rake preview
+```
+テーマをクローンする
+rake installをする</p>
+
+<p>theme is already installed
+などインストールしてるよとか出てこない。</p>
+
+<p>環境によって
+bundle exec が不要でも動く</p>
+]]></content>
+  </entry>
+  
+</feed>
