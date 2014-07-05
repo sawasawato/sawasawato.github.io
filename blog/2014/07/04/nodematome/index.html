@@ -5,11 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Blog Archive - Sawasawato Web Hack Blog</title>
+  <title>Node.js まとめ - Sawasawato Web Hack Blog</title>
   <meta name="author" content="Sawasawato">
 
   
-  <meta name="description" content="Blog Archive 2014 Jul 05 外付け HDD フォーマット Win Mac 兼用 exFAT posted in Basic Jul 04 Node.js まとめ posted in Node.js Jun 13 Octopress git で記事を作成する posted &hellip;">
+  <meta name="description" content="Node.js Node.js まとめ Node.jsの 概要 特徴 導入方法 などさっくりと備忘録かねて紹介 間違ったことを言ってるかもなのであまり宛にしないように。 使用環境 使用環境 Win-7 Professional mac-OSX
+天命で Windows しばりで Node.js &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://sawasawato.github.io/blog/archives">
+  <link rel="canonical" href="http://sawasawato.github.io/blog/2014/07/04/nodematome">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/styles.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Sawasawato Web Hack Blog" type="application/atom+xml">
@@ -149,288 +150,63 @@ Included file 'custom/asides/aboutmetwitter.html' not found in _includes directo
 		</aside>
 		
       <div>
-<article role="article">
+<article>
+	<header>
+  <div class="article-tags">
+      
+
+<span class="categories">
   
-  <header>
-    <h1 class="entry-title">Blog Archive</h1>
-  </header>
+    <a class='category' href='/blog/categories/node-dot-js/'>Node.js</a>
   
-  <div clas id="blog-archives">
-
-  
-  <div class="row-fluid">
-	<div class="span1">
-	
-	  
-	    <h1>2014</h1>
-	
-	</div>
-	
-	<div class="span11">
-	
-
-	  <article>
-	  
-<div class="row-fluid">
-	<div class="span1">
-		<h1 class="date-time"><time datetime="2014-07-05T21:51:45+09:00" pubdate><span class='month'>Jul</span> <span class='day'>05</span><span class='year'><!--2014--></span></time></h1>
-	</div>
-	<div class="span10">
-		<h1><a href="/blog/2014/07/05/exfat/">外付け HDD フォーマット Win Mac 兼用 exFAT</a></h1>
-	</div>
-</div>
-
-<div class="row-fluid">
-	<div class="span1">
-	</div>
-	<div class="span10">
-		
-
-		<footer class="archive">
-		  <span class="categories">posted in <a class='category' href='/blog/categories/basic/'>Basic</a></span>
-		</footer>
-		
-	</div>
-</div>
+</span>
 
 
-	  </article>
-	</div>
   </div>
-
   
-  <div class="row-fluid">
-	<div class="span1">
-	
-	</div>
-	
-	<div class="span11 border-top">
-	
-
-	  <article>
-	  
-<div class="row-fluid">
-	<div class="span1">
-		<h1 class="date-time"><time datetime="2014-07-04T19:46:07+09:00" pubdate><span class='month'>Jul</span> <span class='day'>04</span><span class='year'><!--2014--></span></time></h1>
-	</div>
-	<div class="span10">
-		<h1><a href="/blog/2014/07/04/nodematome/">Node.js まとめ</a></h1>
-	</div>
-</div>
-
-<div class="row-fluid">
-	<div class="span1">
-	</div>
-	<div class="span10">
-		
-
-		<footer class="archive">
-		  <span class="categories">posted in <a class='category' href='/blog/categories/node-dot-js/'>Node.js</a></span>
-		</footer>
-		
-	</div>
-</div>
-
-
-	  </article>
-	</div>
-  </div>
-
+    <h1>
+      Node.js まとめ
+    </h1>
   
-  <div class="row-fluid">
-	<div class="span1">
-	
-	</div>
-	
-	<div class="span11 border-top">
-	
+</header>
 
-	  <article>
-	  
-<div class="row-fluid">
-	<div class="span1">
-		<h1 class="date-time"><time datetime="2014-06-13T12:57:58+09:00" pubdate><span class='month'>Jun</span> <span class='day'>13</span><span class='year'><!--2014--></span></time></h1>
-	</div>
-	<div class="span10">
-		<h1><a href="/blog/2014/06/13/">Octopress git で記事を作成する</a></h1>
-	</div>
+  <section><h2>Node.jsの 概要 特徴 導入方法 などさっくりと備忘録かねて紹介</h2>
+
+<!-- more -->
+
+
+<p>間違ったことを言ってるかもなのであまり宛にしないように。</p>
+
+<h3>使用環境</h3>
+
+<p>使用環境 Win-7 Professional mac-OSX
+天命で Windows しばりで Node.js を触らないといけない人の手助けになればよいな。</p>
+
+<h2>目次</h2>
+
+<ul>
+<li>Node.js導入について</li>
+<li>nvmでNode.js管理する</li>
+<li>npmでNode.js管理する</li>
+<li>npmコマンド</li>
+<li>nvmコマンド</li>
+<li>win環境 Node.js を nvm で管理する</li>
+<li>mac環境 Node.js を nvm で管理する</li>
+</ul>
+
+</section>
+
+
+
+	
+	  <section class="comments">
+	    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 </div>
-
-<div class="row-fluid">
-	<div class="span1">
-	</div>
-	<div class="span10">
-		
-
-		<footer class="archive">
-		  <span class="categories">posted in <a class='category' href='/blog/categories/octopress/'>octopress</a></span>
-		</footer>
-		
-	</div>
-</div>
-
-
-	  </article>
-	</div>
-  </div>
-
-  
-  <div class="row-fluid">
-	<div class="span1">
+	  </section>
 	
-	</div>
-	
-	<div class="span11 border-top">
-	
-
-	  <article>
-	  
-<div class="row-fluid">
-	<div class="span1">
-		<h1 class="date-time"><time datetime="2014-05-28T23:42:36+09:00" pubdate><span class='month'>May</span> <span class='day'>28</span><span class='year'><!--2014--></span></time></h1>
-	</div>
-	<div class="span10">
-		<h1><a href="/blog/2014/05/28/octopress-themechange/">octopress themechange オクトプレスのテーマ 変更</a></h1>
-	</div>
-</div>
-
-<div class="row-fluid">
-	<div class="span1">
-	</div>
-	<div class="span10">
-		
-
-		<footer class="archive">
-		  <span class="categories">posted in <a class='category' href='/blog/categories/ovtopress/'>ovtopress</a></span>
-		</footer>
-		
-	</div>
-</div>
-
-
-	  </article>
-	</div>
-  </div>
-
-  
-  <div class="row-fluid">
-	<div class="span1">
-	
-	</div>
-	
-	<div class="span11 border-top">
-	
-
-	  <article>
-	  
-<div class="row-fluid">
-	<div class="span1">
-		<h1 class="date-time"><time datetime="2014-04-10T13:07:51+09:00" pubdate><span class='month'>Apr</span> <span class='day'>10</span><span class='year'><!--2014--></span></time></h1>
-	</div>
-	<div class="span10">
-		<h1><a href="/blog/2014/04/10/vim/">vim windows 環境設定</a></h1>
-	</div>
-</div>
-
-<div class="row-fluid">
-	<div class="span1">
-	</div>
-	<div class="span10">
-		
-
-		<footer class="archive">
-		  <span class="categories">posted in <a class='category' href='/blog/categories/vim/'>Vim</a></span>
-		</footer>
-		
-	</div>
-</div>
-
-
-	  </article>
-	</div>
-  </div>
-
-  
-  <div class="row-fluid">
-	<div class="span1">
-	
-	</div>
-	
-	<div class="span11 border-top">
-	
-
-	  <article>
-	  
-<div class="row-fluid">
-	<div class="span1">
-		<h1 class="date-time"><time datetime="2014-02-14T16:19:42+09:00" pubdate><span class='month'>Feb</span> <span class='day'>14</span><span class='year'><!--2014--></span></time></h1>
-	</div>
-	<div class="span10">
-		<h1><a href="/blog/2014/02/14/sass/">sass</a></h1>
-	</div>
-</div>
-
-<div class="row-fluid">
-	<div class="span1">
-	</div>
-	<div class="span10">
-		
-
-		<footer class="archive">
-		  <span class="categories">posted in <a class='category' href='/blog/categories/basic/'>Basic</a></span>
-		</footer>
-		
-	</div>
-</div>
-
-
-	  </article>
-	</div>
-  </div>
-
-  
-  <div class="row-fluid">
-	<div class="span1">
-	
-	</div>
-	
-	<div class="span11 border-top">
-	
-
-	  <article>
-	  
-<div class="row-fluid">
-	<div class="span1">
-		<h1 class="date-time"><time datetime="2014-01-28T23:11:39+09:00" pubdate><span class='month'>Jan</span> <span class='day'>28</span><span class='year'><!--2014--></span></time></h1>
-	</div>
-	<div class="span10">
-		<h1><a href="/blog/2014/01/28/markdown/">GitHubでブログの作成 - markdown markup 違い-</a></h1>
-	</div>
-</div>
-
-<div class="row-fluid">
-	<div class="span1">
-	</div>
-	<div class="span10">
-		
-
-		<footer class="archive">
-		  <span class="categories">posted in <a class='category' href='/blog/categories/basic/'>Basic</a></span>
-		</footer>
-		
-	</div>
-</div>
-
-
-	  </article>
-	</div>
-  </div>
-
-</div>
-
-  
 </article>
 </div>
+
     </div>
   </div>
   <footer class="main-footer">
@@ -447,7 +223,10 @@ Included file 'custom/asides/aboutmetwitter.html' not found in _includes directo
       var disqus_shortname = 'sawasawato';
       
         
-        var disqus_script = 'count.js';
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://sawasawato.github.io/blog/2014/07/04/nodematome/';
+        var disqus_url = 'http://sawasawato.github.io/blog/2014/07/04/nodematome/';
+        var disqus_script = 'embed.js';
       
     (function () {
       var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

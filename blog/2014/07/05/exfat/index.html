@@ -5,11 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>sass - Sawasawato Web Hack Blog</title>
+  <title>外付け HDD フォーマット Win Mac 兼用 exFAT - Sawasawato Web Hack Blog</title>
   <meta name="author" content="Sawasawato">
 
   
-  <meta name="description" content=" Basic Sass Please enable JavaScript to view the comments powered by Disqus. ">
+  <meta name="description" content="Basic 外付け HDD フォーマット Win Mac 兼用 exFAT 外付けHDD をWinでもMacでも使えるように設定する 外付け HDD はフォーマット(初期化)しないと使えない。
+フォーマット形式によって、外付けハードディスクは Mac と Win で兼用できない。 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -18,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://sawasawato.github.io/blog/2014/02/14/sass">
+  <link rel="canonical" href="http://sawasawato.github.io/blog/2014/07/05/exfat">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/styles.css" media="screen, projection" rel="stylesheet" type="text/css">
   <link href="/atom.xml" rel="alternate" title="Sawasawato Web Hack Blog" type="application/atom+xml">
@@ -164,12 +165,93 @@ Included file 'custom/asides/aboutmetwitter.html' not found in _includes directo
   </div>
   
     <h1>
-      Sass
+      外付け HDD フォーマット Win Mac 兼用 exFAT
     </h1>
   
 </header>
 
-  <section>
+  <section><h2>外付けHDD をWinでもMacでも使えるように設定する</h2>
+
+<!-- more -->
+
+
+<p>外付け HDD はフォーマット(初期化)しないと使えない。<br/>
+フォーマット形式によって、外付けハードディスクは Mac と Win で兼用できない。<br/>
+Windowsの「NTFSフォーマット」はOS Xでは読み取り専用でしか触れない。<br/>
+Macの「HFS+ドライブはWindowsコンピュータでは読む込むこともできない。</p>
+
+<h2>両方のOSで管理したい時には 「exFAT」 が良い。</h2>
+
+<p>exFATは最近のMac（Leopardでは不可）、Windowsマシンの両方で読み込み・書き込みが可能なファイルシステム<br/>
+Windowsでドライブをフォーマットする。mac(OS-X)ではクロスプラットフォームで使用できない。</p>
+
+<h3>手順</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Windows ボタン → コンピュータ
+</span><span class='line'>外付けHDD (下の方) を右クリックして、メニューから 「フォーマット」を選択
+</span><span class='line'>ファイルシステム欄で「exFAT」を選択
+</span><span class='line'>アロケーションユニットは触らない (任意好みで)
+</span><span class='line'>ボリュームラベル を任意の名前に編集
+</span><span class='line'>クイックフォーマット のチェックを外す
+</span><span class='line'>実行</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>容量が 200MB 〜 1GB しか認識されない。</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Windows ボタン → コンピュータを右クリック 「管理」をクリック
+</span><span class='line'>記憶域 &gt; ディスクの管理 &gt; フォーマットしたいHDD を 右クリック 「ボリュームの削除」
+</span><span class='line'>下の部分に 「未割り当て」 右クリック 「新しいシンプルボリューム」 クリック
+</span><span class='line'>ウィザードが立ち上がるので、指示にしたがう。</span></code></pre></td></tr></table></div></figure>
+
+
+<p>補足
+アロケーションユニットサイズとは?</p>
+
+<p>・クラスタのサイズの事
+・クラスタ === ディスクを管理する際の基本の単位
+・1クラスタ == 4KBでフォーマットされているディスクにわずか1バイトのファイルを保存しても、4KBが使われる。）
+  残りの使われていない無駄領域を「クラスタギャップ」という</p>
+
+<p>・サイズを小さくする：クラスタギャップは少なくなるが、総クラスタ数が多くなって若干アクセスが遅くなる。
+・サイズを大きくする：比較的小さなサイズのファイルが多い時には、クラスタギャップが多くなる。
+・書き込み速度の違いは、主にファイルの上書きで発生</p>
+
+<p>まとめ
+高くすると転送速度が早くなるけど、使用しない無駄な領域ができる。（クラスタギャップ）
+低くすると転送速度は遅くなるけど、無駄な領域が減る。</p>
+
+<p>注意
+※フォーマットするとハードディスク内のデータは削除される。
+  必要なデータは必ずバックアップしておくこと。
+※フォーマット後に容量が 200MB〜1GBしか認識されない場合は再度フォーマットをする。</p>
+
+<p>まとめ リンク<br/>
+exfat形式の説明など<br/>
+<a href="http://www.lifehacker.jp/2012/07/120730exfatfile.html">http://www.lifehacker.jp/2012/07/120730exfatfile.html</a></p>
+
+<p>Mac フォーマット方法<br/>
+<a href="http://toneliko.com/561/">http://toneliko.com/561/</a></p>
+
+<p>exfat 形式でファーマットする方法<br/>
+<a href="http://jmatsuzaki.com/archives/11064">http://jmatsuzaki.com/archives/11064</a></p>
+
+<p>アロケーションのユニットサイズとは？<br/>
+<a href="http://pcnomori.blog.fc2.com/blog-entry-82.html">http://pcnomori.blog.fc2.com/blog-entry-82.html</a> <br/>
+<a href="http://okwave.jp/qa/q679423.html">http://okwave.jp/qa/q679423.html</a></p>
+
+<p>アロケーションユニットサイズのベンチマーク (古い)<br/>
+<a href="http://freesoft.tvbok.com/tips/hddssd_tips/exfat-usb.html">http://freesoft.tvbok.com/tips/hddssd_tips/exfat-usb.html</a></p>
 </section>
 
 
@@ -200,8 +282,8 @@ Included file 'custom/asides/aboutmetwitter.html' not found in _includes directo
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://sawasawato.github.io/blog/2014/02/14/sass/';
-        var disqus_url = 'http://sawasawato.github.io/blog/2014/02/14/sass/';
+        var disqus_identifier = 'http://sawasawato.github.io/blog/2014/07/05/exfat/';
+        var disqus_url = 'http://sawasawato.github.io/blog/2014/07/05/exfat/';
         var disqus_script = 'embed.js';
       
     (function () {

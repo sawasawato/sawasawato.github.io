@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Vim | Sawasawato Web Hack Blog]]></title>
   <link href="http://sawasawato.github.io/blog/categories/vim/atom.xml" rel="self"/>
   <link href="http://sawasawato.github.io/"/>
-  <updated>2014-05-29T01:38:34+09:00</updated>
+  <updated>2014-07-05T23:38:46+09:00</updated>
   <id>http://sawasawato.github.io/</id>
   <author>
     <name><![CDATA[Sawasawato]]></name>
@@ -18,7 +18,7 @@
     <link href="http://sawasawato.github.io/blog/2014/04/10/vim/"/>
     <updated>2014-04-10T13:07:51+09:00</updated>
     <id>http://sawasawato.github.io/blog/2014/04/10/vim</id>
-    <content type="html"><![CDATA[<h1>windows環境でvimプラグインをneobundle.vimで管理する</h1>
+    <content type="html"><![CDATA[<h2>windows環境でvimプラグインをneobundle.vimで管理する</h2>
 
 <!-- more -->
 

@@ -4,7 +4,7 @@
   <title><![CDATA[Sawasawato Web Hack Blog]]></title>
   <link href="http://sawasawato.github.io/atom.xml" rel="self"/>
   <link href="http://sawasawato.github.io/"/>
-  <updated>2014-05-29T01:38:34+09:00</updated>
+  <updated>2014-07-05T23:38:46+09:00</updated>
   <id>http://sawasawato.github.io/</id>
   <author>
     <name><![CDATA[Sawasawato]]></name>
@@ -14,11 +14,150 @@
 
   
   <entry>
+    <title type="html"><![CDATA[外付け HDD フォーマット Win Mac 兼用 exFAT]]></title>
+    <link href="http://sawasawato.github.io/blog/2014/07/05/exfat/"/>
+    <updated>2014-07-05T21:51:45+09:00</updated>
+    <id>http://sawasawato.github.io/blog/2014/07/05/exfat</id>
+    <content type="html"><![CDATA[<h2>外付けHDD をWinでもMacでも使えるように設定する</h2>
+
+<!-- more -->
+
+
+<p>外付け HDD はフォーマット(初期化)しないと使えない。<br/>
+フォーマット形式によって、外付けハードディスクは Mac と Win で兼用できない。<br/>
+Windowsの「NTFSフォーマット」はOS Xでは読み取り専用でしか触れない。<br/>
+Macの「HFS+ドライブはWindowsコンピュータでは読む込むこともできない。</p>
+
+<h2>両方のOSで管理したい時には 「exFAT」 が良い。</h2>
+
+<p>exFATは最近のMac（Leopardでは不可）、Windowsマシンの両方で読み込み・書き込みが可能なファイルシステム<br/>
+Windowsでドライブをフォーマットする。mac(OS-X)ではクロスプラットフォームで使用できない。</p>
+
+<h3>手順</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Windows ボタン → コンピュータ
+</span><span class='line'>外付けHDD (下の方) を右クリックして、メニューから 「フォーマット」を選択
+</span><span class='line'>ファイルシステム欄で「exFAT」を選択
+</span><span class='line'>アロケーションユニットは触らない (任意好みで)
+</span><span class='line'>ボリュームラベル を任意の名前に編集
+</span><span class='line'>クイックフォーマット のチェックを外す
+</span><span class='line'>実行</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>容量が 200MB 〜 1GB しか認識されない。</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Windows ボタン → コンピュータを右クリック 「管理」をクリック
+</span><span class='line'>記憶域 &gt; ディスクの管理 &gt; フォーマットしたいHDD を 右クリック 「ボリュームの削除」
+</span><span class='line'>下の部分に 「未割り当て」 右クリック 「新しいシンプルボリューム」 クリック
+</span><span class='line'>ウィザードが立ち上がるので、指示にしたがう。</span></code></pre></td></tr></table></div></figure>
+
+
+<p>補足
+アロケーションユニットサイズとは?</p>
+
+<p>・クラスタのサイズの事
+・クラスタ === ディスクを管理する際の基本の単位
+・1クラスタ == 4KBでフォーマットされているディスクにわずか1バイトのファイルを保存しても、4KBが使われる。）
+  残りの使われていない無駄領域を「クラスタギャップ」という</p>
+
+<p>・サイズを小さくする：クラスタギャップは少なくなるが、総クラスタ数が多くなって若干アクセスが遅くなる。
+・サイズを大きくする：比較的小さなサイズのファイルが多い時には、クラスタギャップが多くなる。
+・書き込み速度の違いは、主にファイルの上書きで発生</p>
+
+<p>まとめ
+高くすると転送速度が早くなるけど、使用しない無駄な領域ができる。（クラスタギャップ）
+低くすると転送速度は遅くなるけど、無駄な領域が減る。</p>
+
+<p>注意
+※フォーマットするとハードディスク内のデータは削除される。
+  必要なデータは必ずバックアップしておくこと。
+※フォーマット後に容量が 200MB〜1GBしか認識されない場合は再度フォーマットをする。</p>
+
+<p>まとめ リンク<br/>
+exfat形式の説明など<br/>
+<a href="http://www.lifehacker.jp/2012/07/120730exfatfile.html">http://www.lifehacker.jp/2012/07/120730exfatfile.html</a></p>
+
+<p>Mac フォーマット方法<br/>
+<a href="http://toneliko.com/561/">http://toneliko.com/561/</a></p>
+
+<p>exfat 形式でファーマットする方法<br/>
+<a href="http://jmatsuzaki.com/archives/11064">http://jmatsuzaki.com/archives/11064</a></p>
+
+<p>アロケーションのユニットサイズとは？<br/>
+<a href="http://pcnomori.blog.fc2.com/blog-entry-82.html">http://pcnomori.blog.fc2.com/blog-entry-82.html</a> <br/>
+<a href="http://okwave.jp/qa/q679423.html">http://okwave.jp/qa/q679423.html</a></p>
+
+<p>アロケーションユニットサイズのベンチマーク (古い)<br/>
+<a href="http://freesoft.tvbok.com/tips/hddssd_tips/exfat-usb.html">http://freesoft.tvbok.com/tips/hddssd_tips/exfat-usb.html</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Node.js まとめ]]></title>
+    <link href="http://sawasawato.github.io/blog/2014/07/04/nodematome/"/>
+    <updated>2014-07-04T19:46:07+09:00</updated>
+    <id>http://sawasawato.github.io/blog/2014/07/04/nodematome</id>
+    <content type="html"><![CDATA[<h2>Node.jsの 概要 特徴 導入方法 などさっくりと備忘録かねて紹介</h2>
+
+<!-- more -->
+
+
+<p>間違ったことを言ってるかもなのであまり宛にしないように。</p>
+
+<h3>使用環境</h3>
+
+<p>使用環境 Win-7 Professional mac-OSX
+天命で Windows しばりで Node.js を触らないといけない人の手助けになればよいな。</p>
+
+<h2>目次</h2>
+
+<ul>
+<li>Node.js導入について</li>
+<li>nvmでNode.js管理する</li>
+<li>npmでNode.js管理する</li>
+<li>npmコマンド</li>
+<li>nvmコマンド</li>
+<li>win環境 Node.js を nvm で管理する</li>
+<li>mac環境 Node.js を nvm で管理する</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Octopress git で記事を作成する]]></title>
+    <link href="http://sawasawato.github.io/blog/2014/06/13/"/>
+    <updated>2014-06-13T12:57:58+09:00</updated>
+    <id>http://sawasawato.github.io/blog/2014/06/</id>
+    <content type="html"><![CDATA[<h2>github octopress 記事投稿</h2>
+
+<!-- more -->
+
+
+<p>久しぶりに記事を投稿しようと思ったら、どうやって書くんやっけ？
+と迷ってしまったので、再度備忘録を記述</p>
+
+<h1>#</h1>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[octopress themechange オクトプレスのテーマ 変更]]></title>
     <link href="http://sawasawato.github.io/blog/2014/05/28/octopress-themechange/"/>
     <updated>2014-05-28T23:42:36+09:00</updated>
     <id>http://sawasawato.github.io/blog/2014/05/28/octopress-themechange</id>
-    <content type="html"><![CDATA[<h1>octopressでテーマを変更する</h1>
+    <content type="html"><![CDATA[<h2>octopressでテーマを変更する</h2>
 
 <p>octopressのテーマの変更方法と好みにカスタマイズする上で知っておきたいTipsを備忘録がてら記述</p>
 
@@ -64,7 +203,7 @@ bundle exec が不要でも動く</p>
     <link href="http://sawasawato.github.io/blog/2014/04/10/vim/"/>
     <updated>2014-04-10T13:07:51+09:00</updated>
     <id>http://sawasawato.github.io/blog/2014/04/10/vim</id>
-    <content type="html"><![CDATA[<h1>windows環境でvimプラグインをneobundle.vimで管理する</h1>
+    <content type="html"><![CDATA[<h2>windows環境でvimプラグインをneobundle.vimで管理する</h2>
 
 <!-- more -->
 
@@ -329,12 +468,12 @@ NeoBundle コマンドでのインストールは Winの環境PATHの影響を�
     <link href="http://sawasawato.github.io/blog/2014/01/28/markdown/"/>
     <updated>2014-01-28T23:11:39+09:00</updated>
     <id>http://sawasawato.github.io/blog/2014/01/28/markdown</id>
-    <content type="html"><![CDATA[<h1>github octopress Markdown</h1>
+    <content type="html"><![CDATA[<h2>github octopress Markdown</h2>
 
 <!-- more -->
 
 
-<p>GitもRubyもやったことない人間が興味本位でOctopressを始めようとしたので、
+<p>GitもRubyもやったことない人間が興味本位でOctopressを始めようとしたので、<br/>
 驚く位ブログを立ち上げるだけで時間をとられてしまった。<br/>
 後で、導入方法を記述する予定。<br/>
 Octopress で記事を作成するには Markdown なる記述方法が必要とのこと。<br/>
@@ -346,7 +485,7 @@ Markup(HTML)は書いているのである程度わかるものの、知らな�
 <li>軽量マークアップ言語 (結局はマークアップ言語のHTMLに直す)</li>
 <li>簡単</li>
 <li>少ないテキストでマークアップできる</li>
-<li>class id をつけられない＝結局HTML使うらしい。</li>
+<li>class id をつけられない === 結局HTML使うらしい。</li>
 </ul>
 
 

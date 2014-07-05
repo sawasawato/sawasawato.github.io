@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: octopress | Sawasawato Web Hack Blog]]></title>
+  <link href="http://sawasawato.github.io/blog/categories/octopress/atom.xml" rel="self"/>
+  <link href="http://sawasawato.github.io/"/>
+  <updated>2014-07-05T23:38:46+09:00</updated>
+  <id>http://sawasawato.github.io/</id>
+  <author>
+    <name><![CDATA[Sawasawato]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Octopress git で記事を作成する]]></title>
+    <link href="http://sawasawato.github.io/blog/2014/06/13/"/>
+    <updated>2014-06-13T12:57:58+09:00</updated>
+    <id>http://sawasawato.github.io/blog/2014/06/</id>
+    <content type="html"><![CDATA[<h2>github octopress 記事投稿</h2>
+
+<!-- more -->
+
+
+<p>久しぶりに記事を投稿しようと思ったら、どうやって書くんやっけ？
+と迷ってしまったので、再度備忘録を記述</p>
+
+<h1>#</h1>
+]]></content>
+  </entry>
+  
+</feed>
