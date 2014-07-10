@@ -4,7 +4,7 @@
   <title><![CDATA[Category: octopress | Sawasawato Web Hack Blog]]></title>
   <link href="http://sawasawato.github.io/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://sawasawato.github.io/"/>
-  <updated>2014-07-05T23:38:46+09:00</updated>
+  <updated>2014-07-10T21:35:26+09:00</updated>
   <id>http://sawasawato.github.io/</id>
   <author>
     <name><![CDATA[Sawasawato]]></name>
@@ -26,7 +26,102 @@
 <p>久しぶりに記事を投稿しようと思ったら、どうやって書くんやっけ？
 と迷ってしまったので、再度備忘録を記述</p>
 
-<h1>#</h1>
+<h2>記事のファイルを生成</h2>
+
+<p><code>
+rake new_post['title']
+</code>
+&ndash; ファイルはsource/_posts/に生成される。
+&ndash; new_samp とするとsampディレクトリに作成される
+&ndash; titleに日本語をそのまま使用するとはできない。
+&ndash; 英語で書いた後に日本語に変換する。
+&ndash; 手動でファイルを作成しても良い。</p>
+
+<h2>生成されたファイルを編集する</h2>
+
+<h2>```</h2>
+
+<p>layout: post
+title: &ldquo;title&rdquo;
+date: 2014-07-07 17:17
+comments: true</p>
+
+<h2>categories: tanabata</h2>
+
+<p><code>``
+- layout: 使用するレイアウトを選択する。わからない時は触らない
+- title: 記事のタイトル URL とは関係ない
+- date: 記事の作成時刻
+- comments: コメントを許可するかどうかの設定
+- categories: カテゴリを設定します。カテゴリは複数入力することが可能
+- author: 複数人でブログを運営する場合には、この項目で著者の変更
+- published: 記事が下書きの状態の場合、この項目を</code>false` にすることで記事を非公開にする
+&ndash; external-url: URL を設定することで投稿タイトルから直接外部サイトにリンク</p>
+
+<h2>記事をプレビューする</h2>
+
+<p><code>
+rake preview
+</code>
+デフォルトだとブラウザに以下のパスを入力すると見れる</p>
+
+<p><a href="http://localhost:4000/">http://localhost:4000/</a></p>
+
+<h2>記事を作成する(コンパイルする)</h2>
+
+<p><code>
+rake generate
+</code></p>
+
+<h2>Github Pagesに投稿する</h2>
+
+<p><code>
+rake deploy
+</code></p>
+
+<h1>合わせて覚えると便利な octopress 投稿コマンド</h1>
+
+<h3>octopress 複数カテゴリー 記述方法</h3>
+
+<p>```
+// exsample1
+categories: [jQuery, Pjax, History API]</p>
+
+<p>// exsample2
+categories:
+&ndash; jQuery
+&ndash; Pjax
+&ndash; History API
+```</p>
+
+<h3>octopress sorce sass だけ監視</h3>
+
+<p><code>
+rake watch
+</code></p>
+
+<h3>octopress ページを作成</h3>
+
+<p><code>
+rake new_page[sample]
+</code>
+ブログ記事でなく、ページとして作成する時は上のコマンドを使用。
+パスは以下となる
+/source/sample/index.markdown</p>
+
+<p>ディレクトリではなく、HTMLファイルにアクセスさせるようなページを作成する場合には次のようにファイル名まで指定する必要がある</p>
+
+<p>```</p>
+
+<h1>creates /source/example/test.markdown</h1>
+
+<p>rake new_page[example/test.html]
+```
+参考サイト
+<a href="http://blog.4uing.net/octopress-post/">http://blog.4uing.net/octopress-post/</a></p>
+
+<p>マックで文章書く時に参考にさせてもらったサイト
+<a href="http://mattintosh.blog.so-net.ne.jp/2012-07-15_mac_english_katakana_convert">http://mattintosh.blog.so-net.ne.jp/2012-07-15_mac_english_katakana_convert</a></p>
 ]]></content>
   </entry>
   

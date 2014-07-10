@@ -4,7 +4,7 @@
   <title><![CDATA[Sawasawato Web Hack Blog]]></title>
   <link href="http://sawasawato.github.io/atom.xml" rel="self"/>
   <link href="http://sawasawato.github.io/"/>
-  <updated>2014-07-05T23:38:46+09:00</updated>
+  <updated>2014-07-10T21:35:26+09:00</updated>
   <id>http://sawasawato.github.io/</id>
   <author>
     <name><![CDATA[Sawasawato]]></name>
@@ -63,17 +63,20 @@ Windowsでドライブをフォーマットする。mac(OS-X)ではクロスプ�
 </span><span class='line'>ウィザードが立ち上がるので、指示にしたがう。</span></code></pre></td></tr></table></div></figure>
 
 
-<p>補足
-アロケーションユニットサイズとは?</p>
+<h3>補足</h3>
 
-<p>・クラスタのサイズの事
-・クラスタ === ディスクを管理する際の基本の単位
-・1クラスタ == 4KBでフォーマットされているディスクにわずか1バイトのファイルを保存しても、4KBが使われる。）
-  残りの使われていない無駄領域を「クラスタギャップ」という</p>
+<h4>アロケーションユニットサイズとは?</h4>
 
-<p>・サイズを小さくする：クラスタギャップは少なくなるが、総クラスタ数が多くなって若干アクセスが遅くなる。
-・サイズを大きくする：比較的小さなサイズのファイルが多い時には、クラスタギャップが多くなる。
-・書き込み速度の違いは、主にファイルの上書きで発生</p>
+<ul>
+<li>クラスタのサイズの事</li>
+<li>クラスタ === ディスクを管理する際の基本の単位</li>
+<li>1クラスタ == 4KBでフォーマットされているディスクにわずか1バイトのファイルを保存しても、4KBが使われる。）</li>
+<li>残りの使われていない無駄領域を「クラスタギャップ」という</li>
+<li>サイズを小さくする：クラスタギャップは少なくなるが、総クラスタ数が多くなって若干アクセスが遅くなる。</li>
+<li>サイズを大きくする：比較的小さなサイズのファイルが多い時には、クラスタギャップが多くなる。</li>
+<li>書き込み速度の違いは、主にファイルの上書きで発生</li>
+</ul>
+
 
 <p>まとめ
 高くすると転送速度が早くなるけど、使用しない無駄な領域ができる。（クラスタギャップ）
@@ -148,7 +151,124 @@ exfat形式の説明など<br/>
 <p>久しぶりに記事を投稿しようと思ったら、どうやって書くんやっけ？
 と迷ってしまったので、再度備忘録を記述</p>
 
-<h1>#</h1>
+<h2>記事のファイルを生成</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake new_post['title']</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>ファイルはsource/_posts/に生成される。</li>
+<li>new_samp とするとsampディレクトリに作成される</li>
+<li>titleに日本語をそのまま使用するとはできない。</li>
+<li>英語で書いた後に日本語に変換する。</li>
+<li>手動でファイルを作成しても良い。</li>
+</ul>
+
+
+<h2>生成されたファイルを編集する</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>---
+</span><span class='line'>layout: post
+</span><span class='line'>title: "title"
+</span><span class='line'>date: 2014-07-07 17:17
+</span><span class='line'>comments: true
+</span><span class='line'>categories: tanabata
+</span><span class='line'>---</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>layout: 使用するレイアウトを選択する。わからない時は触らない</li>
+<li>title: 記事のタイトル URL とは関係ない</li>
+<li>date: 記事の作成時刻</li>
+<li>comments: コメントを許可するかどうかの設定</li>
+<li>categories: カテゴリを設定します。カテゴリは複数入力することが可能</li>
+<li>author: 複数人でブログを運営する場合には、この項目で著者の変更</li>
+<li>published: 記事が下書きの状態の場合、この項目を <code>false</code> にすることで記事を非公開にする</li>
+<li>external-url: URL を設定することで投稿タイトルから直接外部サイトにリンク</li>
+</ul>
+
+
+<h2>記事をプレビューする</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake preview</span></code></pre></td></tr></table></div></figure>
+
+
+<p>デフォルトだとブラウザに以下のパスを入力すると見れる</p>
+
+<p><a href="http://localhost:4000/">http://localhost:4000/</a></p>
+
+<h2>記事を作成する(コンパイルする)</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake generate</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Github Pagesに投稿する</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake deploy</span></code></pre></td></tr></table></div></figure>
+
+
+<h1>合わせて覚えると便利な octopress 投稿コマンド</h1>
+
+<h3>octopress 複数カテゴリー 記述方法</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>// exsample1
+</span><span class='line'>categories: [jQuery, Pjax, History API]
+</span><span class='line'>
+</span><span class='line'>// exsample2
+</span><span class='line'>categories:
+</span><span class='line'>- jQuery
+</span><span class='line'>- Pjax
+</span><span class='line'>- History API</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>octopress sorce sass だけ監視</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake watch</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>octopress ページを作成</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rake new_page[sample]</span></code></pre></td></tr></table></div></figure>
+
+
+<p>ブログ記事でなく、ページとして作成する時は上のコマンドを使用。
+パスは以下となる
+/source/sample/index.markdown</p>
+
+<p>ディレクトリではなく、HTMLファイルにアクセスさせるようなページを作成する場合には次のようにファイル名まで指定する必要がある</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'># creates /source/example/test.markdown
+</span><span class='line'>rake new_page[example/test.html]</span></code></pre></td></tr></table></div></figure>
+
+
+<p>参考サイト
+<a href="http://blog.4uing.net/octopress-post/">http://blog.4uing.net/octopress-post/</a></p>
+
+<p>マックで文章書く時に参考にさせてもらったサイト
+<a href="http://mattintosh.blog.so-net.ne.jp/2012-07-15_mac_english_katakana_convert">http://mattintosh.blog.so-net.ne.jp/2012-07-15_mac_english_katakana_convert</a></p>
 ]]></content>
   </entry>
   
