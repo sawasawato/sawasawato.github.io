@@ -4,7 +4,7 @@
   <title><![CDATA[Sawasawato Web Hack Blog]]></title>
   <link href="http://sawasawato.github.io/atom.xml" rel="self"/>
   <link href="http://sawasawato.github.io/"/>
-  <updated>2014-07-11T16:27:51+09:00</updated>
+  <updated>2014-07-11T19:58:43+09:00</updated>
   <id>http://sawasawato.github.io/</id>
   <author>
     <name><![CDATA[Sawasawato]]></name>
@@ -30,6 +30,9 @@
 
 <p>下のサイトを参考にバッチファイルを使って、差分ファイルを作成。
 <a href="http://stackoverflow.com/questions/21639415/create-archive-of-modified-files-in-git-via-batch-file">http://stackoverflow.com/questions/21639415/create-archive-of-modified-files-in-git-via-batch-file</a></p>
+
+<p>・急ぎ追記:一部の差分がとれない不安定な動作を発見したため、参考程度に見てください。
+現在原因、調査中</p>
 
 <h2>差分ファイル作成バッチを作成</h2>
 
