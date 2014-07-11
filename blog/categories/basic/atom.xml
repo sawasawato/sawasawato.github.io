@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Basic | Sawasawato Web Hack Blog]]></title>
   <link href="http://sawasawato.github.io/blog/categories/basic/atom.xml" rel="self"/>
   <link href="http://sawasawato.github.io/"/>
-  <updated>2014-07-10T21:35:26+09:00</updated>
+  <updated>2014-07-11T16:27:51+09:00</updated>
   <id>http://sawasawato.github.io/</id>
   <author>
     <name><![CDATA[Sawasawato]]></name>
@@ -12,6 +12,92 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[SourceTree(ソースツリー) 差分ファイル 作成 Win mac]]></title>
+    <link href="http://sawasawato.github.io/blog/2014/07/11/title/"/>
+    <updated>2014-07-11T16:16:42+09:00</updated>
+    <id>http://sawasawato.github.io/blog/2014/07/11/title</id>
+    <content type="html"><![CDATA[<!-- more -->
+
+
+<h2>mac環境 ソースツリーを使って 差分ファイル を作成</h2>
+
+<p>まずmacの方は既に素晴らしいサイトを見つけたので下のサイトへ
+<a href="https://www.eyemovic.com/blog_it/4747.php">https://www.eyemovic.com/blog_it/4747.php</a></p>
+
+<h2>win環境 ソースツリーを使って 差分ファイル を作成</h2>
+
+<p>下のサイトを参考にバッチファイルを使って、差分ファイルを作成。
+<a href="http://stackoverflow.com/questions/21639415/create-archive-of-modified-files-in-git-via-batch-file">http://stackoverflow.com/questions/21639415/create-archive-of-modified-files-in-git-via-batch-file</a></p>
+
+<h2>差分ファイル作成バッチを作成</h2>
+
+<h3>1 以下の内容を記入した .batファイル を作成</h3>
+
+<p>ファイル名、ディレクトリは好みで。
+自分の場合、以下で作成</p>
+
+<p>C:\Users\sawasawato\source_tree_difference.bat</p>
+
+<p><code>
+setlocal enabledelayedexpansion
+set output=
+for /f "delims=" %%a in ('git diff --name-only %1^^') do ( set output=!output! "%%a" )
+git archive -o update.zip HEAD %output%
+endlocal
+</code></p>
+
+<h3>2 SourceTree(ソースツリー) でカスタム設定する</h3>
+
+<p><code>
+ソースツリーを立ち上げ、左上の メニュー
+ツール &gt; オプション &gt; カスタム操作
+</code>
+&ndash; メニュー表示名  ポップアップメニューで表示させる名前の選択。今回「差分ファイル作成」とする。
+&ndash; 実行するスクリプト  先ほど作成したバッチファイルを選択する。
+&ndash; パラメータは無視</p>
+
+<p>確か少し前 macでしかカスタム操作ができなかったと思うけど
+アップデートで Win でもできるようになった模様。</p>
+
+<p>◆ここから上で紹介したマックとの操作が異なる</p>
+
+<h3>3 差分を出したいリビジョンまで戻す。</h3>
+
+<p>ソースツリーログリスト画面で、差分が欲しいところで右クリック
+<code>
+「現在のブランチをこのコミットまでリセット」
+</code></p>
+
+<p>で戻す。使うモードは Mixed</p>
+
+<h3>4 いよいよ差分をだす。</h3>
+
+<p>3と同様、リスト(どこでもいい)</p>
+
+<p><code>
+右クリック &gt; カスタムオプション &gt; 差分ファイル作成
+</code></p>
+
+<p>.gitのあるディレクトリに差分ファイル</p>
+
+<p><strong>update.zip</strong></p>
+
+<p>が作成される。</p>
+
+<h3>5 戻す</h3>
+
+<p>4と同様、最後は現状のリビジョンに戻す。</p>
+
+<p>grunt watchとか立ち上げてると移動時、勝手に走ってしまうので
+止めてから行いましょう。</p>
+
+<h2>そもそもgitとは？</h2>
+
+<p><a href="https://docs.google.com/presentation/d/19d-faZoJcecBGZmzxYoFJt0P8d6_YUV5hefePVJLQpo/edit#slide=id.gae738927_0107">https://docs.google.com/presentation/d/19d-faZoJcecBGZmzxYoFJt0P8d6_YUV5hefePVJLQpo/edit#slide=id.gae738927_0107</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[外付け HDD フォーマット Win Mac 兼用 exFAT]]></title>
