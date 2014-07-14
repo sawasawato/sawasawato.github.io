@@ -4,7 +4,7 @@
   <title><![CDATA[Sawasawato Web Hack Blog]]></title>
   <link href="http://sawasawato.github.io/atom.xml" rel="self"/>
   <link href="http://sawasawato.github.io/"/>
-  <updated>2014-07-11T21:29:12+09:00</updated>
+  <updated>2014-07-14T11:14:44+09:00</updated>
   <id>http://sawasawato.github.io/</id>
   <author>
     <name><![CDATA[Sawasawato]]></name>
@@ -14,11 +14,141 @@
 
   
   <entry>
-    <title type="html"><![CDATA[kigi]]></title>
+    <title type="html"><![CDATA[初めての Grunt 導入方法]]></title>
     <link href="http://sawasawato.github.io/blog/2014/07/11/grunt/"/>
     <updated>2014-07-11T21:26:46+09:00</updated>
     <id>http://sawasawato.github.io/blog/2014/07/11/grunt</id>
-    <content type="html"><![CDATA[
+    <content type="html"><![CDATA[<!-- more -->
+
+
+<h2>Grunt 概要</h2>
+
+<ul>
+<li>・Node.jsを使用したCUIのビルドツール(黒い画面)</li>
+<li>・sass や coffee のコンパイル等毎回する作業を自動でやってくれる</li>
+<li>・ローカルサーバーとかも立ち上げてくれる</li>
+<li>・JavaScript で自動化するタスクを設定する</li>
+</ul>
+
+
+<p>コジカさんがわかりやすいです。<br/>
+<a href="http://kojika17.com/2013/03/grunt.js-memo.html">http://kojika17.com/2013/03/grunt.js-memo.html</a></p>
+
+<h2>gitの準備</h2>
+
+<p>まずgitを使えるようにしておくこと。</p>
+
+<h2>Node.jsの準備</h2>
+
+<p>Node.js を nvm (Node Version Manager)でバージョン管理できる形で導入する。
+バージョンによって、使えないプラグインがある + バージョン変更が面倒なので入れたほうが良い。
+npmはnvmを入れれば勝手に入ってくる</p>
+
+<p>nvm Node.jsのバージョン管理 コマンドでバージョン変更できる
+npm Node.jsで使用するモジュール管理 コマンドでインストールアンインストールできる</p>
+
+<p>導入が終わったら、Grunt導入</p>
+
+<h2>Gruntのインストール</h2>
+
+<h3>Gruntを動かすコマンドのインストール</h3>
+
+<p>コマンドプロンプトか、ターミナルを立ち上げて以下を入力</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>nvmw use v0.10.26 //使用するバージョン選択
+</span><span class='line'>npm install -g grunt-cli //どこでも使えるように -g パラメータを付ける</span></code></pre></td></tr></table></div></figure>
+
+
+<p>grunt-cli は gruntを実行するためのコマンドリストの意味
+たからgruntをいれてもこれを入れないと動かない</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>grunt -version
+</span><span class='line'>grunt-cli v0.1.13</span></code></pre></td></tr></table></div></figure>
+
+
+<p>とか出ていれば OK</p>
+
+<h3>Gruntを使ってみる</h3>
+
+<p>1 作業ディレクトリを作成して、移動する。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>mkdir samplepath/gruntsample
+</span><span class='line'>cd samplepath/gruntsample</span></code></pre></td></tr></table></div></figure>
+
+
+<p>GUIで作って移動するでも、もちろん良い。</p>
+
+<p>2 設定ファイル「package.json」ファイル作成</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>npm init //対話が終わると package.json が生成される</span></code></pre></td></tr></table></div></figure>
+
+
+<p>ウィザードが色々聞いてくれるのでそれに応えて設定ファイルを作成</p>
+
+<pre><code>package.jsonとは？
+Node.jsが依存ライブラリなどの環境情報を管理するための設定ファイル
+</code></pre>
+
+<p>3 gruntモジュールインストール
+プロジェクト毎にバージョンが違うこともあるので、gruntモジュールは個別にインストール</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>npm install grunt --save-dev</span></code></pre></td></tr></table></div></figure>
+
+
+<p>save-devオプションを付けると、package.json の
+「devDependencies」プロパティに
+モジュール名:バージョン
+を自動追記してくれる</p>
+
+<p>4 Gruntfile.jsファイルの作成
+package.jsonと同じ階層に Gruntfile.js を作成
+以下の内容を記述して、Gruntのタスクの設定する</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>module.exports = function(grunt) {
+</span><span class='line'>  //Gruntの設定
+</span><span class='line'>  grunt.initConfig({
+</span><span class='line'>    pkg: grunt.file.readJSON('package.json')
+</span><span class='line'>  });
+</span><span class='line'>  //defaultタスクの定義
+</span><span class='line'>  grunt.registerTask('default', 'Log some stuff.', function() {
+</span><span class='line'>    //ログメッセージの出力
+</span><span class='line'>    grunt.log.write('Logging some stuff...').ok();
+</span><span class='line'>  });
+</span><span class='line'>};</span></code></pre></td></tr></table></div></figure>
+
+
+<p>コマンドラインで以下を入力してタスクを実行</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>grunt</span></code></pre></td></tr></table></div></figure>
+
+
+<p>gruntのみで動くのはderaultタスクが実行される
+実行コマンドと走らせるタスクはもちろん自分で設定できる。</p>
+
+<h2>参考サイト</h2>
+
+<p><a href="http://www.atmarkit.co.jp/ait/articles/1403/04/news020.html">http://www.atmarkit.co.jp/ait/articles/1403/04/news020.html</a>
+<a href="http://kojika17.com/2013/03/grunt.js-memo.html">http://kojika17.com/2013/03/grunt.js-memo.html</a></p>
 ]]></content>
   </entry>
   
