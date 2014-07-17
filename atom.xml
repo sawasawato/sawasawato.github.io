@@ -4,7 +4,7 @@
   <title><![CDATA[Sawasawato Web Hack Blog]]></title>
   <link href="http://sawasawato.github.io/atom.xml" rel="self"/>
   <link href="http://sawasawato.github.io/"/>
-  <updated>2014-07-14T11:14:44+09:00</updated>
+  <updated>2014-07-17T19:35:53+09:00</updated>
   <id>http://sawasawato.github.io/</id>
   <author>
     <name><![CDATA[Sawasawato]]></name>
@@ -12,6 +12,418 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[gitの基本]]></title>
+    <link href="http://sawasawato.github.io/blog/2014/07/17/git/"/>
+    <updated>2014-07-17T19:02:20+09:00</updated>
+    <id>http://sawasawato.github.io/blog/2014/07/17/git</id>
+    <content type="html"><![CDATA[<!-- more-->
+
+
+<p>ソースツリーの登場によって、最近gitをターミナルで叩くことがかなり減った。
+思い出せないことが増えたので、よく使うコマンドをメモ。</p>
+
+<h2>必須情報を登録</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git config --global user.name "sawasawato"
+</span><span class='line'>git config --global user.email "samp@samp.com"
+</span><span class='line'>git config --global color.ul true //必須ではないけどカラースキームは設定した方が良い</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<h2>git 設定を見直す</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git config -l
+</span><span class='line'>git config --list</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<h2>help を引く</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git sample --help
+</span><span class='line'>git help sample</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<h2>作業ディレクトリ ファイル作成</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd /samp/
+</span><span class='line'>mkdir project //ディレクトリ作成
+</span><span class='line'>vim index.html //ファイル作成 修整 保存</span></code></pre></td></tr></table></div></figure>
+
+
+<p>guiでフォルダとファイルを作っても、もちろん良い</p>
+
+<hr />
+
+<h2>git ローカルリポジトリを作成</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git init</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<h2>ステージングにアップ / インデックスに登録</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git add index.html
+</span><span class='line'>git add . //カレントディレクトリ以内登録</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<h2>ローカルリポジトリにアップ</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git commit
+</span><span class='line'>git commit -m "memoMessage" //コミット内容を表記</span></code></pre></td></tr></table></div></figure>
+
+
+<p>テキストエディタが開くので、作業内容などを入力する</p>
+
+<hr />
+
+<h2>ログを見る</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git log
+</span><span class='line'>git log --oneline //ログをコンパクトに見る
+</span><span class='line'>git log -p //変更された場所を表示
+</span><span class='line'>git log --stat //どのファイルが何箇所、変更があったのか表示</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<h2>現在の状況を把握する 重要</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git status</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Changes not staged for commit:<br/>
+  addもcommitもされていないなど表記される</p>
+
+<hr />
+
+<h2>間違えたファイルを元に戻す</h2>
+
+<p>add してステージングにあがっていないもののみ</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git checkout -- index.html
+</span><span class='line'>git checkout -- .</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<h2>差分を確認する &mdash; ステージングの前</h2>
+
+<p>add してステージングにあがっていないもの</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git diff</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<h2>差分を確認する &mdash; ステージングの後</h2>
+
+<p>add してステージングにあげてしまったもの</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git diff --cached</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<h2>コミットしたファイルを削除する方法</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git rm index.html</span></code></pre></td></tr></table></div></figure>
+
+
+<p>commitして、gitの管理化においたファイルはgitコマンドで削除、移動しないとバグになる。
+SVNも同じ。エクスプローラー や macの操作画面でファイルなど削除、移動しないように。</p>
+
+<hr />
+
+<h2>git 管理化に含めない方法</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>vim .gitignore
+</span><span class='line'>
+</span><span class='line'>*.log //など記述する
+</span><span class='line'>
+</span><span class='line'>ls - la //で .ignore 確認できれば OK</span></code></pre></td></tr></table></div></figure>
+
+
+<p>.gitignore がある階層から下のものを除外する
+gui で作成してももちろん良い。</p>
+
+<hr />
+
+<h2>直前のコミットを上書き変更する</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>vim index.html
+</span><span class='line'>git add .
+</span><span class='line'>git commit --amend</span></code></pre></td></tr></table></div></figure>
+
+
+<p>直前のコミットメッセージだけ変えたいときも有効<br/>
+ファイルを変更していなくても大丈夫</p>
+
+<hr />
+
+<h2>過去のバージョンに戻る</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git reset --hard HEAD //作業したファイルを破棄して、最後にコミットした時にリセットする
+</span><span class='line'>git reset --hard HEAD^ //二つ前に戻る
+</span><span class='line'>git reset --hard 445a3e8 //指定のバージョンに戻る 最低7桁</span></code></pre></td></tr></table></div></figure>
+
+
+<p>HEAD === 一つ前のバージョン というか 作業する前の状態<br/>
+commit ID 445a3e80acc7d7135009e995dd9112d247f0151d<br/>
+など入力しても大丈夫 一つより前に戻る時は ID 入力</p>
+
+<hr />
+
+<h2>前のコミットに戻したけどやっぱり、進んだコミットにしたい</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git reset --hard ORIG_HEAD</span></code></pre></td></tr></table></div></figure>
+
+
+<p>2回リセットした場合はダメ</p>
+
+<hr />
+
+<h2>ブランチを確認</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git branch</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<h2>ブランチを作成</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git branch sample</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<h2>ブランチを移動</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git checkout sample</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<h2>ブランチを削除</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git branch -d sample</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<h2>ブランチを作成してそのまま移動</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git checkout -b sample</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<h2>ブランチをマージする / 内容を取り込む</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git checkout sample //他の変更を取り込むメインブランチに移動
+</span><span class='line'>git marge sample2 //サブブランチから取り込む</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<h2>コンフリクトの解決</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>http://dotinstall.com/lessons/basic_git/6716</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<h2>タグを確認する</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git tag</span></code></pre></td></tr></table></div></figure>
+
+
+<p>タグとは 分かりにくいコミットID を分かりやすい別の名前を付ける<br/>
+リリースバージョン 1.0 のように</p>
+
+<hr />
+
+<h2>直近のコミットに対してタグを付ける</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git tag v1.0</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<h2>タグを使ってコミットの内容を示す</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git show v1.0</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<h2>後からタグを付けたい</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git tag samp コミットID(7桁以上)</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<h2>タグを削除する</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git tag -d v1.0</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<h2>エイリアス(ショートカット)を使う</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git config --global alias.co checkout
+</span><span class='line'>git config --global alias.st status
+</span><span class='line'>git config --global alias.br branch
+</span><span class='line'>git config --global alias.ci commit</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<h2>共有リポジトリの作成</h2>
+
+<p>管理ファイルだけが管理されるようになる設定</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git init --bare</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<h2>共有(別の)リポジトリを登録する</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git remote add origin (repos location)
+</span><span class='line'>
+</span><span class='line'>git remote add origin ~/.ourweb.git</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<h2>共有リポジトリ登録を削除する</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git remote rm orign</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<h2>共有リポジトリに push</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git push origin master</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<h2>リモートリポジトリをコピーする</h2>
+
+<p>予めディレクトリを作成する必要はない</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git clone ~/共有リポジトリパス newdirectory</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<h2>別の人が編集したファイルを取り込む</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git pull origin master</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<h2>\dスイッチを使う</h2>
+
+<p>どこからでも別ディレクトリに移動できるこれは便利</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd \d D:</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<h2>Dドライブに移動する</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>D:</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<h3>参考サイト</h3>
+
+<p><a href="http://dotinstall.com/lessons/basic_git/">http://dotinstall.com/lessons/basic_git/</a> <br/>
+<a href="http://www.backlog.jp/git-guide/">http://www.backlog.jp/git-guide/</a> <br/>
+<a href="https://www.atlassian.com/ja/git/tutorial/git-basics#!overview">https://www.atlassian.com/ja/git/tutorial/git-basics#!overview</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[初めての Grunt 導入方法]]></title>
