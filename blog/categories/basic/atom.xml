@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Basic | Sawasawato Web Hack Blog]]></title>
   <link href="http://sawasawato.github.io/blog/categories/basic/atom.xml" rel="self"/>
   <link href="http://sawasawato.github.io/"/>
-  <updated>2014-08-08T17:57:42+09:00</updated>
+  <updated>2014-08-08T18:42:27+09:00</updated>
   <id>http://sawasawato.github.io/</id>
   <author>
     <name><![CDATA[Sawasawato]]></name>
@@ -130,7 +130,7 @@
 
 <p>```
 git config &mdash;global user.name &ldquo;sawasawato&rdquo;
-git config &mdash;global user.email &ldquo;<a href="&#x6d;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#x73;&#x61;&#x6d;&#112;&#x40;&#x73;&#97;&#x6d;&#112;&#46;&#99;&#x6f;&#109;">&#115;&#97;&#109;&#x70;&#x40;&#115;&#x61;&#x6d;&#x70;&#x2e;&#x63;&#111;&#109;</a>&rdquo;
+git config &mdash;global user.email &ldquo;<a href="&#109;&#97;&#x69;&#108;&#x74;&#111;&#58;&#115;&#97;&#109;&#112;&#64;&#x73;&#97;&#x6d;&#112;&#x2e;&#x63;&#x6f;&#109;">&#x73;&#x61;&#x6d;&#x70;&#x40;&#x73;&#97;&#x6d;&#112;&#x2e;&#99;&#x6f;&#x6d;</a>&rdquo;
 git config &mdash;global color.ul true //必須ではないけどカラースキームは設定した方が良い</p>
 
 <h2>```</h2>
