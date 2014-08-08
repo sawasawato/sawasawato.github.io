@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Basic | Sawasawato Web Hack Blog]]></title>
   <link href="http://sawasawato.github.io/blog/categories/basic/atom.xml" rel="self"/>
   <link href="http://sawasawato.github.io/"/>
-  <updated>2014-07-17T19:35:53+09:00</updated>
+  <updated>2014-08-08T17:57:42+09:00</updated>
   <id>http://sawasawato.github.io/</id>
   <author>
     <name><![CDATA[Sawasawato]]></name>
@@ -12,6 +12,108 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[vpn とは？軽く調べる]]></title>
+    <link href="http://sawasawato.github.io/blog/2014/08/08/vpn/"/>
+    <updated>2014-08-08T17:38:42+09:00</updated>
+    <id>http://sawasawato.github.io/blog/2014/08/08/vpn</id>
+    <content type="html"><![CDATA[<h2>再度調べてみた</h2>
+
+<!-- more -->
+
+
+<p>社内のルーターを変更した関係で、VPNの接続方法が変わったので、再度、調査 + 設定</p>
+
+<h2>VPN とは？ (Virtual Private Network) 仮想プライベートネットワーク</h2>
+
+<blockquote><p>VPNはインターネットや多人数が利用する閉域網を介して、暗号化やトラフィック制御技術によりサイト間があたかもプライベート接続されているかのような状況を実現するものである。 &hellip;wiki</p></blockquote>
+
+<h3>荷物 を運ぶイメージをするとわかりやすい。</h3>
+
+<ul>
+<li>インターネット == 一般道路をつかってそのまま手渡しのイメージ。</li>
+<li>VPN == 一般道路の中に、専用道路をつくり、なおかつ荷物が特定されない工夫までしているイメージ。</li>
+<li>専用通信回線 == 専用地下鉄級 外部からはほぼ入れない</li>
+</ul>
+
+
+<p>現実でも、一般道路は、誰もがどこからでも入ることができるため、盗みを企む人と接触するリスクが増える。<br/>
+専用通信回線は安全、安定だが、その分コストがかかる。</p>
+
+<h2>vpn メリット</h2>
+
+<ul>
+<li>外出先から、安全にインターネットを経由して社内にアクセスできる。</li>
+<li>特定の相手に安全に情報を提供できる。</li>
+<li>利用するアプリを意識しないで良いため、便利</li>
+<li>コストが安い</li>
+</ul>
+
+
+<h2>vpn デメリット</h2>
+
+<ul>
+<li>ファイアウォールと衝突を起こす時もあり、利便性が下がる</li>
+<li>通信速度などネット依存なので、時と場合でパフォーマンスが不安定</li>
+</ul>
+
+
+<hr />
+
+<h2>vpnセットアップ参考サイト</h2>
+
+<h3>・Mac系</h3>
+
+<p><a href="http://ja.softether.org/4-docs/2-howto/L2TP%2F%2FIPsec_Setup_Guide_for_SoftEther_VPN_Server/5.Mac_OS_X_L2TP_Client_Setup">http://ja.softether.org/4-docs/2-howto/L2TP%2F%2FIPsec_Setup_Guide_for_SoftEther_VPN_Server/5.Mac_OS_X_L2TP_Client_Setup</a></p>
+
+<h3>・Windows系</h3>
+
+<p><a href="http://www.seil.jp/support/tech/doc/users-guide/pppac-client/win7_l2tp.html">http://www.seil.jp/support/tech/doc/users-guide/pppac-client/win7_l2tp.html</a></p>
+
+<h3>・iPhone系</h3>
+
+<p><a href="https://ja.softether.org/4-docs/2-howto/L2TP%2F%2FIPsec_Setup_Guide_for_SoftEther_VPN_Server/2.iPhone_iPad_L2TP_Client_Setting">https://ja.softether.org/4-docs/2-howto/L2TP%2F%2FIPsec_Setup_Guide_for_SoftEther_VPN_Server/2.iPhone_iPad_L2TP_Client_Setting</a></p>
+
+<h3>・Android系</h3>
+
+<p><a href="http://www.asiavpn.net/androidl2tp">http://www.asiavpn.net/androidl2tp</a></p>
+
+<hr />
+
+<h2>トラブル</h2>
+
+<h3>繋がらない？</h3>
+
+<p>とりあえず、再起動。<br/>
+電源 OFF 時に前回の不要セッションが溜まったままだと、悪さをするそう。<br/>
+セッションを初期化すると正常にVPN接続できるようになった。</p>
+
+<h3>・エラーが表示された</h3>
+
+<p><code>
+＞Forbidden
+＞You don't have permission to access /ababa/sample/sawaAPI on this server.
+</code></p>
+
+<h3>※Mac</h3>
+
+<p>VPNの詳細設定画面で以下をチェック
+「すべてのトラフィックをVPN接続経由で送信」</p>
+
+<h3>※Windows</h3>
+
+<p>VPNの詳細設定画面で以下をチェック
+「リモートネットワークでデフォルトゲートウェイを使う」</p>
+
+<hr />
+
+<h2>参考サイト</h2>
+
+<p><a href="http://www.atmarkit.co.jp/fsecurity/special/22fivemin/fivemin00.html">http://www.atmarkit.co.jp/fsecurity/special/22fivemin/fivemin00.html</a>
+<a href="http://ja.wikipedia.org/wiki/Virtual_Private_Network">http://ja.wikipedia.org/wiki/Virtual_Private_Network</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[gitの基本]]></title>
@@ -28,7 +130,7 @@
 
 <p>```
 git config &mdash;global user.name &ldquo;sawasawato&rdquo;
-git config &mdash;global user.email &ldquo;<a href="&#109;&#x61;&#105;&#x6c;&#x74;&#111;&#58;&#x73;&#x61;&#109;&#112;&#x40;&#x73;&#x61;&#109;&#112;&#x2e;&#x63;&#x6f;&#x6d;">&#115;&#x61;&#109;&#112;&#x40;&#x73;&#x61;&#x6d;&#112;&#46;&#x63;&#111;&#109;</a>&rdquo;
+git config &mdash;global user.email &ldquo;<a href="&#x6d;&#97;&#105;&#108;&#x74;&#111;&#x3a;&#x73;&#x61;&#x6d;&#112;&#x40;&#x73;&#97;&#x6d;&#112;&#46;&#99;&#x6f;&#109;">&#115;&#97;&#109;&#x70;&#x40;&#115;&#x61;&#x6d;&#x70;&#x2e;&#x63;&#111;&#109;</a>&rdquo;
 git config &mdash;global color.ul true //必須ではないけどカラースキームは設定した方が良い</p>
 
 <h2>```</h2>
@@ -537,332 +639,6 @@ exfat形式の説明など<br/>
     <updated>2014-02-14T16:19:42+09:00</updated>
     <id>http://sawasawato.github.io/blog/2014/02/14/sass</id>
     <content type="html"><![CDATA[
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[GitHubでブログの作成 - markdown markup 違い-]]></title>
-    <link href="http://sawasawato.github.io/blog/2014/01/28/markdown/"/>
-    <updated>2014-01-28T23:11:39+09:00</updated>
-    <id>http://sawasawato.github.io/blog/2014/01/28/markdown</id>
-    <content type="html"><![CDATA[<h2>github octopress Markdown</h2>
-
-<!-- more -->
-
-
-<p>GitもRubyもやったことない人間が興味本位でOctopressを始めようとしたので、<br/>
-驚く位ブログを立ち上げるだけで時間をとられてしまった。<br/>
-後で、導入方法を記述する予定。<br/>
-Octopress で記事を作成するには Markdown なる記述方法が必要とのこと。<br/>
-Markup(HTML)は書いているのである程度わかるものの、知らなかったので調べてみたことを備忘録がてら記述。</p>
-
-<h2>Markdownとは？自分解釈</h2>
-
-<ul>
-<li>軽量マークアップ言語 (結局はマークアップ言語のHTMLに直す)</li>
-<li>簡単</li>
-<li>少ないテキストでマークアップできる</li>
-<li>class id をつけられない === 結局HTML使うらしい。</li>
-</ul>
-
-
-<h2>Markdown Markup 違い</h2>
-
-<ul>
-<li>Markup &hellip; &lt;タグ>sample&lt;/タグ></li>
-<li>Markdown &hellip; #記号 #h1見出し ##h2見出し 以降記号と表現する。</li>
-</ul>
-
-
-<p>お固い解釈など興味のある方は
-本家へ <a href="http://daringfireball.net/projects/markdown/">http://daringfireball.net/projects/markdown/</a></p>
-
-<hr />
-
-<h2>見出し #h1〜h6</h2>
-
-<p>```</p>
-
-<h1>見出しh1</h1>
-
-<h2>見出し h2</h2>
-
-<h3>見出し h3</h3>
-
-<h4>見出し h4</h4>
-
-<h5>見出し h5</h5>
-
-<h6>見出し h6</h6>
-
-<p>```</p>
-
-<h1>見出し h1</h1>
-
-<h2>見出し h2</h2>
-
-<h3>見出し h3</h3>
-
-<h4>見出し h4</h4>
-
-<h5>見出し h5</h5>
-
-<h6>見出し h6</h6>
-
-<hr />
-
-<h2>見出しの別の書き方</h2>
-
-<p>```</p>
-
-<h1>Title1 の下に=</h1>
-
-<h2>Title2 の下に-</h2>
-
-<p>```</p>
-
-<h1>Title1 の下に=</h1>
-
-<h2>Title2 の下に-</h2>
-
-<hr />
-
-<h2>段落 p</h2>
-
-<p>```
-段落を分けるには改行の後に</p>
-
-<p>空白を入れるだけ。</p>
-
-<p>```
-改行するには改行の後に</p>
-
-<p>空白を入れるだけ。</p>
-
-<hr />
-
-<h2>改行 br</h2>
-
-<p><code>
-複数行で改行を入れたい場合は、  
-改行の後に半角スペース2回以上入れる。  
-改行するだけでは、
-改行されないので
-</code>
-複数行で改行を入れたい場合は、<br/>
-改行の後に半角スペース2回以上入れる。<br/>
-改行するだけでは、
-改行されないので</p>
-
-<hr />
-
-<h2>強調 em strong</h2>
-
-<p><code>
-強調を示す場合は*(アスタリスク) で囲むか  
-_(アンダースコア) で囲む  
-*em* は＊か＿で一つ囲む  
-__strongは__ ＊か＿で二つ囲む
-</code>
-強調を示す場合は*(アスタリスク) で囲むか<br/>
-_(アンダースコア) で囲む<br/>
-<strong>em</strong> は＊か＿で一つ囲む<br/>
-<strong>strong</strong> は ＊か＿で二つ囲む</p>
-
-<hr />
-
-<h2>引用 bvockquote</h2>
-
-<p>```</p>
-
-<blockquote><p>引用な文章です。</p>
-
-<blockquote><p>入れ子にすることもできる。
-```
-引用な文章です。
-入れ子にすることもできる。</p></blockquote></blockquote>
-
-<hr />
-
-<h2>リスト番号なし ul > li</h2>
-
-<p><code>
-リストを示すには*(アスタリスク),-(ハイフン),+(プラス)のどれかを入力し、スペースまたはタブで挿入する。
-* 上下に空白を一つ入れよう
-+ 記号の前に空白をつけると見れなくなるよ
-- 記号の後に入れるスペースをお忘れなく
-</code></p>
-
-<p>リストを示すには*(アスタリスク),&ndash;(ハイフン),+(プラス)のどれかを入力し、スペースまたはタブで挿入する。</p>
-
-<ul>
-<li>上下に空白を一つ入れよう</li>
-<li>記号の前に空白をつけると見れなくなるよ</li>
-<li>記号の後に入れるスペースをお忘れなく</li>
-</ul>
-
-
-<hr />
-
-<h2>リスト番号あり ol > li</h2>
-
-<p><code>
-1. item1 数字は適当でも
-3. item3 順番に表示
-2. item2 されるよ!
-2. item4 便利だね。
-</code></p>
-
-<ol>
-<li>item1 数字は適当でも</li>
-<li>item3 順番に表示</li>
-<li>item2 されるよ!</li>
-<li>item4 便利だね。</li>
-</ol>
-
-
-<hr />
-
-<h2>リンクを書く</h2>
-
-<p>```
-自動リンク <a href="http://sawasawato.github.io/">http://sawasawato.github.io/</a></p>
-
-<p><a href="http://sawasawato.github.io/">インラインリンク</a></p>
-
-<p><a href="pass/sawasawato.img">外部参照リンク</a></p>
-
-<p>```
-自動リンク <a href="http://sawasawato.github.io/">http://sawasawato.github.io/</a></p>
-
-<p><a href="http://sawasawato.github.io/">インラインリンク</a></p>
-
-<p><a href="pass/sawasawato.img">外部参照リンク</a></p>
-
-<hr />
-
-<h2>画像を読み込む img</h2>
-
-<p>```
-<img src="pass/sawasawato.img" alt="Altタグだよ" /></p>
-
-<p><img src="pass/sawasawato.img" alt="Altタグだよ" /></p>
-
-<p><a href="http://sawasawato.github.io/"><img src="pass/sawasawato.img" alt="画像にリンクをはるよ" /></a></p>
-
-<p>```
-<img src="pass/sawasawato.img" alt="Altタグだよ" /></p>
-
-<p><img src="pass/sawasawato.img" alt="Altタグだよ" /></p>
-
-<p><a href="http://sawasawato.github.io/"><img src="pass/sawasawato.img" alt="画像にリンクをはるよ" /></a></p>
-
-<hr />
-
-<h2>コードブロックを書く1 pre > code</h2>
-
-<p>```
-コードブロックの書き方</p>
-
-<pre><code>スペースを4つつける?   
-自分の環境だとタブ一つできく
-</code></pre>
-
-<p>```</p>
-
-<pre><code>コードブロックの書き方
-スペースを4つつける?   
-自分の環境だとタブ一つできく
-</code></pre>
-
-<hr />
-
-<h2>コードブロックを書く2 pre (このブログは設定変更中)</h2>
-
-<p><code>
-</code>
-コードを書くときなど、&lt;S+@>の<code>(バッククオート)
-をつなげた</code>で文章を囲む。<br/>
-`は二つつなげると"と判断されるよう。この機能じゃまだな。。。
- <code>
-</code></p>
-
-<hr />
-
-<h2>水平線 hr</h2>
-
-<p>```
--を3つつなげる</p>
-
-<hr />
-
-<p>*を3つつなげる</p>
-
-<hr />
-
-<p>```
- -を3つつなげる</p>
-
-<hr />
-
-<p> *を3つつなげる</p>
-
-<hr />
-
-<h2>マークダウン記号をエスケープさせる</h2>
-
-<p><code>
-/#
-</code>
-/#</p>
-
-<hr />
-
-<h2>こういう時は素直にマークアップを使おう</h2>
-
-<ul>
-<li>リンクを<em>ターゲットブランク</em>にしたい</li>
-<li>タグにクラスやIDをつけたい</li>
-<li>ここで紹介された以外のHTMLタグを使いたい</li>
-</ul>
-
-
-<h2>感想</h2>
-
-<p>細かな設定は結局 HTML になるものの、新しい面白い技術。<br/>
-vim + Zencoding = Emmet を積んでカスタマイズしても、Markdownの方が、早く書くことができる。<br/>
-でも画像の入力が手間+属性をつけられないので、画像の管理が面倒<br/>
-画像はローカルじゃなくてクラウドで管理してる人が多いみたい<br/>
-あくまでテキストベースなので、float 使ったカラムの変更とかは向かないのがなんかもったいない。<br/>
-割とvimとは相性が良くない方かもだけど、vimrcにスにペッドを書いてもよさそう。<br/>
-とりあえず、スペースの可視化は必須かな<br/>
-<code>
-set list
-set listchars=tab:&gt;-,extends:&lt;,trail:-,eol:&lt;
-</code>
-細かなvimrcの設定が気になる方はこの方を参考に<br/>
-<a href="http://blog.remora.cx/2011/08/display-invisible-characters-on-vim.html">http://blog.remora.cx/2011/08/display-invisible-characters-on-vim.html</a></p>
-
-<p>なんか悔しいけどwこれはEmaxの方が書きやすいかも</p>
-
-<hr />
-
-<h2>参考にさせていただいた偉人の方々 -SpecialThanks-</h2>
-
-<p>ドットインストール 田口さんは偉大w<br/>
-<a href="http://dotinstall.com/lessons/basic_markdown">http://dotinstall.com/lessons/basic_markdown</a></p>
-
-<p>Milk+eaさん<br/>
-<a href="http://totora0155.hatenablog.jp/entry/2013/03/11/220213">http://totora0155.hatenablog.jp/entry/2013/03/11/220213</a></p>
-
-<p>mimemoさん<br/>
-<a href="http://www.miukoba.net/blog/2013/01/05/start-octopress/">http://www.miukoba.net/blog/2013/01/05/start-octopress/</a></p>
-
-<p>ゆっくりとさん<br/>
-<a href="http://tokkono.cute.coocan.jp/blog/slow/index.php/programming/markdown-skills-for-github-beginners/">http://tokkono.cute.coocan.jp/blog/slow/index.php/programming/markdown-skills-for-github-beginners/</a></p>
-
-<p>こじかさん いつも勉強させていただいてます<br/>
-<a href="http://kojika17.com/2013/01/starting-markdown.html">http://kojika17.com/2013/01/starting-markdown.html</a></p>
 ]]></content>
   </entry>
   
