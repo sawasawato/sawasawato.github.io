@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>vpn とは？軽く調べる - Sawasawato Web Hack Blog</title>
+  <title>git 差分ファイル抽出 - Sawasawato Web Hack Blog</title>
   <meta name="author" content="Sawasawato">
 
    
@@ -19,7 +19,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://sawasawato.github.io/blog/2014/08/08/vpn">
+  <link rel="canonical" href="http://sawasawato.github.io/blog/2014/08/20/git-diff">
   <link href="/favicon.png" rel="icon">
   <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
@@ -95,7 +95,7 @@
 
   <header>
   <div class="jumbotron">
-    Vpn とは？軽く調べる
+    Git 差分ファイル抽出
 	<h5>
 
 
@@ -108,106 +108,89 @@
   
 
 
-<i class="icon-calendar-empty"></i> <time datetime="2014-08-08T17:38:42+09:00" pubdate data-updated="true">Aug 8<span>th</span>, 2014</time></h5>
+<i class="icon-calendar-empty"></i> <time datetime="2014-08-20T14:17:10+09:00" pubdate data-updated="true">Aug 20<span>th</span>, 2014</time></h5>
   </div>
 </header>
   <div class="row-fluid">
     <div class="span12">
-      <h2>再度調べてみた</h2>
+      <h2>git で差分ファイルを抽出する方法</h2>
 
 <!-- more -->
 
 
-<p>社内のルーターを変更した関係で、VPNの接続方法が変わったので、再度、調査 + 設定</p>
-
-<h2>VPN とは？ (Virtual Private Network) 仮想プライベートネットワーク</h2>
-
-<blockquote><p>VPNはインターネットや多人数が利用する閉域網を介して、暗号化やトラフィック制御技術によりサイト間があたかもプライベート接続されているかのような状況を実現するものである。 &hellip;wiki</p></blockquote>
-
-<h3>荷物 を運ぶイメージをするとわかりやすい。</h3>
-
-<ul>
-<li>インターネット == 一般道路をつかってそのまま手渡しのイメージ。</li>
-<li>VPN == 一般道路の中に、専用道路をつくり、なおかつ荷物が特定されない工夫までしているイメージ。</li>
-<li>専用通信回線 == 専用地下鉄級 外部からはほぼ入れない</li>
-</ul>
-
-
-<p>現実でも、一般道路は、誰もがどこからでも入ることができるため、盗みを企む人と接触するリスクが増える。<br/>
-専用通信回線は安全、安定だが、その分コストがかかる。</p>
-
-<h2>vpn メリット</h2>
-
-<ul>
-<li>外出先から、安全にインターネットを経由して社内にアクセスできる。</li>
-<li>特定の相手に安全に情報を提供できる。</li>
-<li>利用するアプリを意識しないで良いため、便利</li>
-<li>コストが安い</li>
-</ul>
-
-
-<h2>vpn デメリット</h2>
-
-<ul>
-<li>ファイアウォールと衝突を起こす時もあり、利便性が下がる</li>
-<li>通信速度などネット依存なので、時と場合でパフォーマンスが不安定</li>
-</ul>
-
-
-<hr />
-
-<h2>vpnセットアップ参考サイト</h2>
-
-<h3>・Mac系</h3>
-
-<p><a href="http://ja.softether.org/4-docs/2-howto/L2TP%2F%2FIPsec_Setup_Guide_for_SoftEther_VPN_Server/5.Mac_OS_X_L2TP_Client_Setup">http://ja.softether.org/4-docs/2-howto/L2TP%2F%2FIPsec_Setup_Guide_for_SoftEther_VPN_Server/5.Mac_OS_X_L2TP_Client_Setup</a></p>
-
-<h3>・Windows系</h3>
-
-<p><a href="http://www.seil.jp/support/tech/doc/users-guide/pppac-client/win7_l2tp.html">http://www.seil.jp/support/tech/doc/users-guide/pppac-client/win7_l2tp.html</a></p>
-
-<h3>・iPhone系</h3>
-
-<p><a href="https://ja.softether.org/4-docs/2-howto/L2TP%2F%2FIPsec_Setup_Guide_for_SoftEther_VPN_Server/2.iPhone_iPad_L2TP_Client_Setting">https://ja.softether.org/4-docs/2-howto/L2TP%2F%2FIPsec_Setup_Guide_for_SoftEther_VPN_Server/2.iPhone_iPad_L2TP_Client_Setting</a></p>
-
-<h3>・Android系</h3>
-
-<p><a href="http://www.asiavpn.net/androidl2tp">http://www.asiavpn.net/androidl2tp</a></p>
-
-<hr />
-
-<h2>トラブル</h2>
-
-<h3>繋がらない？</h3>
-
-<p>とりあえず、再起動。<br/>
-電源 OFF 時に前回の不要セッションが溜まったままだと、悪さをするそう。<br/>
-セッションを初期化すると正常にVPN接続できるようになった。</p>
-
-<h3>・エラーが表示された</h3>
+<p>クライアントに納品する時に、差分で欲しいと良く言われる。<br/>
+誤上書きのリスクを避けられるのと、バグが出た時に原因を追いやすくするため。<br/>
+gitを利用するだけで、差分用のディレクトリを手動で作成したり、タイムスタンプで確認など不毛な作業から解放される。</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>＞Forbidden
-</span><span class='line'>＞You don't have permission to access /ababa/sample/sawaAPI on this server.</span></code></pre></td></tr></table></div></figure>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git archive --format=zip --prefix=root/ HEAD `git diff --name-only HEAD HEAD^` -o sample.zip
+</span><span class='line'>git archive --format=zip --prefix=root/ HEAD `git diff --name-only HEAD HEAD~1` -o sample.zip
+</span><span class='line'>git archive HEAD `git diff --name-only HEAD HEAD~1` -o sample.zip
+</span><span class='line'>git archive 3b4a6ca `git diff --name-only 3b4a6ca ea155fc ` -o sample.zip</span></code></pre></td></tr></table></div></figure>
 
 
-<h3>※Mac</h3>
+<hr />
 
-<p>VPNの詳細設定画面で以下をチェック
-「すべてのトラフィックをVPN接続経由で送信」</p>
+<h3>git archive 説明</h3>
 
-<h3>※Windows</h3>
+<p>[ git archive ] アーカイブを作るコマンド</p>
 
-<p>VPNの詳細設定画面で以下をチェック
-「リモートネットワークでデフォルトゲートウェイを使う」</p>
+<ul>
+<li>&mdash;format == 圧縮形式の指定</li>
+<li>&mdash;prefix == 保存先のディレクトリ指定 ないとカレントディレクトリに保存される
+            &mdash;prefix=root/でrootディレクトリに入れてくれる。
+
+<ul>
+<li>-o == 出力先とファイル名指定</li>
+</ul>
+</li>
+</ul>
+
+
+<hr />
+
+<h3>git diff 説明</h3>
+
+<p>[ git diff ]<br/>
+&mdash;name-only == ファイルパスを返してくれる</p>
+
+<hr />
+
+<h4>特定のリビジョンのアーカイブを作成</h4>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git archive HEAD -o sample.zip
+</span><span class='line'>git archive d4bb5fa -o sample.zip //ID7桁入力</span></code></pre></td></tr></table></div></figure>
+
+
+<p>-o オプションをつけないと、文字化けの文字列がターミナル上に表示され続けてクラッシュする。<br/>
+前の時のが、効果がよかったから、丸々戻してくれと言われた時に便利</p>
+
+<hr />
+
+<h3>特定のファイル、ディレクトリをアーカイブする</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>git archive HEAD Gruntfile.js -o sample.zip
+</span><span class='line'>git archive d4bb5fa Gruntfile.js -o sample.zip //ID7桁入力</span></code></pre></td></tr></table></div></figure>
+
 
 <hr />
 
 <h2>参考サイト</h2>
 
-<p><a href="http://www.atmarkit.co.jp/fsecurity/special/22fivemin/fivemin00.html">http://www.atmarkit.co.jp/fsecurity/special/22fivemin/fivemin00.html</a>
-<a href="http://ja.wikipedia.org/wiki/Virtual_Private_Network">http://ja.wikipedia.org/wiki/Virtual_Private_Network</a></p>
+<ul>
+<li><a href="http://qiita.com/kaminaly/items/28f9cb4e680deb700833">http://qiita.com/kaminaly/items/28f9cb4e680deb700833</a></li>
+<li><a href="http://transitive.info/article/git/command/archive/">http://transitive.info/article/git/command/archive/</a></li>
+<li><a href="http://transitive.info/article/git/command/diff/">http://transitive.info/article/git/command/diff/</a></li>
+<li><a href="http://git-scm.com/docs/git-archive">http://git-scm.com/docs/git-archive</a></li>
+</ul>
+
 
     </div>
   </div>
@@ -226,7 +209,7 @@
 
 
 
-  <a href="/blog/categories/basic/"><span class="badge">Basic</span></a>
+  <a href="/blog/categories/git/"><span class="badge">git</span></a>
 
 
 
@@ -258,10 +241,8 @@
       <div class="span12">
         <p class="meta">
           
-            <a class="basic-alignment left" href="/blog/2014/07/17/git/" title="Previous Post: gitの基本">&laquo; gitの基本</a>
+            <a class="basic-alignment left" href="/blog/2014/08/08/mac/" title="Previous Post: mac ショートカットコマンド">&laquo; mac ショートカットコマンド</a>
           
-          
-            <a class="basic-alignment right" href="/blog/2014/08/08/mac/" title="Next Post: mac ショートカットコマンド">mac ショートカットコマンド &raquo;</a>
           
         </p>
       </div>

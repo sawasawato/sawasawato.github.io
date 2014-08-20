@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Basic | Sawasawato Web Hack Blog]]></title>
   <link href="http://sawasawato.github.io/blog/categories/basic/atom.xml" rel="self"/>
   <link href="http://sawasawato.github.io/"/>
-  <updated>2014-08-08T18:47:28+09:00</updated>
+  <updated>2014-08-20T16:31:59+09:00</updated>
   <id>http://sawasawato.github.io/</id>
   <author>
     <name><![CDATA[Sawasawato]]></name>
@@ -12,6 +12,30 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[mac ショートカットコマンド]]></title>
+    <link href="http://sawasawato.github.io/blog/2014/08/08/mac/"/>
+    <updated>2014-08-08T20:54:42+09:00</updated>
+    <id>http://sawasawato.github.io/blog/2014/08/08/mac</id>
+    <content type="html"><![CDATA[<!--more-->
+
+
+<h2>Mac おすすめコマンド</h2>
+
+<p>Windows から本格的に mac に切り替える時に
+もとWinユーザーnoあるあるをまとめる</p>
+
+<h2>mac ショートカットコマンド7選</h2>
+
+<p>ターミナルを開く
+ファインダーを開く</p>
+
+<h2>参考サイト</h2>
+
+<p><a href="http://inforati.jp/apple/mac-tips-techniques/system-hints/how-to-operate-folder-with-mac-finder-keyboard-shortcut.html">http://inforati.jp/apple/mac-tips-techniques/system-hints/how-to-operate-folder-with-mac-finder-keyboard-shortcut.html</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[vpn とは？軽く調べる]]></title>
@@ -130,7 +154,7 @@
 
 <p>```
 git config &mdash;global user.name &ldquo;sawasawato&rdquo;
-git config &mdash;global user.email &ldquo;<a href="&#x6d;&#97;&#105;&#108;&#116;&#111;&#58;&#x73;&#x61;&#109;&#x70;&#64;&#115;&#97;&#x6d;&#x70;&#46;&#x63;&#x6f;&#109;">&#x73;&#97;&#109;&#112;&#x40;&#115;&#x61;&#109;&#x70;&#46;&#x63;&#111;&#x6d;</a>&rdquo;
+git config &mdash;global user.email &ldquo;<a href="&#x6d;&#97;&#105;&#108;&#116;&#111;&#58;&#x73;&#x61;&#x6d;&#x70;&#64;&#x73;&#x61;&#109;&#112;&#x2e;&#99;&#x6f;&#x6d;">&#x73;&#x61;&#x6d;&#112;&#64;&#x73;&#x61;&#109;&#x70;&#46;&#x63;&#111;&#x6d;</a>&rdquo;
 git config &mdash;global color.ul true //必須ではないけどカラースキームは設定した方が良い</p>
 
 <h2>```</h2>
@@ -630,15 +654,6 @@ exfat形式の説明など<br/>
 
 <p>アロケーションユニットサイズのベンチマーク (古い)<br/>
 <a href="http://freesoft.tvbok.com/tips/hddssd_tips/exfat-usb.html">http://freesoft.tvbok.com/tips/hddssd_tips/exfat-usb.html</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[sass]]></title>
-    <link href="http://sawasawato.github.io/blog/2014/02/14/sass/"/>
-    <updated>2014-02-14T16:19:42+09:00</updated>
-    <id>http://sawasawato.github.io/blog/2014/02/14/sass</id>
-    <content type="html"><![CDATA[
 ]]></content>
   </entry>
   

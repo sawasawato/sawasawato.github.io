@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: git | Sawasawato Web Hack Blog]]></title>
+  <link href="http://sawasawato.github.io/blog/categories/git/atom.xml" rel="self"/>
+  <link href="http://sawasawato.github.io/"/>
+  <updated>2014-08-20T16:31:59+09:00</updated>
+  <id>http://sawasawato.github.io/</id>
+  <author>
+    <name><![CDATA[Sawasawato]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[git 差分ファイル抽出]]></title>
+    <link href="http://sawasawato.github.io/blog/2014/08/20/git-diff/"/>
+    <updated>2014-08-20T14:17:10+09:00</updated>
+    <id>http://sawasawato.github.io/blog/2014/08/20/git-diff</id>
+    <content type="html"><![CDATA[<h2>git で差分ファイルを抽出する方法</h2>
+
+<!-- more -->
+
+
+<p>クライアントに納品する時に、差分で欲しいと良く言われる。<br/>
+誤上書きのリスクを避けられるのと、バグが出た時に原因を追いやすくするため。<br/>
+gitを利用するだけで、差分用のディレクトリを手動で作成したり、タイムスタンプで確認など不毛な作業から解放される。</p>
+
+<p><code>``
+git archive --format=zip --prefix=root/ HEAD</code>git diff &mdash;name-only HEAD HEAD^<code>-o sample.zip
+git archive --format=zip --prefix=root/ HEAD</code>git diff &mdash;name-only HEAD HEAD~1<code>-o sample.zip
+git archive HEAD</code>git diff &mdash;name-only HEAD HEAD~1<code>-o sample.zip
+git archive 3b4a6ca</code>git diff &mdash;name-only 3b4a6ca ea155fc ` -o sample.zip</p>
+
+<h2>```</h2>
+
+<h3>git archive 説明</h3>
+
+<p>[ git archive ] アーカイブを作るコマンド</p>
+
+<ul>
+<li>&mdash;format == 圧縮形式の指定</li>
+<li>&mdash;prefix == 保存先のディレクトリ指定 ないとカレントディレクトリに保存される
+            &mdash;prefix=root/でrootディレクトリに入れてくれる。
+
+<ul>
+<li>-o == 出力先とファイル名指定</li>
+</ul>
+</li>
+</ul>
+
+
+<hr />
+
+<h3>git diff 説明</h3>
+
+<p>[ git diff ]<br/>
+&mdash;name-only == ファイルパスを返してくれる</p>
+
+<hr />
+
+<h4>特定のリビジョンのアーカイブを作成</h4>
+
+<p><code>
+git archive HEAD -o sample.zip
+git archive d4bb5fa -o sample.zip //ID7桁入力
+</code>
+-o オプションをつけないと、文字化けの文字列がターミナル上に表示され続けてクラッシュする。<br/>
+前の時のが、効果がよかったから、丸々戻してくれと言われた時に便利</p>
+
+<hr />
+
+<h3>特定のファイル、ディレクトリをアーカイブする</h3>
+
+<p>```
+git archive HEAD Gruntfile.js -o sample.zip
+git archive d4bb5fa Gruntfile.js -o sample.zip //ID7桁入力</p>
+
+<h2>```</h2>
+
+<h2>参考サイト</h2>
+
+<ul>
+<li><a href="http://qiita.com/kaminaly/items/28f9cb4e680deb700833">http://qiita.com/kaminaly/items/28f9cb4e680deb700833</a></li>
+<li><a href="http://transitive.info/article/git/command/archive/">http://transitive.info/article/git/command/archive/</a></li>
+<li><a href="http://transitive.info/article/git/command/diff/">http://transitive.info/article/git/command/diff/</a></li>
+<li><a href="http://git-scm.com/docs/git-archive">http://git-scm.com/docs/git-archive</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>
