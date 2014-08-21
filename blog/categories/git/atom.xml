@@ -4,7 +4,7 @@
   <title><![CDATA[Category: git | Sawasawato Web Hack Blog]]></title>
   <link href="http://sawasawato.github.io/blog/categories/git/atom.xml" rel="self"/>
   <link href="http://sawasawato.github.io/"/>
-  <updated>2014-08-20T16:32:54+09:00</updated>
+  <updated>2014-08-21T21:46:24+09:00</updated>
   <id>http://sawasawato.github.io/</id>
   <author>
     <name><![CDATA[Sawasawato]]></name>
@@ -37,17 +37,12 @@ git archive 3b4a6ca</code>git diff &mdash;name-only 3b4a6ca ea155fc ` -o sample.
 
 <h3>git archive 説明</h3>
 
-<p>[ git archive ] アーカイブを作るコマンド</p>
+<p>[ <strong>git archive</strong> ] アーカイブを作るコマンド</p>
 
 <ul>
 <li>&mdash;format == 圧縮形式の指定</li>
-<li>&mdash;prefix == 保存先のディレクトリ指定 ないとカレントディレクトリに保存される&mdash;
-            &mdash;prefix=root/でrootディレクトリに入れてくれる。
-
-<ul>
+<li>&mdash;prefix == 保存先のディレクトリ指定 ないとカレントディレクトリに保存される&mdash;prefix=root/でrootディレクトリに入れてくれる。</li>
 <li>-o == 出力先とファイル名指定</li>
-</ul>
-</li>
 </ul>
 
 
@@ -55,7 +50,7 @@ git archive 3b4a6ca</code>git diff &mdash;name-only 3b4a6ca ea155fc ` -o sample.
 
 <h3>git diff 説明</h3>
 
-<p>[ git diff ]<br/>
+<p>[ <strong>git diff</strong> ] 変更された箇所を表示するコマンド
 &mdash;name-only == ファイルパスを返してくれる</p>
 
 <hr />

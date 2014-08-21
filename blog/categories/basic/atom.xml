@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Basic | Sawasawato Web Hack Blog]]></title>
+  <title><![CDATA[Category: basic | Sawasawato Web Hack Blog]]></title>
   <link href="http://sawasawato.github.io/blog/categories/basic/atom.xml" rel="self"/>
   <link href="http://sawasawato.github.io/"/>
-  <updated>2014-08-20T16:32:54+09:00</updated>
+  <updated>2014-08-21T21:46:24+09:00</updated>
   <id>http://sawasawato.github.io/</id>
   <author>
     <name><![CDATA[Sawasawato]]></name>
@@ -14,646 +14,209 @@
 
   
   <entry>
-    <title type="html"><![CDATA[mac ショートカットコマンド]]></title>
-    <link href="http://sawasawato.github.io/blog/2014/08/08/mac/"/>
-    <updated>2014-08-08T20:54:42+09:00</updated>
-    <id>http://sawasawato.github.io/blog/2014/08/08/mac</id>
-    <content type="html"><![CDATA[<!--more-->
-
-
-<h2>Mac おすすめコマンド</h2>
-
-<p>Windows から本格的に mac に切り替える時に
-もとWinユーザーnoあるあるをまとめる</p>
-
-<h2>mac ショートカットコマンド7選</h2>
-
-<p>ターミナルを開く
-ファインダーを開く</p>
-
-<h2>参考サイト</h2>
-
-<p><a href="http://inforati.jp/apple/mac-tips-techniques/system-hints/how-to-operate-folder-with-mac-finder-keyboard-shortcut.html">http://inforati.jp/apple/mac-tips-techniques/system-hints/how-to-operate-folder-with-mac-finder-keyboard-shortcut.html</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[vpn とは？軽く調べる]]></title>
-    <link href="http://sawasawato.github.io/blog/2014/08/08/vpn/"/>
-    <updated>2014-08-08T17:38:42+09:00</updated>
-    <id>http://sawasawato.github.io/blog/2014/08/08/vpn</id>
-    <content type="html"><![CDATA[<h2>再度調べてみた</h2>
+    <title type="html"><![CDATA[Mac初心者オススメ<br />ターミナルで使う 厳選UNIXコマンド]]></title>
+    <link href="http://sawasawato.github.io/blog/2014/08/21/unix-command/"/>
+    <updated>2014-08-21T21:20:22+09:00</updated>
+    <id>http://sawasawato.github.io/blog/2014/08/21/unix-command</id>
+    <content type="html"><![CDATA[<h2>Macはデフォルトで強力</h2>
 
 <!-- more -->
 
 
-<p>社内のルーターを変更した関係で、VPNの接続方法が変わったので、再度、調査 + 設定</p>
+<p>GUIが魅力のMac でもそれだけでなく、CUIもかなり強力。<br/>
+Winのコマンドプロンプトなどは、デフォルトだと貧弱すぎるのでカスタマイズしたり。<br/>
+CygWin 入れたり、それでもクセがあって使いにくい。<br/>
+MacはUNIXベースな上、デフォルトが良い感じなので、初心者でも是非使うべき。<br/>
+スタバなどで、ターミナルを立ち上げて、できる大人を演出しよう</p>
 
-<h2>VPN とは？ (Virtual Private Network) 仮想プライベートネットワーク</h2>
-
-<blockquote><p>VPNはインターネットや多人数が利用する閉域網を介して、暗号化やトラフィック制御技術によりサイト間があたかもプライベート接続されているかのような状況を実現するものである。 &hellip;wiki</p></blockquote>
-
-<h3>荷物 を運ぶイメージをするとわかりやすい。</h3>
-
-<ul>
-<li>インターネット == 一般道路をつかってそのまま手渡しのイメージ。</li>
-<li>VPN == 一般道路の中に、専用道路をつくり、なおかつ荷物が特定されない工夫までしているイメージ。</li>
-<li>専用通信回線 == 専用地下鉄級 外部からはほぼ入れない</li>
-</ul>
-
-
-<p>現実でも、一般道路は、誰もがどこからでも入ることができるため、盗みを企む人と接触するリスクが増える。<br/>
-専用通信回線は安全、安定だが、その分コストがかかる。</p>
-
-<h2>vpn メリット</h2>
-
-<ul>
-<li>外出先から、安全にインターネットを経由して社内にアクセスできる。</li>
-<li>特定の相手に安全に情報を提供できる。</li>
-<li>利用するアプリを意識しないで良いため、便利</li>
-<li>コストが安い</li>
-</ul>
-
-
-<h2>vpn デメリット</h2>
-
-<ul>
-<li>ファイアウォールと衝突を起こす時もあり、利便性が下がる</li>
-<li>通信速度などネット依存なので、時と場合でパフォーマンスが不安定</li>
-</ul>
-
-
-<hr />
-
-<h2>vpnセットアップ参考サイト</h2>
-
-<h3>・Mac系</h3>
-
-<p><a href="http://ja.softether.org/4-docs/2-howto/L2TP%2F%2FIPsec_Setup_Guide_for_SoftEther_VPN_Server/5.Mac_OS_X_L2TP_Client_Setup">http://ja.softether.org/4-docs/2-howto/L2TP%2F%2FIPsec_Setup_Guide_for_SoftEther_VPN_Server/5.Mac_OS_X_L2TP_Client_Setup</a></p>
-
-<h3>・Windows系</h3>
-
-<p><a href="http://www.seil.jp/support/tech/doc/users-guide/pppac-client/win7_l2tp.html">http://www.seil.jp/support/tech/doc/users-guide/pppac-client/win7_l2tp.html</a></p>
-
-<h3>・iPhone系</h3>
-
-<p><a href="https://ja.softether.org/4-docs/2-howto/L2TP%2F%2FIPsec_Setup_Guide_for_SoftEther_VPN_Server/2.iPhone_iPad_L2TP_Client_Setting">https://ja.softether.org/4-docs/2-howto/L2TP%2F%2FIPsec_Setup_Guide_for_SoftEther_VPN_Server/2.iPhone_iPad_L2TP_Client_Setting</a></p>
-
-<h3>・Android系</h3>
-
-<p><a href="http://www.asiavpn.net/androidl2tp">http://www.asiavpn.net/androidl2tp</a></p>
-
-<hr />
-
-<h2>トラブル</h2>
-
-<h3>繋がらない？</h3>
-
-<p>とりあえず、再起動。<br/>
-電源 OFF 時に前回の不要セッションが溜まったままだと、悪さをするそう。<br/>
-セッションを初期化すると正常にVPN接続できるようになった。</p>
-
-<h3>・エラーが表示された</h3>
+<h3>基本構文</h3>
 
 <p><code>
-＞Forbidden
-＞You don't have permission to access /ababa/sample/sawaAPI on this server.
-</code></p>
+コマンド
+コマンド + オプション
+コマンド + 引数
+コマンド + オプション + 引数
+</code>
+半角スペースを間に入れる
+「オプション + 引数」 の場合 オプションが先
+return (enter) 実行</p>
 
-<h3>※Mac</h3>
+<hr />
 
-<p>VPNの詳細設定画面で以下をチェック
-「すべてのトラフィックをVPN接続経由で送信」</p>
+<h2>作業(カレント)ディレクトリ表示</h2>
 
-<h3>※Windows</h3>
+<p><code>
+pwd
+  /usr/
+</code>
+pwd == (print working directory)</p>
 
-<p>VPNの詳細設定画面で以下をチェック
-「リモートネットワークでデフォルトゲートウェイを使う」</p>
+<hr />
+
+<h2>作業(カレント)ディレクトリ変更</h2>
+
+<p>```
+cd samp_directory
+  /usr/samp_directory</p>
+
+<p>cd /usr/samp_directory/
+  /usr/samp_directory</p>
+
+<p>cd ../
+  /usr/
+```
+cd == (change directory)
+引数に「絶対パス」 「相対パス」を入力する<br/>
+./  カレントディレクトリ 現在いる階層<br/>
+../ ペアレントディレクトリ 一つ上の階層 何個でも書ける</p>
+
+<h3>タブ補完</h3>
+
+<p><code>
+cd sa &lt;Tab&gt;
+cd samp_directory  //と勝手に入力してくれる
+</code>
+毎回パスを手打ちするのは面倒なので指定するディレクトリやファイル名の途中で
+タブボタンを押すと勝手に入力してくれる。 &hellip;便利</p>
+
+<hr />
+
+<h2>ファイルの一覧表示</h2>
+
+<p><code>
+ls
+ls -a //隠しファイル、ディレクトリ表示
+ls -i //ファイルの詳細を表示
+ls -F //ファイルタイプを表す記号を付けて表示
+ls -R //サブディレクトリの中身も表示
+</code>
+ls == (list segments)
+良く使うオプションのみ紹介、他にもあるけど割愛。必要に応じて<br/>
+オプション複数指定できる</p>
+
+<hr />
+
+<h2>ディレクトリを作成</h2>
+
+<p><code>
+mkdir samp_directory
+mkdir -pv samp_directory //結果も返す
+mkdir -m samp_directory //パーミッションも合わせて設定する
+</code>
+mkdir == (make directory)</p>
+
+<hr />
+
+<h2>ファイルを削除</h2>
+
+<p>```
+rm samp_directory
+rm -r //指定したディレクトリを中身ごと削除
+rm -f //警告、エラーを発生させずに対象を削除
+rm -i //削除するかを（ユーザに）確認しながら削除
+rm -v //削除後、内容を表示</p>
+
+<p>```
+ rm == (remove)
+ rmdir も削除コマンドとしてあるけど、中身があると削除できないので使えない。&mdash;
+ rm -r はかなり使うので覚えよう。</p>
+
+<hr />
+
+<h2>ファイル(ディレクトリ)を検索</h2>
+
+<p><code>
+find [検索対象ディレクトリパス] -name filename
+find -name "*.html" -ls
+</code>
+ワイルドカードなどのメタ文字を使用する時は &ldquo;ダブルクォーテーションで囲む&rdquo;</p>
+
+<hr />
+
+<h2>テキストファイルから、任意の文字を検索 (正規表現に一致)</h2>
+
+<p><code>
+grep [option][pattern][file1]
+grep samp *.html
+grep -n samp *.html //検索で見つかった行番号を表示
+grep -r samp *.html //カレントディレクトリ以下のディレクトリの中身も検索
+grep -R samp *.html //カレントディレクトリ以下のディレクトリの中身も検索
+</code>
+find と組み合わせた検索方法は必須なので、覚えること</p>
+
+<hr />
+
+<h2>ファイルやディレクトリの複製をつくる</h2>
+
+<p>```
+cp [option] Source Target
+cp -i samp.txt samp_directory/samp.txt
+cp -f コピー先に同名ファイルがあった時、確認せずに上書きする
+cr -i コピー先に同名ファイルがあった時、上書きするか確認する
+cp -r //ディレクトリを複製する時に使用</p>
+
+<p>```
+ cp == (copy)
+Sourceがコピー元で、Targetがコピー先
+GUIのが楽で早いのであまり使わない
+コピー時に別の名前でもコピーできる</p>
+
+<hr />
+
+<h2>ファイルやディレクトリを移動、名前変更</h2>
+
+<p>```
+mv [option] Source Target
+mv [option] Source Path
+mv -f 移動先に同名ファイルがあった時、確認せずに上書きする
+mv -i 移動先に同名ファイルがあった時、上書きするか確認する</p>
+
+<p>```
+ mv== (move files)</p>
+
+<hr />
+
+<h2>入力したコマンドの履歴を確認</h2>
+
+<p><code>
+history
+↑
+↓
+</code>
+十字キー 上 下 で履歴を追うこともできる。割と便利</p>
+
+<hr />
+
+<h2>ターミナルに表示された内容を消去する</h2>
+
+<p><code>
+clear
+</code>
+ログが溜まって確認の効率が落ちた時など便利</p>
+
+<hr />
+
+<h2>コマンドの細かな使い方を確認</h2>
+
+<p><code>
+man [command]
+help [command]
+</code>
+ man == (manual)
+マニュアルが読めたら</p>
 
 <hr />
 
 <h2>参考サイト</h2>
 
-<p><a href="http://www.atmarkit.co.jp/fsecurity/special/22fivemin/fivemin00.html">http://www.atmarkit.co.jp/fsecurity/special/22fivemin/fivemin00.html</a>
-<a href="http://ja.wikipedia.org/wiki/Virtual_Private_Network">http://ja.wikipedia.org/wiki/Virtual_Private_Network</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[gitの基本]]></title>
-    <link href="http://sawasawato.github.io/blog/2014/07/17/git/"/>
-    <updated>2014-07-17T19:02:20+09:00</updated>
-    <id>http://sawasawato.github.io/blog/2014/07/17/git</id>
-    <content type="html"><![CDATA[<!-- more-->
-
-
-<p>ソースツリーの登場によって、最近gitをターミナルで叩くことがかなり減った。
-思い出せないことが増えたので、よく使うコマンドをメモ。</p>
-
-<h2>必須情報を登録</h2>
-
-<p>```
-git config &mdash;global user.name &ldquo;sawasawato&rdquo;
-git config &mdash;global user.email &ldquo;<a href="&#109;&#x61;&#105;&#108;&#116;&#111;&#x3a;&#115;&#x61;&#109;&#x70;&#64;&#x73;&#x61;&#x6d;&#112;&#x2e;&#99;&#111;&#109;">&#x73;&#x61;&#x6d;&#112;&#64;&#x73;&#97;&#x6d;&#112;&#x2e;&#x63;&#111;&#x6d;</a>&rdquo;
-git config &mdash;global color.ul true //必須ではないけどカラースキームは設定した方が良い</p>
-
-<h2>```</h2>
-
-<h2>git 設定を見直す</h2>
-
-<p>```
-git config -l
-git config &mdash;list</p>
-
-<h2>```</h2>
-
-<h2>help を引く</h2>
-
-<p>```
-git sample &mdash;help
-git help sample</p>
-
-<h2>```</h2>
-
-<h2>作業ディレクトリ ファイル作成</h2>
-
-<p><code>
-cd /samp/
-mkdir project //ディレクトリ作成
-vim index.html //ファイル作成 修整 保存
-</code>
-guiでフォルダとファイルを作っても、もちろん良い</p>
-
-<hr />
-
-<h2>git ローカルリポジトリを作成</h2>
-
-<p>```
-git init</p>
-
-<h2>```</h2>
-
-<h2>ステージングにアップ / インデックスに登録</h2>
-
-<p>```
-git add index.html
-git add . //カレントディレクトリ以内登録</p>
-
-<h2>```</h2>
-
-<h2>ローカルリポジトリにアップ</h2>
-
-<p><code>
-git commit
-git commit -m "memoMessage" //コミット内容を表記
-</code>
-テキストエディタが開くので、作業内容などを入力する</p>
-
-<hr />
-
-<h2>ログを見る</h2>
-
-<p>```
-git log
-git log &mdash;oneline //ログをコンパクトに見る
-git log -p //変更された場所を表示
-git log &mdash;stat //どのファイルが何箇所、変更があったのか表示</p>
-
-<h2>```</h2>
-
-<h2>現在の状況を把握する 重要</h2>
-
-<p><code>
-git status
-</code>
-Changes not staged for commit:<br/>
-  addもcommitもされていないなど表記される</p>
-
-<hr />
-
-<h2>間違えたファイルを元に戻す</h2>
-
-<p>add してステージングにあがっていないもののみ
-<code>
-git checkout -- index.html
-git checkout -- .
-</code></p>
-
-<hr />
-
-<h2>差分を確認する &mdash; ステージングの前</h2>
-
-<p>add してステージングにあがっていないもの
-<code>
-git diff
-</code></p>
-
-<hr />
-
-<h2>差分を確認する &mdash; ステージングの後</h2>
-
-<p>add してステージングにあげてしまったもの
-<code>
-git diff --cached
-</code></p>
-
-<hr />
-
-<h2>コミットしたファイルを削除する方法</h2>
-
-<p><code>
-git rm index.html
-</code>
-commitして、gitの管理化においたファイルはgitコマンドで削除、移動しないとバグになる。
-SVNも同じ。エクスプローラー や macの操作画面でファイルなど削除、移動しないように。</p>
-
-<hr />
-
-<h2>git 管理化に含めない方法</h2>
-
-<p>```
-vim .gitignore</p>
-
-<p>*.log //など記述する</p>
-
-<p>ls &ndash; la //で .ignore 確認できれば OK
-```
-.gitignore がある階層から下のものを除外する
-gui で作成してももちろん良い。</p>
-
-<hr />
-
-<h2>直前のコミットを上書き変更する</h2>
-
-<p><code>
-vim index.html
-git add .
-git commit --amend
-</code>
-直前のコミットメッセージだけ変えたいときも有効<br/>
-ファイルを変更していなくても大丈夫</p>
-
-<hr />
-
-<h2>過去のバージョンに戻る</h2>
-
-<p><code>
-git reset --hard HEAD //作業したファイルを破棄して、最後にコミットした時にリセットする
-git reset --hard HEAD^ //二つ前に戻る
-git reset --hard 445a3e8 //指定のバージョンに戻る 最低7桁
-</code>
-HEAD === 一つ前のバージョン というか 作業する前の状態<br/>
-commit ID 445a3e80acc7d7135009e995dd9112d247f0151d<br/>
-など入力しても大丈夫 一つより前に戻る時は ID 入力</p>
-
-<hr />
-
-<h2>前のコミットに戻したけどやっぱり、進んだコミットにしたい</h2>
-
-<p><code>
-git reset --hard ORIG_HEAD
-</code>
-2回リセットした場合はダメ</p>
-
-<hr />
-
-<h2>ブランチを確認</h2>
-
-<p>```
-git branch</p>
-
-<h2>```</h2>
-
-<h2>ブランチを作成</h2>
-
-<p>```
-git branch sample</p>
-
-<h2>```</h2>
-
-<h2>ブランチを移動</h2>
-
-<p>```
-git checkout sample</p>
-
-<h2>```</h2>
-
-<h2>ブランチを削除</h2>
-
-<p>```
-git branch -d sample</p>
-
-<h2>```</h2>
-
-<h2>ブランチを作成してそのまま移動</h2>
-
-<p>```
-git checkout -b sample</p>
-
-<h2>```</h2>
-
-<h2>ブランチをマージする / 内容を取り込む</h2>
-
-<p>```
-git checkout sample //他の変更を取り込むメインブランチに移動
-git marge sample2 //サブブランチから取り込む</p>
-
-<h2>```</h2>
-
-<h2>コンフリクトの解決</h2>
-
-<p>```
-<a href="http://dotinstall.com/lessons/basic_git/6716">http://dotinstall.com/lessons/basic_git/6716</a></p>
-
-<h2>```</h2>
-
-<h2>タグを確認する</h2>
-
-<p><code>
-git tag
-</code>
-タグとは 分かりにくいコミットID を分かりやすい別の名前を付ける<br/>
-リリースバージョン 1.0 のように</p>
-
-<hr />
-
-<h2>直近のコミットに対してタグを付ける</h2>
-
-<p>```
-git tag v1.0</p>
-
-<h2>```</h2>
-
-<h2>タグを使ってコミットの内容を示す</h2>
-
-<p>```
-git show v1.0</p>
-
-<h2>```</h2>
-
-<h2>後からタグを付けたい</h2>
-
-<p>```
-git tag samp コミットID(7桁以上)</p>
-
-<h2>```</h2>
-
-<h2>タグを削除する</h2>
-
-<p>```
-git tag -d v1.0</p>
-
-<h2>```</h2>
-
-<h2>エイリアス(ショートカット)を使う</h2>
-
-<p>```
-git config &mdash;global alias.co checkout
-git config &mdash;global alias.st status
-git config &mdash;global alias.br branch
-git config &mdash;global alias.ci commit</p>
-
-<h2>```</h2>
-
-<h2>共有リポジトリの作成</h2>
-
-<p>管理ファイルだけが管理されるようになる設定
-```
-git init &mdash;bare</p>
-
-<h2>```</h2>
-
-<h2>共有(別の)リポジトリを登録する</h2>
-
-<p>```
-git remote add origin (repos location)</p>
-
-<p>git remote add origin ~/.ourweb.git</p>
-
-<h2>```</h2>
-
-<h2>共有リポジトリ登録を削除する</h2>
-
-<p>```
-git remote rm orign</p>
-
-<h2>```</h2>
-
-<h2>共有リポジトリに push</h2>
-
-<p>```
-git push origin master</p>
-
-<h2>```</h2>
-
-<h2>リモートリポジトリをコピーする</h2>
-
-<p>予めディレクトリを作成する必要はない
-```
-git clone ~/共有リポジトリパス newdirectory</p>
-
-<h2>```</h2>
-
-<h2>別の人が編集したファイルを取り込む</h2>
-
-<p>```
-git pull origin master</p>
-
-<h2>```</h2>
-
-<h2>\dスイッチを使う</h2>
-
-<p>どこからでも別ディレクトリに移動できるこれは便利
-```
-cd \d D:</p>
-
-<h2>```</h2>
-
-<h2>Dドライブに移動する</h2>
-
-<p>```
-D:</p>
-
-<h2>```</h2>
-
-<h3>参考サイト</h3>
-
-<p><a href="http://dotinstall.com/lessons/basic_git/">http://dotinstall.com/lessons/basic_git/</a> <br/>
-<a href="http://www.backlog.jp/git-guide/">http://www.backlog.jp/git-guide/</a> <br/>
-<a href="https://www.atlassian.com/ja/git/tutorial/git-basics#!overview">https://www.atlassian.com/ja/git/tutorial/git-basics#!overview</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[SourceTree(ソースツリー) 差分ファイル 作成 Win mac]]></title>
-    <link href="http://sawasawato.github.io/blog/2014/07/11/sorcetree/"/>
-    <updated>2014-07-11T16:16:42+09:00</updated>
-    <id>http://sawasawato.github.io/blog/2014/07/11/sorcetree</id>
-    <content type="html"><![CDATA[<!-- more -->
-
-
-<h2>mac環境 ソースツリーを使って 差分ファイル を作成</h2>
-
-<p>まずmacの方は既に素晴らしいサイトを見つけたので下のサイトへ
-<a href="https://www.eyemovic.com/blog_it/4747.php">https://www.eyemovic.com/blog_it/4747.php</a></p>
-
-<h2>win環境 ソースツリーを使って 差分ファイル を作成</h2>
-
-<p>下のサイトを参考にバッチファイルを使って、差分ファイルを作成。
-<a href="http://stackoverflow.com/questions/21639415/create-archive-of-modified-files-in-git-via-batch-file">http://stackoverflow.com/questions/21639415/create-archive-of-modified-files-in-git-via-batch-file</a></p>
-
-<p>・急ぎ追記:一部の差分がとれない不安定な動作を発見したため、参考程度に見てください。
-現在原因、調査中</p>
-
-<h2>差分ファイル作成バッチを作成</h2>
-
-<h3>1 以下の内容を記入した .batファイル を作成</h3>
-
-<p>ファイル名、ディレクトリは好みで。
-自分の場合、以下で作成</p>
-
-<p>C:\Users\sawasawato\source_tree_difference.bat</p>
-
-<p><code>
-setlocal enabledelayedexpansion
-set output=
-for /f "delims=" %%a in ('git diff --name-only %1^^') do ( set output=!output! "%%a" )
-git archive -o update.zip HEAD %output%
-endlocal
-</code></p>
-
-<h3>2 SourceTree(ソースツリー) でカスタム設定する</h3>
-
-<p><code>
-ソースツリーを立ち上げ、左上の メニュー
-ツール &gt; オプション &gt; カスタム操作
-</code>
-&ndash; メニュー表示名  ポップアップメニューで表示させる名前の選択。今回「差分ファイル作成」とする。
-&ndash; 実行するスクリプト  先ほど作成したバッチファイルを選択する。
-&ndash; パラメータは無視</p>
-
-<p>確か少し前 macでしかカスタム操作ができなかったと思うけど
-アップデートで Win でもできるようになった模様。</p>
-
-<p>◆ここから上で紹介したマックとの操作が異なる</p>
-
-<h3>3 差分を出したいリビジョンまで戻す。</h3>
-
-<p>ソースツリーログリスト画面で、差分が欲しいところで右クリック
-<code>
-「現在のブランチをこのコミットまでリセット」
-</code></p>
-
-<p>で戻す。使うモードは Mixed</p>
-
-<h3>4 いよいよ差分をだす。</h3>
-
-<p>3と同様、リスト(どこでもいい)</p>
-
-<p><code>
-右クリック &gt; カスタムオプション &gt; 差分ファイル作成
-</code></p>
-
-<p>.gitのあるディレクトリに差分ファイル</p>
-
-<p><strong>update.zip</strong></p>
-
-<p>が作成される。</p>
-
-<h3>5 戻す</h3>
-
-<p>4と同様、最後は現状のリビジョンに戻す。</p>
-
-<p>grunt watchとか立ち上げてると移動時、勝手に走ってしまうので
-止めてから行いましょう。</p>
-
-<h2>そもそもgitとは？</h2>
-
-<p><a href="https://docs.google.com/presentation/d/19d-faZoJcecBGZmzxYoFJt0P8d6_YUV5hefePVJLQpo/edit#slide=id.gae738927_0107">https://docs.google.com/presentation/d/19d-faZoJcecBGZmzxYoFJt0P8d6_YUV5hefePVJLQpo/edit#slide=id.gae738927_0107</a></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[外付け HDD フォーマット Win Mac 兼用 exFAT]]></title>
-    <link href="http://sawasawato.github.io/blog/2014/07/05/exfat/"/>
-    <updated>2014-07-05T21:51:45+09:00</updated>
-    <id>http://sawasawato.github.io/blog/2014/07/05/exfat</id>
-    <content type="html"><![CDATA[<h2>外付けHDD をWinでもMacでも使えるように設定する</h2>
-
-<!-- more -->
-
-
-<p>外付け HDD はフォーマット(初期化)しないと使えない。<br/>
-フォーマット形式によって、外付けハードディスクは Mac と Win で兼用できない。<br/>
-Windowsの「NTFSフォーマット」はOS Xでは読み取り専用でしか触れない。<br/>
-Macの「HFS+ドライブはWindowsコンピュータでは読む込むこともできない。</p>
-
-<h2>両方のOSで管理したい時には 「exFAT」 が良い。</h2>
-
-<p>exFATは最近のMac（Leopardでは不可）、Windowsマシンの両方で読み込み・書き込みが可能なファイルシステム<br/>
-Windowsでドライブをフォーマットする。mac(OS-X)ではクロスプラットフォームで使用できない。</p>
-
-<h3>手順</h3>
-
-<p><code>
-Windows ボタン → コンピュータ
-外付けHDD (下の方) を右クリックして、メニューから 「フォーマット」を選択
-ファイルシステム欄で「exFAT」を選択
-アロケーションユニットは触らない (任意好みで)
-ボリュームラベル を任意の名前に編集
-クイックフォーマット のチェックを外す
-実行
-</code></p>
-
-<h3>容量が 200MB 〜 1GB しか認識されない。</h3>
-
-<p><code>
-Windows ボタン → コンピュータを右クリック 「管理」をクリック
-記憶域 &gt; ディスクの管理 &gt; フォーマットしたいHDD を 右クリック 「ボリュームの削除」
-下の部分に 「未割り当て」 右クリック 「新しいシンプルボリューム」 クリック
-ウィザードが立ち上がるので、指示にしたがう。
-</code></p>
-
-<h3>補足</h3>
-
-<h4>アロケーションユニットサイズとは?</h4>
-
 <ul>
-<li>クラスタのサイズの事</li>
-<li>クラスタ === ディスクを管理する際の基本の単位</li>
-<li>1クラスタ == 4KBでフォーマットされているディスクにわずか1バイトのファイルを保存しても、4KBが使われる。）</li>
-<li>残りの使われていない無駄領域を「クラスタギャップ」という</li>
-<li>サイズを小さくする：クラスタギャップは少なくなるが、総クラスタ数が多くなって若干アクセスが遅くなる。</li>
-<li>サイズを大きくする：比較的小さなサイズのファイルが多い時には、クラスタギャップが多くなる。</li>
-<li>書き込み速度の違いは、主にファイルの上書きで発生</li>
+<li><a href="http://dotinstall.com/lessons/basic_unix">http://dotinstall.com/lessons/basic_unix</a></li>
+<li><a href="http://webya.in/archives/3676">http://webya.in/archives/3676</a></li>
+<li><a href="http://macwiki.sourceforge.jp/wiki/index.php/UNIX%E3%81%AE%E5%9F%BA%E6%9C%AC%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">http://macwiki.sourceforge.jp/wiki/index.php/UNIX%E3%81%AE%E5%9F%BA%E6%9C%AC%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89</a></li>
+<li><a href="http://news.mynavi.jp/column/wc/013/">http://news.mynavi.jp/column/wc/013/</a>
+1</li>
 </ul>
 
-
-<p>まとめ
-高くすると転送速度が早くなるけど、使用しない無駄な領域ができる。（クラスタギャップ）
-低くすると転送速度は遅くなるけど、無駄な領域が減る。</p>
-
-<p>注意
-※フォーマットするとハードディスク内のデータは削除される。
-  必要なデータは必ずバックアップしておくこと。
-※フォーマット後に容量が 200MB〜1GBしか認識されない場合は再度フォーマットをする。</p>
-
-<p>まとめ リンク<br/>
-exfat形式の説明など<br/>
-<a href="http://www.lifehacker.jp/2012/07/120730exfatfile.html">http://www.lifehacker.jp/2012/07/120730exfatfile.html</a></p>
-
-<p>Mac フォーマット方法<br/>
-<a href="http://toneliko.com/561/">http://toneliko.com/561/</a></p>
-
-<p>exfat 形式でファーマットする方法<br/>
-<a href="http://jmatsuzaki.com/archives/11064">http://jmatsuzaki.com/archives/11064</a></p>
-
-<p>アロケーションのユニットサイズとは？<br/>
-<a href="http://pcnomori.blog.fc2.com/blog-entry-82.html">http://pcnomori.blog.fc2.com/blog-entry-82.html</a> <br/>
-<a href="http://okwave.jp/qa/q679423.html">http://okwave.jp/qa/q679423.html</a></p>
-
-<p>アロケーションユニットサイズのベンチマーク (古い)<br/>
-<a href="http://freesoft.tvbok.com/tips/hddssd_tips/exfat-usb.html">http://freesoft.tvbok.com/tips/hddssd_tips/exfat-usb.html</a></p>
 ]]></content>
   </entry>
   

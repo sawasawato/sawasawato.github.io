@@ -2,70 +2,74 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://sawasawato.github.io/blog/2014/01/28/markdown/</loc>
-        <lastmod>2014-08-08T18:34:23+09:00</lastmod>
+        <lastmod>2014-08-21T21:46:10+09:00</lastmod>
     </url>
     <url>
         <loc>http://sawasawato.github.io/blog/2014/02/14/sass/</loc>
-        <lastmod>2014-08-08T18:34:23+09:00</lastmod>
+        <lastmod>2014-08-21T21:46:10+09:00</lastmod>
     </url>
     <url>
         <loc>http://sawasawato.github.io/blog/2014/04/10/vim/</loc>
-        <lastmod>2014-08-08T18:34:23+09:00</lastmod>
+        <lastmod>2014-08-21T21:46:10+09:00</lastmod>
     </url>
     <url>
         <loc>http://sawasawato.github.io/blog/2014/05/28/octopress-themechange/</loc>
-        <lastmod>2014-08-08T18:34:23+09:00</lastmod>
+        <lastmod>2014-08-21T21:46:10+09:00</lastmod>
     </url>
     <url>
         <loc>http://sawasawato.github.io/blog/2014/06/13/</loc>
-        <lastmod>2014-08-08T18:34:23+09:00</lastmod>
+        <lastmod>2014-08-21T21:46:10+09:00</lastmod>
     </url>
     <url>
         <loc>http://sawasawato.github.io/blog/2014/07/04/nodematome/</loc>
-        <lastmod>2014-08-08T18:34:23+09:00</lastmod>
+        <lastmod>2014-08-21T21:46:10+09:00</lastmod>
     </url>
     <url>
         <loc>http://sawasawato.github.io/blog/2014/07/05/exfat/</loc>
-        <lastmod>2014-08-08T18:34:23+09:00</lastmod>
+        <lastmod>2014-08-21T21:46:10+09:00</lastmod>
     </url>
     <url>
         <loc>http://sawasawato.github.io/blog/2014/07/11/sorcetree/</loc>
-        <lastmod>2014-08-08T18:34:23+09:00</lastmod>
+        <lastmod>2014-08-21T21:46:10+09:00</lastmod>
     </url>
     <url>
         <loc>http://sawasawato.github.io/blog/2014/07/11/grunt/</loc>
-        <lastmod>2014-08-08T18:34:23+09:00</lastmod>
+        <lastmod>2014-08-21T21:46:10+09:00</lastmod>
     </url>
     <url>
         <loc>http://sawasawato.github.io/blog/2014/07/17/git/</loc>
-        <lastmod>2014-08-08T18:34:23+09:00</lastmod>
+        <lastmod>2014-08-21T21:46:10+09:00</lastmod>
     </url>
     <url>
         <loc>http://sawasawato.github.io/blog/2014/08/08/vpn/</loc>
-        <lastmod>2014-08-08T18:34:23+09:00</lastmod>
+        <lastmod>2014-08-21T21:46:10+09:00</lastmod>
     </url>
     <url>
         <loc>http://sawasawato.github.io/blog/2014/08/08/mac/</loc>
-        <lastmod>2014-08-08T21:03:39+09:00</lastmod>
+        <lastmod>2014-08-21T21:46:10+09:00</lastmod>
     </url>
     <url>
         <loc>http://sawasawato.github.io/blog/2014/08/20/git-diff/</loc>
-        <lastmod>2014-08-20T16:32:39+09:00</lastmod>
+        <lastmod>2014-08-21T21:46:10+09:00</lastmod>
+    </url>
+    <url>
+        <loc>http://sawasawato.github.io/blog/2014/08/21/unix-command/</loc>
+        <lastmod>2014-08-21T21:46:10+09:00</lastmod>
     </url>
     <url>
         <loc>http://sawasawato.github.io/about/</loc>
-        <lastmod>2014-08-08T18:34:23+09:00</lastmod>
+        <lastmod>2014-08-21T21:46:10+09:00</lastmod>
     </url>
     <url>
         <loc>http://sawasawato.github.io/blog/archives/</loc>
-        <lastmod>2014-08-20T16:32:39+09:00</lastmod>
+        <lastmod>2014-08-21T21:46:10+09:00</lastmod>
     </url>
     <url>
         <loc>http://sawasawato.github.io/</loc>
-        <lastmod>2014-08-20T16:32:39+09:00</lastmod>
+        <lastmod>2014-08-21T21:46:11+09:00</lastmod>
     </url>
     <url>
         <loc>http://sawasawato.github.io/robots.txt</loc>
-        <lastmod>2014-08-08T18:34:23+09:00</lastmod>
+        <lastmod>2014-08-21T21:46:11+09:00</lastmod>
     </url>
 </urlset>

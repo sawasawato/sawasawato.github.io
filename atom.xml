@@ -4,7 +4,7 @@
   <title><![CDATA[Sawasawato Web Hack Blog]]></title>
   <link href="http://sawasawato.github.io/atom.xml" rel="self"/>
   <link href="http://sawasawato.github.io/"/>
-  <updated>2014-08-20T16:32:54+09:00</updated>
+  <updated>2014-08-21T21:46:24+09:00</updated>
   <id>http://sawasawato.github.io/</id>
   <author>
     <name><![CDATA[Sawasawato]]></name>
@@ -12,6 +12,264 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Mac初心者オススメ<br />ターミナルで使う 厳選UNIXコマンド]]></title>
+    <link href="http://sawasawato.github.io/blog/2014/08/21/unix-command/"/>
+    <updated>2014-08-21T21:20:22+09:00</updated>
+    <id>http://sawasawato.github.io/blog/2014/08/21/unix-command</id>
+    <content type="html"><![CDATA[<h2>Macはデフォルトで強力</h2>
+
+<!-- more -->
+
+
+<p>GUIが魅力のMac でもそれだけでなく、CUIもかなり強力。<br/>
+Winのコマンドプロンプトなどは、デフォルトだと貧弱すぎるのでカスタマイズしたり。<br/>
+CygWin 入れたり、それでもクセがあって使いにくい。<br/>
+MacはUNIXベースな上、デフォルトが良い感じなので、初心者でも是非使うべき。<br/>
+スタバなどで、ターミナルを立ち上げて、できる大人を演出しよう</p>
+
+<h3>基本構文</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>コマンド
+</span><span class='line'>コマンド + オプション
+</span><span class='line'>コマンド + 引数
+</span><span class='line'>コマンド + オプション + 引数</span></code></pre></td></tr></table></div></figure>
+
+
+<p>半角スペースを間に入れる
+「オプション + 引数」 の場合 オプションが先
+return (enter) 実行</p>
+
+<hr />
+
+<h2>作業(カレント)ディレクトリ表示</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>pwd
+</span><span class='line'>  /usr/</span></code></pre></td></tr></table></div></figure>
+
+
+<p>pwd == (print working directory)</p>
+
+<hr />
+
+<h2>作業(カレント)ディレクトリ変更</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd samp_directory
+</span><span class='line'>  /usr/samp_directory
+</span><span class='line'>
+</span><span class='line'>cd /usr/samp_directory/
+</span><span class='line'>  /usr/samp_directory
+</span><span class='line'>
+</span><span class='line'>cd ../
+</span><span class='line'>  /usr/</span></code></pre></td></tr></table></div></figure>
+
+
+<p>cd == (change directory)
+引数に「絶対パス」 「相対パス」を入力する<br/>
+./  カレントディレクトリ 現在いる階層<br/>
+../ ペアレントディレクトリ 一つ上の階層 何個でも書ける</p>
+
+<h3>タブ補完</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd sa &lt;Tab&gt;
+</span><span class='line'>cd samp_directory  //と勝手に入力してくれる</span></code></pre></td></tr></table></div></figure>
+
+
+<p>毎回パスを手打ちするのは面倒なので指定するディレクトリやファイル名の途中で
+タブボタンを押すと勝手に入力してくれる。 &hellip;便利</p>
+
+<hr />
+
+<h2>ファイルの一覧表示</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ls
+</span><span class='line'>ls -a //隠しファイル、ディレクトリ表示
+</span><span class='line'>ls -i //ファイルの詳細を表示
+</span><span class='line'>ls -F //ファイルタイプを表す記号を付けて表示
+</span><span class='line'>ls -R //サブディレクトリの中身も表示</span></code></pre></td></tr></table></div></figure>
+
+
+<p>ls == (list segments)
+良く使うオプションのみ紹介、他にもあるけど割愛。必要に応じて<br/>
+オプション複数指定できる</p>
+
+<hr />
+
+<h2>ディレクトリを作成</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>mkdir samp_directory
+</span><span class='line'>mkdir -pv samp_directory //結果も返す
+</span><span class='line'>mkdir -m samp_directory //パーミッションも合わせて設定する</span></code></pre></td></tr></table></div></figure>
+
+
+<p>mkdir == (make directory)</p>
+
+<hr />
+
+<h2>ファイルを削除</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rm samp_directory
+</span><span class='line'>rm -r //指定したディレクトリを中身ごと削除
+</span><span class='line'>rm -f //警告、エラーを発生させずに対象を削除
+</span><span class='line'>rm -i //削除するかを（ユーザに）確認しながら削除
+</span><span class='line'>rm -v //削除後、内容を表示
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p> rm == (remove)
+ rmdir も削除コマンドとしてあるけど、中身があると削除できないので使えない。&mdash;
+ rm -r はかなり使うので覚えよう。</p>
+
+<hr />
+
+<h2>ファイル(ディレクトリ)を検索</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>find [検索対象ディレクトリパス] -name filename
+</span><span class='line'>find -name "*.html" -ls</span></code></pre></td></tr></table></div></figure>
+
+
+<p>ワイルドカードなどのメタ文字を使用する時は &ldquo;ダブルクォーテーションで囲む&rdquo;</p>
+
+<hr />
+
+<h2>テキストファイルから、任意の文字を検索 (正規表現に一致)</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>grep [option][pattern][file1]
+</span><span class='line'>grep samp *.html
+</span><span class='line'>grep -n samp *.html //検索で見つかった行番号を表示
+</span><span class='line'>grep -r samp *.html //カレントディレクトリ以下のディレクトリの中身も検索
+</span><span class='line'>grep -R samp *.html //カレントディレクトリ以下のディレクトリの中身も検索</span></code></pre></td></tr></table></div></figure>
+
+
+<p>find と組み合わせた検索方法は必須なので、覚えること</p>
+
+<hr />
+
+<h2>ファイルやディレクトリの複製をつくる</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cp [option] Source Target
+</span><span class='line'>cp -i samp.txt samp_directory/samp.txt
+</span><span class='line'>cp -f コピー先に同名ファイルがあった時、確認せずに上書きする
+</span><span class='line'>cr -i コピー先に同名ファイルがあった時、上書きするか確認する
+</span><span class='line'>cp -r //ディレクトリを複製する時に使用
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p> cp == (copy)
+Sourceがコピー元で、Targetがコピー先
+GUIのが楽で早いのであまり使わない
+コピー時に別の名前でもコピーできる</p>
+
+<hr />
+
+<h2>ファイルやディレクトリを移動、名前変更</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>mv [option] Source Target
+</span><span class='line'>mv [option] Source Path
+</span><span class='line'>mv -f 移動先に同名ファイルがあった時、確認せずに上書きする
+</span><span class='line'>mv -i 移動先に同名ファイルがあった時、上書きするか確認する
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p> mv== (move files)</p>
+
+<hr />
+
+<h2>入力したコマンドの履歴を確認</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>history
+</span><span class='line'>↑
+</span><span class='line'>↓</span></code></pre></td></tr></table></div></figure>
+
+
+<p>十字キー 上 下 で履歴を追うこともできる。割と便利</p>
+
+<hr />
+
+<h2>ターミナルに表示された内容を消去する</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>clear</span></code></pre></td></tr></table></div></figure>
+
+
+<p>ログが溜まって確認の効率が落ちた時など便利</p>
+
+<hr />
+
+<h2>コマンドの細かな使い方を確認</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>man [command]
+</span><span class='line'>help [command]</span></code></pre></td></tr></table></div></figure>
+
+
+<p> man == (manual)
+マニュアルが読めたら</p>
+
+<hr />
+
+<h2>参考サイト</h2>
+
+<ul>
+<li><a href="http://dotinstall.com/lessons/basic_unix">http://dotinstall.com/lessons/basic_unix</a></li>
+<li><a href="http://webya.in/archives/3676">http://webya.in/archives/3676</a></li>
+<li><a href="http://macwiki.sourceforge.jp/wiki/index.php/UNIX%E3%81%AE%E5%9F%BA%E6%9C%AC%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89">http://macwiki.sourceforge.jp/wiki/index.php/UNIX%E3%81%AE%E5%9F%BA%E6%9C%AC%E3%82%B3%E3%83%9E%E3%83%B3%E3%83%89</a></li>
+<li><a href="http://news.mynavi.jp/column/wc/013/">http://news.mynavi.jp/column/wc/013/</a>
+1</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[git 差分ファイル抽出]]></title>
@@ -41,17 +299,12 @@ gitを利用するだけで、差分用のディレクトリを手動で作成�
 
 <h3>git archive 説明</h3>
 
-<p>[ git archive ] アーカイブを作るコマンド</p>
+<p>[ <strong>git archive</strong> ] アーカイブを作るコマンド</p>
 
 <ul>
 <li>&mdash;format == 圧縮形式の指定</li>
-<li>&mdash;prefix == 保存先のディレクトリ指定 ないとカレントディレクトリに保存される&mdash;
-            &mdash;prefix=root/でrootディレクトリに入れてくれる。
-
-<ul>
+<li>&mdash;prefix == 保存先のディレクトリ指定 ないとカレントディレクトリに保存される&mdash;prefix=root/でrootディレクトリに入れてくれる。</li>
 <li>-o == 出力先とファイル名指定</li>
-</ul>
-</li>
 </ul>
 
 
@@ -59,7 +312,7 @@ gitを利用するだけで、差分用のディレクトリを手動で作成�
 
 <h3>git diff 説明</h3>
 
-<p>[ git diff ]<br/>
+<p>[ <strong>git diff</strong> ] 変更された箇所を表示するコマンド
 &mdash;name-only == ファイルパスを返してくれる</p>
 
 <hr />
