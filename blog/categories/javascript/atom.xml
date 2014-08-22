@@ -4,7 +4,7 @@
   <title><![CDATA[Category: JavaScript | Sawasawato Web Hack Blog]]></title>
   <link href="http://sawasawato.github.io/blog/categories/javascript/atom.xml" rel="self"/>
   <link href="http://sawasawato.github.io/"/>
-  <updated>2014-08-22T23:24:55+09:00</updated>
+  <updated>2014-08-22T23:26:51+09:00</updated>
   <id>http://sawasawato.github.io/</id>
   <author>
     <name><![CDATA[Sawasawato]]></name>
@@ -77,7 +77,7 @@ $('#wrap').on('click','.buton', function(event) {
 <ul>
 <li>むやみに GlobalPollution の位置に変数を書いちゃいかん</li>
 <li>var FunkSamp = (function() { &hellip; のようにリテラル無名関数を宣言すると、中の変数はローカル変数として扱われて、外に出されず汚染されない。定数扱いしたいものは、ここに記述。</li>
-<li>retun function() { &hellip;関数オブジェクトを、無名関数の戻り値とすることで、無名関数が実行された後、実体をもつ関数になる。&hellip;つまり処理内容をここに書けと</li>
+<li>retun function() { &hellip;関数オブジェクトを、無名関数の戻り値とすることで、無名関数が実行された後、実体をもつ関数になる。&hellip;つまりイベント毎(クリックとか)に実行したい処理内容をここに書けと</li>
 <li>クロージャーを使うと、引数にとらわれずに色々できる。</li>
 <li>でも汎用性を上げるために引数を渡したいとおもうはず。そんな時はこんな書き方をしよう。</li>
 </ul>
