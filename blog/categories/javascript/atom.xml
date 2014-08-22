@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: JavaScript | Sawasawato Web Hack Blog]]></title>
+  <link href="http://sawasawato.github.io/blog/categories/javascript/atom.xml" rel="self"/>
+  <link href="http://sawasawato.github.io/"/>
+  <updated>2014-08-22T23:16:39+09:00</updated>
+  <id>http://sawasawato.github.io/</id>
+  <author>
+    <name><![CDATA[Sawasawato]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[JavaScript 一番簡単なクロージャー 説明]]></title>
+    <link href="http://sawasawato.github.io/blog/2014/08/22/js-losure/"/>
+    <updated>2014-08-22T22:13:09+09:00</updated>
+    <id>http://sawasawato.github.io/blog/2014/08/22/js-losure</id>
+    <content type="html"><![CDATA[<h2>JSの曖昧なクロージャーとは</h2>
+
+<!-- more -->
+
+
+<p>Webデザイナー、コーダーの方などは「C言語」のような老舗プログラム言語をやらずに<br/>
+JSが初めてのプログラム言語という方は、私も含めて少なくないと思う。<br/>
+少し慣れてきたと思ったら、恐らく上司などに言われるであろう<br/>
+「<strong>グローバル汚染がひどい</strong>」<br/>
+それを回避する方法にクロージャーや、カプセル化があるけれど、なくても動いてしまうから、結構あいまいにしがち。<br/>
+でも知らずにいると、痛い目に合いそうなこと必須なので、ちょっと調べてみた。</p>
+
+<hr />
+
+<h2>クロージャーとは</h2>
+
+<p><strong>引数以外の値を関数に対して設定するプログラミング手法。</strong><br/>
+  == 変数の利用する範囲をコントロールする<br/>
+何となく現場だと、クロージャーという言葉が出る時は変数スコープに問題がある時が多いので、今回はその対処法を記載するということで。<br/>
+でも本当は上記の意味らしい。細かいのはお偉いさんのサイトでご確認を</p>
+
+<hr />
+
+<h2>即時関数</h2>
+
+<p>ちゃっちゃとどうすればグローバル汚染を防げるのか説明
+```
+(function(window, document, $) {</p>
+
+<pre><code>var GlobalPollution = 'グローバル汚染ここの範囲に書いちゃいかん';
+var FuncSamp = (function() {
+    var GlobalModoki = 0; //初期化のように一回だけ呼びたいものを記述
+
+    return function(target,e) {
+        var NandomoYobarel = 0; //イベント毎に初期化したいものを記述
+        e.preventDefault;
+        GlobalModoki ++;
+        NandomoYobarel ++;
+        console.log(GlobalModoki); // 1,2,3
+        console.log(NandomoYobarel); // 1
+        console.log(target); //Dom取得 (this)
+        console.log(GlobalPollution);//グローバル汚染
+    };
+})();
+
+$('#wrap').on('click','.buton', function(event) {
+    FuncSamp($(this), event);
+});
+</code></pre>
+
+<p>})(window, document, jQuery);
+```
+はじめのうちは、大抵イベント呼び出し時に定数のしたいものを初期化してしまって
+外に出してたら気づかずグローバル汚染してた。ということが多い。&hellip;と思う。</p>
+
+<ul>
+<li>むやみに GlobalPollution の位置に変数を書いちゃいかん</li>
+<li>var FunkSamp = (function() { &hellip; のようにリテラル無名関数を宣言すると、中の変数はローカル変数として扱われて、外に出されず汚染されない。定数扱いしたいものは、ここに記述。</li>
+<li>retun function() { &hellip;関数オブジェクトを、無名関数の戻り値とすることで、無名関数が実行された後、実体をもつ関数になる。&hellip;つまり処理内容をここに書けと</li>
+<li>クロージャーを使うと、引数にとらわれずに色々できる。</li>
+<li>でも汎用性を上げるために引数を渡したいとおもうはず。そんな時はこんな書き方をしよう。</li>
+</ul>
+
+
+<p>なんとなく、クロージャーというより、スコープの話し。<br/>
+でもいいよね。つられてもいいよね。</p>
+
+<hr />
+
+<h2>参考サイト</h2>
+
+<ul>
+<li><a href="https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Closures">https://developer.mozilla.org/ja/docs/Web/JavaScript/Guide/Closures</a></li>
+<li><a href="http://dqn.sakusakutto.jp/2009/01/javascript_5.html">http://dqn.sakusakutto.jp/2009/01/javascript_5.html</a></li>
+<li><a href="http://qiita.com/takeharu/items/4975031faf6f7baf077a">http://qiita.com/takeharu/items/4975031faf6f7baf077a</a></li>
+<li><a href="http://tacamy.hatenablog.com/entry/2012/12/31/005951">http://tacamy.hatenablog.com/entry/2012/12/31/005951</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>
