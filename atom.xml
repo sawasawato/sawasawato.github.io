@@ -4,7 +4,7 @@
   <title><![CDATA[Sawasawato Web Hack Blog]]></title>
   <link href="http://sawasawato.github.io/atom.xml" rel="self"/>
   <link href="http://sawasawato.github.io/"/>
-  <updated>2014-08-22T23:52:45+09:00</updated>
+  <updated>2014-08-25T11:25:25+09:00</updated>
   <id>http://sawasawato.github.io/</id>
   <author>
     <name><![CDATA[Sawasawato]]></name>
@@ -73,16 +73,16 @@
 <span class='line-number'>21</span>
 <span class='line-number'>22</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>(function(window, document, $) {
-</span><span class='line'>    var GlobalPollution = 'グローバル汚染ここの範囲に書いちゃいかん';
+</span><span class='line'>    var GLOBALPOLLUTION = 'グローバル汚染の原因。ここの範囲に変数書いちゃいかん';
 </span><span class='line'>    var FuncSamp = (function() {
-</span><span class='line'>        var GlobalModoki = 0; //初期化のように一回だけ呼びたいものを記述
+</span><span class='line'>        var IkkaiYobareru = 0; //初期化のように一回だけ呼びたいものを記述
 </span><span class='line'>        
 </span><span class='line'>        return function(target,e) {
 </span><span class='line'>            var NandomoYobarel = 0; //イベント毎に初期化したいものを記述
-</span><span class='line'>            e.preventDefault;
-</span><span class='line'>            GlobalModoki ++;
+</span><span class='line'>            e.preventDefault; //aタグとかイベントが呼ばれるものを指定する場合必要
+</span><span class='line'>            IkkaiYobareru ++;
 </span><span class='line'>            NandomoYobarel ++;
-</span><span class='line'>            console.log(GlobalModoki); // 1,2,3
+</span><span class='line'>            console.log(IkkaiYobareru); // 1,2,3
 </span><span class='line'>            console.log(NandomoYobarel); // 1
 </span><span class='line'>            console.log(target); //Dom取得 (this)
 </span><span class='line'>            console.log(GlobalPollution);//グローバル汚染
@@ -100,7 +100,7 @@
 外に出してたら気づかずグローバル汚染してた。ということが多い。&hellip;と思う。</p>
 
 <ul>
-<li>むやみに GlobalPollution の位置に変数を書いちゃいかん</li>
+<li>GLOBALPOLLUTION の位置に変数を書いちゃいかん。でも書き換えない定数なら可。（でもやらないのがおすすめ）</li>
 <li>var FunkSamp = (function() { &hellip; のようにリテラル無名関数を宣言すると、中の変数はローカル変数として扱われて、外に出されず汚染されない。定数扱いしたいものは、ここに記述。&hellip;即時関数を用いて FuncSmap に return されているオブジェクトが代入される。らしい</li>
 <li>retun function() { &hellip;関数オブジェクトを、無名関数の戻り値とすることで、無名関数が実行された後、実体をもつ関数になる。&hellip;つまりイベント毎(クリックとか)に実行したい処理内容をここに書けと</li>
 <li>クロージャーを使うと、引数にとらわれずに色々できる。</li>
