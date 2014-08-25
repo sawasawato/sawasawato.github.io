@@ -4,7 +4,7 @@
   <title><![CDATA[Category: JavaScript | Sawasawato Web Hack Blog]]></title>
   <link href="http://sawasawato.github.io/blog/categories/javascript/atom.xml" rel="self"/>
   <link href="http://sawasawato.github.io/"/>
-  <updated>2014-08-25T11:25:25+09:00</updated>
+  <updated>2014-08-25T11:36:55+09:00</updated>
   <id>http://sawasawato.github.io/</id>
   <author>
     <name><![CDATA[Sawasawato]]></name>
@@ -61,10 +61,10 @@ var FuncSamp = (function() {
         e.preventDefault; //aタグとかイベントが呼ばれるものを指定する場合必要
         IkkaiYobareru ++;
         NandomoYobarel ++;
-        console.log(IkkaiYobareru); // 1,2,3
-        console.log(NandomoYobarel); // 1
-        console.log(target); //Dom取得 (this)
-        console.log(GlobalPollution);//グローバル汚染
+        console.log(IkkaiYobareru); // 1
+        console.log(NandomoYobarel); // 1,2,3
+        console.log(target); //Dom取得、今回は jQueryオブジェクト (this)
+        console.log(GLOBALPOLLUTION);//グローバル汚染
     };
 })();
 
