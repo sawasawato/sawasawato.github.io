@@ -4,7 +4,7 @@
   <title><![CDATA[Sawasawato Web Hack Blog]]></title>
   <link href="http://sawasawato.github.io/atom.xml" rel="self"/>
   <link href="http://sawasawato.github.io/"/>
-  <updated>2014-08-25T11:36:55+09:00</updated>
+  <updated>2014-09-01T21:11:20+09:00</updated>
   <id>http://sawasawato.github.io/</id>
   <author>
     <name><![CDATA[Sawasawato]]></name>
@@ -12,6 +12,317 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[日本語で曖昧な英単語をネイティブに聞いてみた]]></title>
+    <link href="http://sawasawato.github.io/blog/2014/08/31/near-word/"/>
+    <updated>2014-08-31T21:47:33+09:00</updated>
+    <id>http://sawasawato.github.io/blog/2014/08/31/near-word</id>
+    <content type="html"><![CDATA[<h2>類義語といえど微妙にニュアンスが違うはずだ！</h2>
+
+<!-- more -->
+
+
+<p>英語の学習中、英単語を参考書や、辞書で調べてみたところ、同じような言い回しを使っていたり、ましては全く同じように訳されていて、戸惑ったことはないでしょうか？</p>
+
+<p>単語が違うのに、全く同じ日本語に訳されているのに違和感を感じた自分は、日本語同様、微妙なニュアンスの違いがあるはずと思って、アメリカ人のネイティブな友人に質問してみた.</p>
+
+<h2>同じ意味が記されていた。類似語</h2>
+
+<p><strong>買う</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>buy 買う。ほぼどこでも使用することができる。
+</span><span class='line'>purchase  購入する。ビジネスで使い、日常会話ではほぼ使わない。</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>誰か</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>someone - 誰か
+</span><span class='line'>somebody - 誰か
+</span><span class='line'>ほぼ同じ。あまり意識したこともないそう。</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>変える、変更する</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>change - とり変える。全て変えるイメージ
+</span><span class='line'>alter - 一部修正する。一部だけ変更するイメージ</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>大学</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>university - 総合学校と一部では解釈されるが、オーストラリア、ニュージーランドで、一般的に大学として使われるそう。
+</span><span class='line'>college - 単科大学と一部で解釈されるが、アメリカでは一般的に大学としてつかわれるそう。
+</span><span class='line'>方言に近い</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>魅了する。惹き付ける</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>attract - 惹き付ける 動詞
+</span><span class='line'>charm - 魅力 名詞
+</span><span class='line'>魅力を使って、惹き付けるというようなイメージ</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>気づく</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>conscious - 意識する。自分からアクションを起こして、気がつくイメージ
+</span><span class='line'>notice - 気づく 気がつく。意識せずに気がつくイメージ
+</span><span class='line'>aware - notice に近く、knowにも似ている。私は把握しているぞ。と見下した言い方に近いニュアンス.</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>含む</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>contain
+</span><span class='line'>include
+</span><span class='line'>ほぼ同じ、読み込むとかでは決してない。</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>合計</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>amount 額 金額面での合数
+</span><span class='line'>total 一般的な合数
+</span><span class='line'>sum - 普通使わない。数学などの時にのみ使用。
+</span><span class='line'>total amount で合計金額</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>練習</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>exercize -運動、体操するという内容もある。 
+</span><span class='line'>practice - 練習
+</span><span class='line'>traning - 練習。ちょっとストイックなニュアンスがある。
+</span><span class='line'>使い方で同じ意味にも違う意味にもなる</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>貴重な、特別な</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>precious - 特別な 自分にとって大切なもの ...記念写真とか思い出の品とか
+</span><span class='line'>valuable - 貴重な 一般的に価値が高いもの ...金、宝石、金とか</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>たまたま</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>seldom - たまたま
+</span><span class='line'>hardly - めったにない
+</span><span class='line'>rarely - レアな時間、ラッキーというニュアンス内容がある</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>多分</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>probably - 多分 少しカジュアル
+</span><span class='line'>perhaps - 恐らく 少し丁寧</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>貴重な、大切な</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>signficant - 重要な 少し固い
+</span><span class='line'>important - 大切な</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>説明する</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>describe - 説明する
+</span><span class='line'>define - 定義する meaning 意味付けするに近い</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>厳しい</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>harsh - harsh wind harsh teacherなど使い方はネイティブでも曖昧らしい
+</span><span class='line'>severe - severe sunlight など 上に同じ severe teacherは使うとおかしい
+</span><span class='line'>strict - 厳しいに近い
+</span><span class='line'>
+</span><span class='line'>使うシチュエーションで変わる
+</span><span class='line'>段階のイメージを天気で例えると
+</span><span class='line'>good &gt; bad &gt; laugh &gt; harsh &gt; severe
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>正確な</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>exactly - 厳密に正確な まさに
+</span><span class='line'>accrate - 正確な
+</span><span class='line'>just - ちょうど
+</span><span class='line'>
+</span><span class='line'>exactly とaccrate がニュアンスは近い。justはそれよりも
+</span><span class='line'>exactly &gt; accrate &gt; just</span></code></pre></td></tr></table></div></figure>
+
+
+<p><strong>起こる</strong></p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>occur
+</span><span class='line'>happen
+</span><span class='line'>
+</span><span class='line'>ほぼ一緒の内容、occurの方が丁寧</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>ネイティブアメリカンと実際に会話した例文</h2>
+
+<p>・これは英語で言うと何ですか？</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>What's this in English</span></code></pre></td></tr></table></div></figure>
+
+
+<p>・○○は英語で普通に使いますか？</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>○○ it's normaly not used </span></code></pre></td></tr></table></div></figure>
+
+
+<p>・話をもどしまして</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Back to the convetsation</span></code></pre></td></tr></table></div></figure>
+
+
+<p>・次の○○は</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>The next is ○○</span></code></pre></td></tr></table></div></figure>
+
+
+<p>・その場合は</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>In this case
+</span><span class='line'>In that case</span></code></pre></td></tr></table></div></figure>
+
+
+<p>・プログラミング言語でincludeと言う意味は○○です</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>In Programing language means include is ○○</span></code></pre></td></tr></table></div></figure>
+
+
+<p>・ジャンケン</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>rock paper siserts</span></code></pre></td></tr></table></div></figure>
+
+
+<p>・それ聞いたかもだけど</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>I asked before</span></code></pre></td></tr></table></div></figure>
+
+
+<p>・確かに</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>certainly</span></code></pre></td></tr></table></div></figure>
+
+
+<p>・その通りだ</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>exactoly</span></code></pre></td></tr></table></div></figure>
+
+
+<p>・ちょっと待って</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Please wait a little bit
+</span><span class='line'>Please wait a few minnute</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>おまけ</h2>
+
+<p>Would you mind ~ing<br/>
+・〜しても気を害さないでしょうか？ == 〜しても問題ないでしょうか？</p>
+
+<h3>写真をとってもらう</h3>
+
+<p>・私たちの、写真をとってもらえますか<br/>
+Could you take a picture of us?</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>for と of は間違いやすい  
+</span><span class='line'>for us == 私達のための  
+</span><span class='line'>of us == 私たちの  </span></code></pre></td></tr></table></div></figure>
+
+
+<p>・私たちの写真をとっていただいて、問題ないでしょうか？(超丁寧)</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>would you mind taking our picture?  
+</span><span class='line'>sure no problem == 良いですよ。問題ない (would you mind の時はnoが了解の意味になる)  </span></code></pre></td></tr></table></div></figure>
+
+
+<p>もう一度メールを送っていただいても問題ないでしょうか？</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>would you mind resending E-mail  
+</span><span class='line'>ビジネスで使用する時は必須  </span></code></pre></td></tr></table></div></figure>
+
+
+<p>いくつかドラ○ンボールをいただいても問題ないでしょうか？</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>would you mind giving me a few drag○n balls?  
+</span><span class='line'>丁寧すぎた物言いは、相手に威圧感を与える。例 フリーザ様  </span></code></pre></td></tr></table></div></figure>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[JavaScript 一番簡単なクロージャー 説明]]></title>
