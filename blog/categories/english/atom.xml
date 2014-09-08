@@ -4,7 +4,7 @@
   <title><![CDATA[Category: English | Sawasawato Web Hack Blog]]></title>
   <link href="http://sawasawato.github.io/blog/categories/english/atom.xml" rel="self"/>
   <link href="http://sawasawato.github.io/"/>
-  <updated>2014-09-02T16:18:11+09:00</updated>
+  <updated>2014-09-08T20:11:20+09:00</updated>
   <id>http://sawasawato.github.io/</id>
   <author>
     <name><![CDATA[Sawasawato]]></name>
@@ -12,6 +12,130 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[英語基本]]></title>
+    <link href="http://sawasawato.github.io/blog/2014/09/08/"/>
+    <updated>2014-09-08T19:25:13+09:00</updated>
+    <id>http://sawasawato.github.io/blog/2014/09/</id>
+    <content type="html"><![CDATA[<h2>英語と日本語の大きな違い -語順</h2>
+
+<p>日本語と英語は語順が大きく違う</p>
+
+<!-- more -->
+
+
+
+
+<!-- 日本はサンドウィッチのように、話の詳細を真ん中に入れ、最後に動詞を置く  
+私は 東京に 住んでいる -->
+
+
+<h3>日本語</h3>
+
+<p>```
+(S) + O + V
+東京にすんでいる</p>
+
+<p>S + C + V
+私は 生徒 です</p>
+
+<p>S + O + V
+私は りんごを 食べる</p>
+
+<p>S + C + O + V
+彼（には）とてもきれいな彼女がいる。</p>
+
+<p>S + O + C + V   (主語は昨日でなく、彼女)
+彼はその熊が死んで入るのを見つけた。</p>
+
+<p>(S) + O + V
+(私の)お腹が減った
+```
+主語 == S (私、あなた、彼、それ、あれ、等)
+動詞 == V (食べる、投げる)
+目的語 == O (料理名 )
+補語 == C</p>
+
+<p>～は。～が 主語</p>
+
+<h3>英語</h3>
+
+<p>```
+S + V
+I live in NewYork</p>
+
+<p>S + V + C
+I am a student</p>
+
+<p>S + V + O
+I eat apple</p>
+
+<p>S + V + O + C
+She have girl friend beautiful</p>
+
+<p>S + V + O + C
+He found the bear dead</p>
+
+<p>S + V + C
+I am hungry
+```
+&ndash; 英語は日本語以上に語順が縛りが強い。
+&ndash; 英語は日本語のように主語の省略はしない(口語のぞく)。</p>
+
+<h2>英語の基本構文</h2>
+
+<p>英語…語順がその文の構文と意味を決める。<br/>
+　　　　　　　→この語順を5文型という<br/>
+　　　　　　　　　　　　① ＳＶ<br/>
+　　　　　　　　　　　　② ＳＶＣ　→（Ｓ＝Ｃ）<br/>
+　　　　　　　　　　　　③ ＳＶＯ　→（Ｓ≠Ｏ）<br/>
+　　　　　　　　　　　　④ ＳＶＯＯ<br/>
+　　　　　　　　　　　　⑤ ＳＶＯＣ　→（ＯとＣの関係は主語と述語）<br/>
+　　
+　　　S＝主語　日本語にすると「～は、～が」となるもの<br/>
+　　　V＝動詞　動作または状態を表すもの<br/>
+　　　O＝目的語　動詞か前置詞が後ろに名詞を支配するもの<br/>
+　　　C＝補語　主語（第５文型の場合は目的語）の説明をするもの</p>
+
+<h2>目的語と補語の見分け方</h2>
+
+<p><strong>主語とイコールならば、補語、違うならば、目的語</strong>と簡単に判断できる。(もちろん例外あり)
+```
+I am a student
+S + V + C
+私は生徒です</p>
+
+<p>I go to school
+S + V + O
+私は学校へ行きます
+```
+私 == 生徒 → ○
+私 == 学校 → ×</p>
+
+<h2>英語と日本語の大きな違い -英語には助詞がない</h2>
+
+<h2>参考サイト</h2>
+
+<p><a href="http://www.geocities.jp/gyouseikowa/eigo/syugo.html">http://www.geocities.jp/gyouseikowa/eigo/syugo.html</a></p>
+
+<p><a href="http://www5a.biglobe.ne.jp/~t-kite/super-basic1.htm">http://www5a.biglobe.ne.jp/~t-kite/super-basic1.htm</a></p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[英語基本 動詞]]></title>
+    <link href="http://sawasawato.github.io/blog/2014/09/08/verb/"/>
+    <updated>2014-09-08T19:21:01+09:00</updated>
+    <id>http://sawasawato.github.io/blog/2014/09/08/verb</id>
+    <content type="html"><![CDATA[<h2>日本語と英語の動詞の違い</h2>
+
+<!-- more -->
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[日本語で曖昧な英単語をネイティブスピーカーに聞いてみた]]></title>
