@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Enviroment | Sawasawato Web Hack Blog]]></title>
   <link href="http://sawasawato.github.io/blog/categories/enviroment/atom.xml" rel="self"/>
   <link href="http://sawasawato.github.io/"/>
-  <updated>2015-01-23T17:09:25+09:00</updated>
+  <updated>2015-01-24T01:26:27+09:00</updated>
   <id>http://sawasawato.github.io/</id>
   <author>
     <name><![CDATA[Sawasawato]]></name>
@@ -14,16 +14,237 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Home Brew 導入方法]]></title>
-    <link href="http://sawasawato.github.io/blog/2015/01/23/homebrew/"/>
-    <updated>2015-01-23T15:43:45+09:00</updated>
-    <id>http://sawasawato.github.io/blog/2015/01/23/homebrew</id>
-    <content type="html"><![CDATA[<h2>Macの開発環境を整えるのに便利なHomeBrewの導入と使い方</h2>
+    <title type="html"><![CDATA[NVM Node.js 使い方]]></title>
+    <link href="http://sawasawato.github.io/blog/2015/01/23/nvm/"/>
+    <updated>2015-01-23T17:10:36+09:00</updated>
+    <id>http://sawasawato.github.io/blog/2015/01/23/nvm</id>
+    <content type="html"><![CDATA[<h2>Grunt入れる前のNode.Jsで気をつける事など</h2>
 
 <!-- more-->
 
 
-<h2>Home Brew とは？</h2>
+<p>もはやメジャーになった Node.js サーバーまでJSで書けるということで、色々話題の代物<br/>
+フロントエンドエンジニアでは、GruntやGulpでの環境で使用するのが多いと思う。<br/>
+なので Grunt 寄りの環境で紹介する。</p>
+
+<h2>Node.js とは？ 概要 特長</h2>
+
+<p>Node.js はサーバー・サイドの JavaScript インタープリター(サーバープログラム)<br/>
+イベント駆動型プログラミング&hellip;らしい<br/>
+大量の同時接続を高速に処理するのに向いている。ノンブロッキングI/O(非同期処理)というモデルで実現されている&hellip;らしい。<br/>
+「スケーラブルなネットワーク・プログラムを作成するための簡単な方法を提供すること」が Node.js の第 1 の目標&hellip;らしい<br/>
+拡張性が高く、小規模にも大規模にもで対応できる&hellip;らしい。<br/>
+モジュールインストールで色々できる<br/>
+シングルスレッドベースの非同期処理環境 シングルなのに「イベントループ」アーキテクチャ(構築、構造)で実現している&hellip;らしい<br/>
+ローカルの開発環境向上にも使える。</p>
+
+<p>いろいろすごい事ができるらしいけど、私はローカル開発環境の向上をするばかりに使用。</p>
+
+<p>Grunt とか Jade とか Coffee とか Sass とか</p>
+
+<hr />
+
+<h2>なぜNVMを使うのか？</h2>
+
+<p>Node.jsはバージョンアップが盛んで、バージョンが違うと使えないものがあったりする。<br/>
+バージョンを上げたり、落としたり、入れたり削除したりが面倒なので、<br/>
+パッケージ管理できると、とても便利。<br/>
+Ruby の rvm みたいなもの</p>
+
+<hr />
+
+<h2>NVM インストール</h2>
+
+<p>1 git で NVM 落としてくる
+<code>
+git clone git://github.com/creationix/nvm.git ~/.nvm
+</code>
+2 nvm 有効化 ロード
+<code>
+source ~/.nvm/nvm.sh
+</code>
+2 nvm シェルから見えるようにする .zsh<em>(.zshrc、.zshenv) .bash_profileに追記
+<code>
+[[ -s "$HOME/.nvm/nvm.sh" ]] &amp;&amp; source "$HOME/.nvm/nvm.sh"
+</code>
+3 nvm デフォルトを設定する .zsh</em>(.zshrc、.zshenv) .bash_profileに追記
+```
+[[ -s &ldquo;$HOME/.nvm/nvm.sh&rdquo; ]] &amp;&amp; source &ldquo;$HOME/.nvm/nvm.sh&rdquo;</p>
+
+<p>nvm use default
+npm_dir=${NVM_PATH}_modules
+export NODE_PATH=$npm_dir</p>
+
+<p><code>
+4 node.js インストール
+</code>
+nvm install v0.10
+//0.10.0ではStreaming API が新しいらしい
+```</p>
+
+<p>以上。</p>
+
+<p>NVMでなく、インストーラを使用した場合以下に追加され、PATHが追記される
+<code>
+/usr/local/bin/node
+/usr/local/bin/npm
+</code></p>
+
+<h2>NVM 使い方 基本コマンド</h2>
+
+<p>・インストール可能な Node.js のバージョンを確認
+<code>
+nvm ls-remote
+</code>
+・Node.js インストール<br/>
+0.10.0ではStreaming API が新しいらしい
+<code>
+nvm install v0.10.24 //バージョン指定でインストール
+nvm install v0.10 //0.10.x系 最新バージョンインストール
+nvm install v0 //0.x系 最新バージョンインストール
+</code>
+・Node.js インストール済 バージョン一覧
+<code>
+nvm ls
+</code>
+・Node バージョン指定 有効化
+シェルプロファイルに基本バージョンを指定しないと、毎回指定する必要がある。
+<code>
+nvm use v0.10
+</code>
+・node バージョン確認
+<code>
+node -v
+node --version
+</code>
+・現在の バージョン確認
+<code>
+nvm current
+</code>
+・nvm use コマンドを指定する。 プロファイル記述でなく指定する
+<code>
+nvm alias default v0.10
+</code>
+・pakage.json から必要なライブラリをインストール
+node_modudeDirectory に package_json で指定されたライブラリをインストール
+<code>
+npm install
+</code>
+・packge_json で実行する
+```
+{
+  &ldquo;name&rdquo;: &ldquo;hoge&rdquo;,
+  &ldquo;version&rdquo;: &ldquo;0.0.1&rdquo;,
+  &ldquo;description&rdquo;: &ldquo;hoge!&rdquo;,
+  &ldquo;main&rdquo;: &ldquo;server.js&rdquo;,
+  &ldquo;scripts&rdquo;: {</p>
+
+<pre><code>"test": "mocha test/**/*.test.js",
+"start": "node server.js"
+</code></pre>
+
+<p>  }
+<code>
+・実行
+</code>
+npm start
+or
+npm server.js
+<code>
+・nvm と指定されたバージョンの Node.js がインストール済みの場合だけ設定を有効にする
+</code>
+if [[ -f ~/.nvm/nvm.sh ]]; then
+  source ~/.nvm/nvm.sh</p>
+
+<p>  if which nvm >/dev/null 2>&amp;1 ;then</p>
+
+<pre><code>_nodejs_use_version="v0.4.0"
+if nvm ls | grep -F -e "${_nodejs_use_version}" &gt;/dev/null 2&gt;&amp;1 ;then
+  nvm use "${_nodejs_use_version}" &gt;/dev/null
+  export NODE_PATH=${NVM_PATH}_modules${NODE_PATH:+:}${NODE_PATH}
+fi
+unset _nodejs_use_version
+</code></pre>
+
+<p>  fi
+fi
+```</p>
+
+<hr />
+
+<h2>Win Nvm設定</h2>
+
+<p>以前 Win 環境で使わなければならなかった時に設定した方が良いと思ったこと<br/>
+使用環境 Win-7 Professional mac-OSX</p>
+
+<p>・nvmw を導入 (win版)
+<code>
+git clone git://github.com/hakobera/nvmw.git "C:\Users\ユーザ名\.nvmw"
+</code></p>
+
+<p>Winはいつも、ディレクトリが特殊で環境パスでいつも迷ってしまう。
+.gem とか .ssh とか置く場所あたりが良いと思う</p>
+
+<p>先にnpmから入れちゃったから面倒 npm のパスは下のような感じ
+<code>
+C:\Users\tsumiki\AppData\Roaming\npm
+</code></p>
+
+<p>・環境変数例
+<code>
+C:\Ruby200-x64\bin;C:\Ruby200\bin;C:\Users\tsumiki\AppData\Roaming\npm;C:\Users\sawasawato\.nvmw
+</code></p>
+
+<h3>cmd.exe 起動時、オートコマンド実行</h3>
+
+<p>Node を nvmw で管理、Ruby を rvm で管理するときに、毎回コマンドを打つ手間があって面倒だったため<br/>
+macはbashrcをいじればいいものの、Winだとかなり手間</p>
+
+<p>方法はレジストリに設定。 (ふっ飛ばさないように)この方の記事がよい。 win7なので各自<br/>
+これと同じようにすれば、rvmのデフォルト設定もできる。<br/>
+でもバッチとか使う時にこれが原因でエラーが出た事もあった&hellip;</p>
+
+<p>・windows でコマンドのエイリアス設定(DOSKEY)<br/>
+<a href="http://www.adminweb.jp/command/command/index2.html  ">http://www.adminweb.jp/command/command/index2.html  </a>
+<a href="http://c4se.hatenablog.com/entry/2012/10/19/230718">http://c4se.hatenablog.com/entry/2012/10/19/230718</a></p>
+
+<p>・レジストリで起動パスを記述する<br/>
+レジストリを立ち上げた後、右クリック修整で下のパスを記述<br/>
+<code>
+C:\Users\tsumiki\cmd_profile.bat  
+</code></p>
+
+<p>・バッチファイルで管理
+<code>
+C:\Users\tsumiki\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
+</code></p>
+
+<h2>参考サイト</h2>
+
+<ul>
+<li><a href="http://nodejs.org/">http://nodejs.org/</a></li>
+<li><a href="http://nodejs.jp/nodejs.org_ja/">http://nodejs.jp/nodejs.org_ja/</a></li>
+<li><a href="http://itpro.nikkeibp.co.jp/article/COLUMN/20120725/411441/">http://itpro.nikkeibp.co.jp/article/COLUMN/20120725/411441/</a></li>
+<li><a href="http://www.atmarkit.co.jp/ait/articles/1102/28/news105.html">http://www.atmarkit.co.jp/ait/articles/1102/28/news105.html</a></li>
+<li><a href="http://www.ibm.com/developerworks/jp/opensource/library/os-nodejs/?cmp=dw&amp;cpb=dwope&amp;ct=dwrss&amp;cr=dwrss&amp;ccy=jp&amp;csr=060311">http://www.ibm.com/developerworks/jp/opensource/library/os-nodejs/?cmp=dw&amp;cpb=dwope&amp;ct=dwrss&amp;cr=dwrss&amp;ccy=jp&amp;csr=060311</a></li>
+<li><a href="http://www.nodebeginner.org/index-jp.html">http://www.nodebeginner.org/index-jp.html</a></li>
+<li><a href="http://gihyo.jp/dev/serial/01/nodejs/0001">http://gihyo.jp/dev/serial/01/nodejs/0001</a></li>
+</ul>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Home Brew 導入 セットアップ方法]]></title>
+    <link href="http://sawasawato.github.io/blog/2015/01/23/homebrew/"/>
+    <updated>2015-01-23T15:43:45+09:00</updated>
+    <id>http://sawasawato.github.io/blog/2015/01/23/homebrew</id>
+    <content type="html"><![CDATA[<h2>Macの開発環境を整えるのに便利な HomeBrew の導入と使い方</h2>
+
+<!-- more-->
+
+
+<h2>Home Brew とは？ 概要 特徴</h2>
 
 <p>Mac OS X オペレーティングシステム上でソフトウェアの導入を単純化するパッケージ管理システム。<br/>
 パッケージ管理システムとはこのパッケージのインストール（アンインストール）作業を一元的管理するもの。</p>
@@ -81,7 +302,7 @@ brew prune</p>
 
 <h2>```</h2>
 
-<h2>Home brew の基本動作</h2>
+<h2>Home brew 使い方 基本コマンド</h2>
 
 <p>・パッケージ検索
 <code>
