@@ -1,0 +1,452 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Home Brew 導入方法 - Sawasawato Web Hack Blog</title>
+  <meta name="author" content="Sawasawato">
+
+   
+  <meta name="description" content="伝統工芸を専門にしていたものが、Webという真逆の新しい業界で学んだことを色々書き記してみるブログ">
+  
+  <meta name="keywords" content="">
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://sawasawato.github.io/blog/2015/01/23/homebrew">
+  <link href="/favicon.png" rel="icon">
+  <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Sawasawato Web Hack Blog" type="application/atom+xml">
+  <script src="/js/jquery.js"></script>
+  <script src="/js/bootstrap-collapse.js"></script>
+  <script src="/js/modernizr-2.0.js"></script>
+  <script src="/js/octopress.js" type="text/javascript"></script>
+  <script src="/js/application.js"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-47609442-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <div class="navbar navbar-inverse navbar-static-top">
+  	<div class="navbar-inner">
+  	  <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+          <span class="fui-menu-24"></span>
+        </a>
+  	  	<div class="nav-collapse collapse navbar-responsive-collapse" style="height:0;">
+  	      <ul class="nav">
+    
+        <li ><a href="/index.html">Home</a></li>
+    
+        <li ><a href="/new_page_name.html">New Page Title</a></li>
+    
+</ul>
+
+<ul class="nav pull-right">
+    
+    <li><a href="http://github.com/sawasawato" title="Github Profile"><i class="icon-github-sign social-navbar"></i></a></li>
+    
+    
+    
+    
+    <li><a href="http://twitter.com/sawasawato" title="Twitter Profile"><i class="icon-twitter-sign social-navbar"></i></a></li>
+    
+    
+    
+    
+
+    
+</ul>
+
+  	    </div>
+  	  </div>
+  	</div>
+  </div>
+  <div class="container" id="main">
+      <div class="row-fluid">
+        <div id="content">
+          <div>
+<article class="hentry" role="article">
+  
+
+  <header>
+  <div class="jumbotron">
+    <h1>Home Brew 導入方法</h1>
+    <h5>
+
+
+
+
+
+
+
+
+  
+
+
+<i class="icon-calendar-empty"></i> <time datetime="2015-01-23T15:43:45+09:00" pubdate data-updated="true">Jan 23<span>rd</span>, 2015</time></h5>
+  </div>
+</header>
+  <div class="row-fluid">
+    <div class="span12">
+      <h2>Macの開発環境を整えるのに便利なHomeBrewの導入と使い方</h2>
+
+<!-- more-->
+
+
+<h2>Home Brew とは？</h2>
+
+<p>Mac OS X オペレーティングシステム上でソフトウェアの導入を単純化するパッケージ管理システム。<br/>
+パッケージ管理システムとはこのパッケージのインストール（アンインストール）作業を一元的管理するもの。</p>
+
+<p>パッケージとは実行ファイルや設定ファイル、ライブラリetcを一つのファイルとしてまとめているもの。<br/>
+パッケージやライブラリの依存関係などが管理できて便利。</p>
+
+<hr />
+
+<h2>Home Brew 仕組み</h2>
+
+<p>Homebrewでのパッケージは/usr/local/Cellarというディレクトリにインストールされる。<br/>
+そしてインストール時にbinにリンクされるという仕組みになっているらしい。<br/>
+Cellarにあれば、それを使い、無ければmacデフォルトの物を使う。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>/usr/local/Cellar  コマンド実体
+</span><span class='line'>/usr/local/bin  コマンドのエイリアス</span></code></pre></td></tr></table></div></figure>
+
+
+<p>しかし、Macデフォルトにある物の場合(gitとか)、設定しないとデフォルトのバージョンが使用される。</p>
+
+<hr />
+
+<h2>Home Brew インストール</h2>
+
+<p>1 ターミナルを起動</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Ctrl + Space → terminal</span></code></pre></td></tr></table></div></figure>
+
+
+<p>2 インストールコマンドを実行  できればpathは本家サイトで確認</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</span></code></pre></td></tr></table></div></figure>
+
+
+<p>3 確認後インストール内容が表示される、再度Enterを押して進める</p>
+
+<p>4 パスワード入力後Enterを押すとインストールが開始</p>
+
+<h3>動作確認</h3>
+
+<p>下のように表示されればOK</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>brew doctor
+</span><span class='line'>Your system is ready to brew</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>エラーが表示された場合</h3>
+
+<p>homebrewの実行に必要なコマンドラインツールがインストールされていない場合、エイリアスだけ残ってしまった場合等がある。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>brew update
+</span><span class='line'>brew prune</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<h2>Home brew の基本動作</h2>
+
+<p>・パッケージ検索</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>brew -serch &lt;パッケージ名&gt;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>・パッケージインストール アンインストール</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>brew install &lt;パッケージ名&gt; #インストール
+</span><span class='line'>brew remove &lt;パッケージ名&gt; #アンインストール</span></code></pre></td></tr></table></div></figure>
+
+
+<p>・パッケージの有効化と無効化</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>brew link &lt;パッケージ名&gt; #有効化
+</span><span class='line'>brew unlink &lt;パッケージ名&gt; #無効化</span></code></pre></td></tr></table></div></figure>
+
+
+<p>・パッケージ一覧の更新 アップデート</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>brew update #formula を更新
+</span><span class='line'>brew upgrade #更新があるパッケージを再ビルド</span></code></pre></td></tr></table></div></figure>
+
+
+<p>・インストールされたパッケージリストを表示</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>brew list</span></code></pre></td></tr></table></div></figure>
+
+
+<p>・インストールの問題をチェック</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>brew doctor</span></code></pre></td></tr></table></div></figure>
+
+
+<p>・brewの設定確認</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>brew --config</span></code></pre></td></tr></table></div></figure>
+
+
+<p>・バージョンチェック (-v はversionでは無い)</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>brew -v (--verbose) brew --version</span></code></pre></td></tr></table></div></figure>
+
+
+<p>・Home brew のパッケージリセット、Cellar内、全削除</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>brew uninstall `brew list`</span></code></pre></td></tr></table></div></figure>
+
+
+<p>・デッドリンクになっているものを削除 Cellarのものだけを削除するとなる</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>brew prune</span></code></pre></td></tr></table></div></figure>
+
+
+<p>・Homebrew をインストール</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</span></code></pre></td></tr></table></div></figure>
+
+
+<p>・Homebrew をアンインストール</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>cd `brew --prefix`
+</span><span class='line'>rm -rf Cellar
+</span><span class='line'>brew prune
+</span><span class='line'>rm `git ls-files`
+</span><span class='line'>rmdir Library/Homebrew Library/Aliases Library/Formula Library/Contributions
+</span><span class='line'>rm -rf .git
+</span><span class='line'>rm -rf ~/Library/Caches/Homebrew</span></code></pre></td></tr></table></div></figure>
+
+
+<h2>Home brew インストール例</h2>
+
+<p>本家サイトを参考にwgetをインストールする。</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>brew install wget</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>wgetとは？</h3>
+
+<p>wget とは、UNIXコマンドラインで HTTP や FTP 経由のファイル取得を行えるツール。</p>
+
+<p><a href="http://tech.basicinc.jp/Mac/2014/04/20/mac_app_engineer/">http://tech.basicinc.jp/Mac/2014/04/20/mac_app_engineer/</a></p>
+
+<hr />
+
+<h2>Homebrewコマンド一覧</h2>
+
+<p>brew install foo fooをインストール<br/>
+brew install &mdash;HEAD foo fooのHEADバージョンをインストール<br/>
+brew install &mdash;force &mdash;HEAD foo fooの新しいHEADバージョンをインストール<br/>
+brew search インストール可能なすべてのformulaを表示<br/>
+brew search foo インストール可能なformulaからfooを検索<br/>
+brew search /foo/ 正規表現fooを検索<br/>
+brew list インストール済みのformulaeを表示<br/>
+brew list foo fooのインストールしたファイルを表示<br/>
+brew info &mdash;github foo foo formulaのGithub履歴ページをブラウザで表示<br/>
+brew info インストール済みのHomebrewパッケージのサマリーを表示<br/>
+brew info foo インストール済みのfooのすべての情報を表示<br/>
+brew home HomebrewのWebサイトをデフォルトブラウザで表示<br/>
+brew home foo fooのWebサイトをデフォルトブラウザで表示<br/>
+brew update HomebrewのformulaeとHomebrew自体をアップデート<br/>
+brew remove foo fooのアンインストール<br/>
+brew create [url] ダウンロード可能なファイルのURLのformulaを生成してBREWEDITORかEDITORで指定されているエディタで開く<br/>
+brew create url-of-tarball &mdash;cache formulaを生成して、tarballをダウンロードする。md5をformulaテンプレートに追加する。<br/>
+brew create &mdash;macports foo どのようにfooをインストールするか調べるために、MacPortsパッケージ検索ページでfooを検索する。<br/>
+brew create &mdash;fink foo Finkで同様のことを行う。<br/>
+brew edit foo formulaをHOMEBREWEDITORかEDITORで開く<br/>
+brew link foo fooのインストールされたファイルのHomebrew prefixシンボリックリンク作成する。（Homebrewでインストールすると自動的に行われる。DIYインストールを行った場合に有用。<br/>
+brew unlink foo Homebrew prefixシンボリックリンクを削除する。<br/>
+brew prune Homebrewprefixからデッドシンボリックリンクを削除する。<br/>
+brew outdated 利用可能なアップデートバージョンが存在するformulaを表示する。新しいバージョンをインストールするにはbrew install fooを実行する。<br/>
+brew upgrade 利用可能なアップデートバージョンが存在するformulaをすべてアップグレードする。<br/>
+brew &mdash;config Homebrewのシステム設定を表示する<br/>
+brew &mdash;prefix Howebrew prefixのパスを表示する。(普通は /usr/local)<br/>
+brew &mdash;prefix (formula) インストールされたformulaのパスを表示する。<br/>
+brew &mdash;cellar Homebrew Cellarのパスを表示する。(普通は /usr/local/Cellar)<br/>
+brew &mdash;cache Homebrew キャッシュダウンロードのパスを表示する。(普通は ~/Library/Caches/Homebrew)<br/>
+brew doctor インストールの一般的な問題をチェックする。<br/>
+brew audit すべてのformulaeのコードとスタイルの問題を検査する。<br/>
+brew cleanup foo インストールしたすべてもしくは特定のformulaeの古いバージョンをcellarから削除する。すべての場合はbrew cleanupを実行する。</p>
+
+<hr />
+
+<h2>参考サイト</h2>
+
+<ul>
+<li><a href="http://brew.sh/">http://brew.sh/</a></li>
+<li><a href="http://brew.sh/index_ja.html">http://brew.sh/index_ja.html</a></li>
+<li><a href="http://www.tettori.net/post/1442/">http://www.tettori.net/post/1442/</a></li>
+<li><a href="http://qiita.com/omega999/items/6f65217b81ad3fffe7e6">http://qiita.com/omega999/items/6f65217b81ad3fffe7e6</a></li>
+<li><a href="http://qiita.com/b4b4r07/items/6efebc2f3d1cbbd393fc">http://qiita.com/b4b4r07/items/6efebc2f3d1cbbd393fc</a></li>
+<li><a href="http://millkeyweb.com/installing-homebrew/">http://millkeyweb.com/installing-homebrew/</a></li>
+</ul>
+
+
+    </div>
+  </div>
+
+
+
+  <footer>
+    <hr>
+    
+    <div class="row-fluid">
+      
+      <div class="span6">
+        <p class="meta">
+        
+        
+
+
+
+  <a href="/blog/categories/enviroment/"><span class="badge">Enviroment</span></a>
+
+
+
+
+        </p>
+      </div>
+      
+      <div class="span6 social-sharing">
+        <div class="sharing">
+  <div class="addthis_toolbox addthis_default_style ">
+  
+  <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+  
+  
+  <a class="addthis_button_tweet"></a>
+  
+  
+  <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="http://s7.addthis.com/js/250/addthis_widget.js#pubid="></script>
+</div>
+
+      </div>
+      
+      
+    </div>
+    
+    <div class="row-fluid">
+      <div class="span12">
+        <p class="meta">
+          
+            <a class="basic-alignment left" href="/blog/2014/09/08/" title="Previous Post: 英語基本">&laquo; 英語基本</a>
+          
+          
+        </p>
+      </div>
+    </div>
+  </footer>
+</article>
+
+</div>
+
+
+
+        </div>
+      </div>
+      <div class="row-fluid">
+        <footer class="footer-page" role="contentinfo">
+          <p>
+  Copyright &copy; 2015 - Sawasawato -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span> - Theme by <a href="http://alexgaribay.com">Alex Garibay</a>
+</p>
+
+
+        </footer>
+      </div>
+  </div>
+  
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
