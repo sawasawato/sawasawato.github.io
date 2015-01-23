@@ -118,20 +118,23 @@
 <!-- more-->
 
 
-<p>もはやメジャーになった Node.js サーバーまでJSで書けるということで、色々話題の代物<br/>
+<p>もはやメジャーになった Node.js サーバーまでJSで書けるということで、色々話題の代物。<br/>
 フロントエンドエンジニアでは、GruntやGulpでの環境で使用するのが多いと思う。<br/>
 なので Grunt 寄りの環境で紹介する。</p>
 
 <h2>Node.js とは？ 概要 特長</h2>
 
-<p>Node.js はサーバー・サイドの JavaScript インタープリター(サーバープログラム)<br/>
-イベント駆動型プログラミング&hellip;らしい<br/>
-大量の同時接続を高速に処理するのに向いている。ノンブロッキングI/O(非同期処理)というモデルで実現されている&hellip;らしい。<br/>
-「スケーラブルなネットワーク・プログラムを作成するための簡単な方法を提供すること」が Node.js の第 1 の目標&hellip;らしい<br/>
-拡張性が高く、小規模にも大規模にもで対応できる&hellip;らしい。<br/>
-モジュールインストールで色々できる<br/>
-シングルスレッドベースの非同期処理環境 シングルなのに「イベントループ」アーキテクチャ(構築、構造)で実現している&hellip;らしい<br/>
-ローカルの開発環境向上にも使える。</p>
+<ul>
+<li>Node.js はサーバー・サイドの JavaScript インタープリター(サーバープログラム)</li>
+<li>イベント駆動型プログラミング&hellip;らしい</li>
+<li>大量の同時接続を高速に処理するのに向いている。ノンブロッキングI/O(非同期処理)というモデルで実現されている&hellip;らしい。</li>
+<li>「スケーラブルなネットワーク・プログラムを作成するための簡単な方法を提供すること」が Node.js の第 1 の目標&hellip;らしい</li>
+<li>拡張性が高く、小規模にも大規模にもで対応できる&hellip;らしい。</li>
+<li>モジュールインストールで色々できる</li>
+<li>シングルスレッドベースの非同期処理環境 シングルなのに「イベントループ」アーキテクチャ(構築、構造)で実現している&hellip;らしい</li>
+<li>ローカルの開発環境向上にも使える。</li>
+</ul>
+
 
 <p>いろいろすごい事ができるらしいけど、私はローカル開発環境の向上をするばかりに使用。</p>
 
@@ -156,16 +159,15 @@ Ruby の rvm みたいなもの</p>
 </pre></td><td class='code'><pre><code class=''><span class='line'>git clone git://github.com/creationix/nvm.git ~/.nvm</span></code></pre></td></tr></table></div></figure>
 
 
-<p>2 nvm 有効化 ロード</p>
+<p>2 nvm 有効化 ロード
+2 nvm シェルから見えるようにする .zsh*(.zshrc、.zshenv) .bash_profileに追記</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>source ~/.nvm/nvm.sh</span></code></pre></td></tr></table></div></figure>
-
-
-<p>2 nvm シェルから見えるようにする .zsh*(.zshrc、.zshenv) .bash_profileに追記</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>[[ -s "$HOME/.nvm/nvm.sh" ]] && source "$HOME/.nvm/nvm.sh"</span></code></pre></td></tr></table></div></figure>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>source ~/.nvm/nvm.sh
+</span><span class='line'>or
+</span><span class='line'>[[ -s "$HOME/.nvm/nvm.sh" ]] && source "$HOME/.nvm/nvm.sh"</span></code></pre></td></tr></table></div></figure>
 
 
 <p>3 nvm デフォルトを設定する .zsh*(.zshrc、.zshenv) .bash_profileに追記</p>
@@ -193,7 +195,8 @@ Ruby の rvm みたいなもの</p>
 
 <p>以上。</p>
 
-<p>NVMでなく、インストーラを使用した場合以下に追加され、PATHが追記される</p>
+<p>NVMでなく、インストーラを使用した場合以下に追加され、PATHが追記される。<br/>
+正直オススメしない。</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -209,8 +212,7 @@ Ruby の rvm みたいなもの</p>
 </pre></td><td class='code'><pre><code class=''><span class='line'>nvm ls-remote</span></code></pre></td></tr></table></div></figure>
 
 
-<p>・Node.js インストール<br/>
-0.10.0ではStreaming API が新しいらしい</p>
+<p>・Node.js インストール  (0.10.0ではStreaming API が新しいらしい)</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
@@ -226,8 +228,7 @@ Ruby の rvm みたいなもの</p>
 </pre></td><td class='code'><pre><code class=''><span class='line'>nvm ls</span></code></pre></td></tr></table></div></figure>
 
 
-<p>・Node バージョン指定 有効化
-シェルプロファイルに基本バージョンを指定しないと、毎回指定する必要がある。</p>
+<p>・Node バージョン指定 有効化 (シェルプロファイルに基本バージョンを指定しないと、毎回指定)</p>
 
 <figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 </pre></td><td class='code'><pre><code class=''><span class='line'>nvm use v0.10</span></code></pre></td></tr></table></div></figure>
@@ -357,9 +358,11 @@ macはbashrcをいじればいいものの、Winだとかなり手間</p>
 これと同じようにすれば、rvmのデフォルト設定もできる。<br/>
 でもバッチとか使う時にこれが原因でエラーが出た事もあった&hellip;</p>
 
-<p>・windows でコマンドのエイリアス設定(DOSKEY)<br/>
-<a href="http://www.adminweb.jp/command/command/index2.html  ">http://www.adminweb.jp/command/command/index2.html  </a>
-<a href="http://c4se.hatenablog.com/entry/2012/10/19/230718">http://c4se.hatenablog.com/entry/2012/10/19/230718</a></p>
+<p>・windows でコマンドのエイリアス設定(DOSKEY)</p>
+
+<p><a href="http://www.adminweb.jp/command/command/index2.html">http://www.adminweb.jp/command/command/index2.html</a></p>
+
+<p><a href="http://c4se.hatenablog.com/entry/2012/10/19/230718">http://c4se.hatenablog.com/entry/2012/10/19/230718</a></p>
 
 <p>・レジストリで起動パスを記述する<br/>
 レジストリを立ち上げた後、右クリック修整で下のパスを記述</p>

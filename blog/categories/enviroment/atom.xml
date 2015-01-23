@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Enviroment | Sawasawato Web Hack Blog]]></title>
   <link href="http://sawasawato.github.io/blog/categories/enviroment/atom.xml" rel="self"/>
   <link href="http://sawasawato.github.io/"/>
-  <updated>2015-01-24T01:26:27+09:00</updated>
+  <updated>2015-01-24T01:31:34+09:00</updated>
   <id>http://sawasawato.github.io/</id>
   <author>
     <name><![CDATA[Sawasawato]]></name>
@@ -23,20 +23,23 @@
 <!-- more-->
 
 
-<p>もはやメジャーになった Node.js サーバーまでJSで書けるということで、色々話題の代物<br/>
+<p>もはやメジャーになった Node.js サーバーまでJSで書けるということで、色々話題の代物。<br/>
 フロントエンドエンジニアでは、GruntやGulpでの環境で使用するのが多いと思う。<br/>
 なので Grunt 寄りの環境で紹介する。</p>
 
 <h2>Node.js とは？ 概要 特長</h2>
 
-<p>Node.js はサーバー・サイドの JavaScript インタープリター(サーバープログラム)<br/>
-イベント駆動型プログラミング&hellip;らしい<br/>
-大量の同時接続を高速に処理するのに向いている。ノンブロッキングI/O(非同期処理)というモデルで実現されている&hellip;らしい。<br/>
-「スケーラブルなネットワーク・プログラムを作成するための簡単な方法を提供すること」が Node.js の第 1 の目標&hellip;らしい<br/>
-拡張性が高く、小規模にも大規模にもで対応できる&hellip;らしい。<br/>
-モジュールインストールで色々できる<br/>
-シングルスレッドベースの非同期処理環境 シングルなのに「イベントループ」アーキテクチャ(構築、構造)で実現している&hellip;らしい<br/>
-ローカルの開発環境向上にも使える。</p>
+<ul>
+<li>Node.js はサーバー・サイドの JavaScript インタープリター(サーバープログラム)</li>
+<li>イベント駆動型プログラミング&hellip;らしい</li>
+<li>大量の同時接続を高速に処理するのに向いている。ノンブロッキングI/O(非同期処理)というモデルで実現されている&hellip;らしい。</li>
+<li>「スケーラブルなネットワーク・プログラムを作成するための簡単な方法を提供すること」が Node.js の第 1 の目標&hellip;らしい</li>
+<li>拡張性が高く、小規模にも大規模にもで対応できる&hellip;らしい。</li>
+<li>モジュールインストールで色々できる</li>
+<li>シングルスレッドベースの非同期処理環境 シングルなのに「イベントループ」アーキテクチャ(構築、構造)で実現している&hellip;らしい</li>
+<li>ローカルの開発環境向上にも使える。</li>
+</ul>
+
 
 <p>いろいろすごい事ができるらしいけど、私はローカル開発環境の向上をするばかりに使用。</p>
 
@@ -60,11 +63,10 @@ Ruby の rvm みたいなもの</p>
 git clone git://github.com/creationix/nvm.git ~/.nvm
 </code>
 2 nvm 有効化 ロード
-<code>
-source ~/.nvm/nvm.sh
-</code>
 2 nvm シェルから見えるようにする .zsh<em>(.zshrc、.zshenv) .bash_profileに追記
 <code>
+source ~/.nvm/nvm.sh
+or
 [[ -s "$HOME/.nvm/nvm.sh" ]] &amp;&amp; source "$HOME/.nvm/nvm.sh"
 </code>
 3 nvm デフォルトを設定する .zsh</em>(.zshrc、.zshenv) .bash_profileに追記
@@ -84,7 +86,8 @@ nvm install v0.10
 
 <p>以上。</p>
 
-<p>NVMでなく、インストーラを使用した場合以下に追加され、PATHが追記される
+<p>NVMでなく、インストーラを使用した場合以下に追加され、PATHが追記される。<br/>
+正直オススメしない。
 <code>
 /usr/local/bin/node
 /usr/local/bin/npm
@@ -96,8 +99,7 @@ nvm install v0.10
 <code>
 nvm ls-remote
 </code>
-・Node.js インストール<br/>
-0.10.0ではStreaming API が新しいらしい
+・Node.js インストール  (0.10.0ではStreaming API が新しいらしい)
 <code>
 nvm install v0.10.24 //バージョン指定でインストール
 nvm install v0.10 //0.10.x系 最新バージョンインストール
@@ -107,8 +109,7 @@ nvm install v0 //0.x系 最新バージョンインストール
 <code>
 nvm ls
 </code>
-・Node バージョン指定 有効化
-シェルプロファイルに基本バージョンを指定しないと、毎回指定する必要がある。
+・Node バージョン指定 有効化 (シェルプロファイルに基本バージョンを指定しないと、毎回指定)
 <code>
 nvm use v0.10
 </code>
@@ -204,9 +205,11 @@ macはbashrcをいじればいいものの、Winだとかなり手間</p>
 これと同じようにすれば、rvmのデフォルト設定もできる。<br/>
 でもバッチとか使う時にこれが原因でエラーが出た事もあった&hellip;</p>
 
-<p>・windows でコマンドのエイリアス設定(DOSKEY)<br/>
-<a href="http://www.adminweb.jp/command/command/index2.html  ">http://www.adminweb.jp/command/command/index2.html  </a>
-<a href="http://c4se.hatenablog.com/entry/2012/10/19/230718">http://c4se.hatenablog.com/entry/2012/10/19/230718</a></p>
+<p>・windows でコマンドのエイリアス設定(DOSKEY)</p>
+
+<p><a href="http://www.adminweb.jp/command/command/index2.html">http://www.adminweb.jp/command/command/index2.html</a></p>
+
+<p><a href="http://c4se.hatenablog.com/entry/2012/10/19/230718">http://c4se.hatenablog.com/entry/2012/10/19/230718</a></p>
 
 <p>・レジストリで起動パスを記述する<br/>
 レジストリを立ち上げた後、右クリック修整で下のパスを記述<br/>
