@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Enviroment | Sawasawato Web Hack Blog]]></title>
   <link href="http://sawasawato.github.io/blog/categories/enviroment/atom.xml" rel="self"/>
   <link href="http://sawasawato.github.io/"/>
-  <updated>2015-01-25T04:32:43+09:00</updated>
+  <updated>2015-01-25T04:34:19+09:00</updated>
   <id>http://sawasawato.github.io/</id>
   <author>
     <name><![CDATA[Sawasawato]]></name>
@@ -678,16 +678,15 @@ a.hover{
 
 <h2>参考サイト</h2>
 
-<h2>&ndash; <a href="http://sass-lang.com/">http://sass-lang.com/</a>  </h2>
+<ul>
+<li><a href="http://sass-lang.com/">http://sass-lang.com/</a></li>
+<li><a href="http://www.webcreatorbox.com/tech/css-sass/">http://www.webcreatorbox.com/tech/css-sass/</a></li>
+<li><a href="http://wp.yat-net.com/?p=2344">http://wp.yat-net.com/?p=2344</a></li>
+<li><a href="http://css-happylife.com/archives/2012/0107_0000.php">http://css-happylife.com/archives/2012/0107_0000.php</a></li>
+<li><a href="http://liginc.co.jp/designer/archives/11623">http://liginc.co.jp/designer/archives/11623</a></li>
+<li><a href="http://designup.jp/sass-compass-install-86/">http://designup.jp/sass-compass-install-86/</a></li>
+</ul>
 
-<h2>&ndash; </h2>
-
-<h2>&ndash; </h2>
-
-<p><a href="http://wp.yat-net.com/?p=2344">http://wp.yat-net.com/?p=2344</a>
-<a href="http://css-happylife.com/archives/2012/0107_0000.php">http://css-happylife.com/archives/2012/0107_0000.php</a>
-<a href="http://liginc.co.jp/designer/archives/11623">http://liginc.co.jp/designer/archives/11623</a>
-<a href="http://designup.jp/sass-compass-install-86/">http://designup.jp/sass-compass-install-86/</a></p>
 ]]></content>
   </entry>
   
