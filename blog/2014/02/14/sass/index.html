@@ -5,7 +5,7 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>sass - Sawasawato Web Hack Blog</title>
+  <title>Sass 導入 使い方 - Sawasawato Web Hack Blog</title>
   <meta name="author" content="Sawasawato">
 
    
@@ -95,7 +95,7 @@
 
   <header>
   <div class="jumbotron">
-    <h1>Sass</h1>
+    <h1>Sass 導入 使い方</h1>
     <h5>
 
 
@@ -113,7 +113,337 @@
 </header>
   <div class="row-fluid">
     <div class="span12">
-      
+      <h2>もはやスタンダードになっているSassの導入と使い方</h2>
+
+<!-- more-->
+
+
+<h2>Sass(Scss) とは？ 概要 特徴</h2>
+
+<p>Sass (Syntactically Awesome Stylesheets)
+つまり構文スゲースタイルシート</p>
+
+<p>CSSを拡張したメタ言語
+綺麗にまとめてくれる</p>
+
+<ul>
+<li>変数が使える  ($名前 : 値;)</li>
+<li>ミックスイン(関数)可能 (@mixin 名前($変数1,$変数2,&hellip;))</li>
+<li>セレクタのネスト(入れ子)可能</li>
+<li>セレクタのスタイル継承可能(@extend)</li>
+</ul>
+
+
+<hr />
+
+<h2>Sass , Scss 違い</h2>
+
+<h3>Sass (Syntactically Awesome Stylesheets)</h3>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>table.hl {
+</span><span class='line'>  margin: 2em 0;
+</span><span class='line'>  td.ln {
+</span><span class='line'>    text-align: right;
+</span><span class='line'>  }
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<h3>Scss (Saccy Css)</h3>
+
+<p>インデントで階層を表現</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>table.hl
+</span><span class='line'>  margin: 2em 0
+</span><span class='line'>  td.ln
+</span><span class='line'>    text-align: right</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<h2>Sass(Scss) 変数 Variables</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>/* var  */
+</span><span class='line'>$color-base:#fff;
+</span><span class='line'>$color-sub:#333;
+</span><span class='line'>$color-key:#666;
+</span><span class='line'>
+</span><span class='line'>$fontsize-base:16px;
+</span><span class='line'>$fontsize-title:30px;
+</span><span class='line'>
+</span><span class='line'>/* Scss */
+</span><span class='line'>
+</span><span class='line'>body{
+</span><span class='line'>  color: $color-base;
+</span><span class='line'>  $fontsize-base:16px;
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<h2>Sass(Scss) 関数 ミックスイン Mixins</h2>
+
+<p>関数というよりも、Cssスニペッドに名前を付けていつでも呼び出せるイメージ。<br/>
+名前とその中で使える変数名(ローカル変数)を指定する。<br/>
+ベンダーブレフィックスとか便利</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>/* 
+</span><span class='line'>@mixin 名前($変数1,$変数2,...){
+</span><span class='line'>
+</span><span class='line'>    プロパティ1:$変数1;
+</span><span class='line'>    プロパティ2:$変数2;
+</span><span class='line'>    プロパティ3:$変数1 $変数2 ...;
+</span><span class='line'>}
+</span><span class='line'>*/
+</span><span class='line'>
+</span><span class='line'>@mixin border-radius($radius) {
+</span><span class='line'>  -webkit-border-radius: $radius;
+</span><span class='line'>     -moz-border-radius: $radius;
+</span><span class='line'>      -ms-border-radius: $radius;
+</span><span class='line'>          border-radius: $radius;
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>.box { @include border-radius(10px); }</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<h2>Sass(Scss) ネスト 入れ子 Nesting</h2>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>.box{
+</span><span class='line'>  background-color: #000;
+</span><span class='line'>  ul{
+</span><span class='line'>    margin: 3px;
+</span><span class='line'>    li{
+</span><span class='line'>      padding: 3px;
+</span><span class='line'>      a{
+</span><span class='line'>        background-color: #333;
+</span><span class='line'>
+</span><span class='line'>        &:hover{
+</span><span class='line'>          background-color: #666;
+</span><span class='line'>        }
+</span><span class='line'>      }
+</span><span class='line'>    }
+</span><span class='line'>  }
+</span><span class='line'>  div{
+</span><span class='line'>    color: #999;
+</span><span class='line'>  }
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<h2>Sass(Scss) 継承 Extend</h2>
+
+<p>h1、h2、スタイルは同じだけど、色だけ変えたい時など</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>h1{
+</span><span class='line'>  font-size: 30px;
+</span><span class='line'>  color: #333;
+</span><span class='line'>  font-family: ヒラギノ角ゴ Pro W3, Hiragino Kaku Gothic Pro, ＭＳ Ｐゴシック
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>h2{
+</span><span class='line'>  @extend h1;
+</span><span class='line'>  font-size: 20px;
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<h2>Sass(Scss) インポート Import</h2>
+
+<p>他のscssのデータを全部読み込む
+reset.scss を base.scss に取り込む</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>//reset.scss
+</span><span class='line'>html,body,ul,ol{
+</span><span class='line'>  margin: 0;
+</span><span class='line'>  padding: 0;
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>//base.scss
+</span><span class='line'>@import 'reset';
+</span><span class='line'>body{
+</span><span class='line'>  background-color: #333;
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<h2>Sass(Scss) Operators</h2>
+
+<p>ファイル内で四則演算ができる。<br/>
+細かい計算とかしないで済む</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>.container { width: 100%; }
+</span><span class='line'>
+</span><span class='line'>article[role="main"] {
+</span><span class='line'>  float: left;
+</span><span class='line'>  width: 600px / 960px * 100%;
+</span><span class='line'>}
+</span><span class='line'>
+</span><span class='line'>aside[role="complimentary"] {
+</span><span class='line'>  float: right;
+</span><span class='line'>  width: 300px / 960px * 100%;
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<h2>Sass(Scss) &amp;</h2>
+
+<p>親参照セレクタ</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>a{
+</span><span class='line'>  background-color: #000;
+</span><span class='line'>  &.hover{
+</span><span class='line'>    background-color: #333;
+</span><span class='line'>  }
+</span><span class='line'>  .hover &{
+</span><span class='line'>    background-color: #666;
+</span><span class='line'>  }
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>a {
+</span><span class='line'>  background-color: #000;
+</span><span class='line'>}
+</span><span class='line'>a.hover{
+</span><span class='line'>  background-color: #000;
+</span><span class='line'>}
+</span><span class='line'>.hover a {
+</span><span class='line'>  background-color: #000;
+</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
+
+
+<hr />
+
+<h2>参考サイト</h2>
+
+<h2>&ndash; <a href="http://sass-lang.com/">http://sass-lang.com/</a>  </h2>
+
+<h2>&ndash; </h2>
+
+<h2>&ndash; </h2>
+
+<p><a href="http://wp.yat-net.com/?p=2344">http://wp.yat-net.com/?p=2344</a>
+<a href="http://css-happylife.com/archives/2012/0107_0000.php">http://css-happylife.com/archives/2012/0107_0000.php</a>
+<a href="http://liginc.co.jp/designer/archives/11623">http://liginc.co.jp/designer/archives/11623</a>
+<a href="http://designup.jp/sass-compass-install-86/">http://designup.jp/sass-compass-install-86/</a></p>
 
     </div>
   </div>
@@ -132,7 +462,7 @@
 
 
 
-  <a href="/blog/categories/basic/"><span class="badge">Basic</span></a>
+  <a href="/blog/categories/enviroment/"><span class="badge">Enviroment</span></a>
 
 
 

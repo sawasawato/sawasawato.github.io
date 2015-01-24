@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Enviroment | Sawasawato Web Hack Blog]]></title>
   <link href="http://sawasawato.github.io/blog/categories/enviroment/atom.xml" rel="self"/>
   <link href="http://sawasawato.github.io/"/>
-  <updated>2015-01-24T01:31:34+09:00</updated>
+  <updated>2015-01-25T04:32:43+09:00</updated>
   <id>http://sawasawato.github.io/</id>
   <author>
     <name><![CDATA[Sawasawato]]></name>
@@ -14,11 +14,11 @@
 
   
   <entry>
-    <title type="html"><![CDATA[NVM Node.js 使い方]]></title>
+    <title type="html"><![CDATA[NVM Node.js 導入 使い方]]></title>
     <link href="http://sawasawato.github.io/blog/2015/01/23/nvm/"/>
     <updated>2015-01-23T17:10:36+09:00</updated>
     <id>http://sawasawato.github.io/blog/2015/01/23/nvm</id>
-    <content type="html"><![CDATA[<h2>Grunt入れる前のNode.Jsで気をつける事など</h2>
+    <content type="html"><![CDATA[<h2>Gruntを入れる前に Node.Js で気をつける事など</h2>
 
 <!-- more-->
 
@@ -238,7 +238,7 @@ C:\Users\tsumiki\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Home Brew 導入 セットアップ方法]]></title>
+    <title type="html"><![CDATA[Home Brew 導入 セットアップ方法 使い方]]></title>
     <link href="http://sawasawato.github.io/blog/2015/01/23/homebrew/"/>
     <updated>2015-01-23T15:43:45+09:00</updated>
     <id>http://sawasawato.github.io/blog/2015/01/23/homebrew</id>
@@ -441,6 +441,253 @@ brew cleanup foo インストールしたすべてもしくは特定のformulae�
 <li><a href="http://millkeyweb.com/installing-homebrew/">http://millkeyweb.com/installing-homebrew/</a></li>
 </ul>
 
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Sass 導入 使い方]]></title>
+    <link href="http://sawasawato.github.io/blog/2014/02/14/sass/"/>
+    <updated>2014-02-14T16:19:42+09:00</updated>
+    <id>http://sawasawato.github.io/blog/2014/02/14/sass</id>
+    <content type="html"><![CDATA[<h2>もはやスタンダードになっているSassの導入と使い方</h2>
+
+<!-- more-->
+
+
+<h2>Sass(Scss) とは？ 概要 特徴</h2>
+
+<p>Sass (Syntactically Awesome Stylesheets)
+つまり構文スゲースタイルシート</p>
+
+<p>CSSを拡張したメタ言語
+綺麗にまとめてくれる</p>
+
+<ul>
+<li>変数が使える  ($名前 : 値;)</li>
+<li>ミックスイン(関数)可能 (@mixin 名前($変数1,$変数2,&hellip;))</li>
+<li>セレクタのネスト(入れ子)可能</li>
+<li>セレクタのスタイル継承可能(@extend)</li>
+</ul>
+
+
+<hr />
+
+<h2>Sass , Scss 違い</h2>
+
+<h3>Sass (Syntactically Awesome Stylesheets)</h3>
+
+<p>```
+table.hl {
+  margin: 2em 0;
+  td.ln {</p>
+
+<pre><code>text-align: right;
+</code></pre>
+
+<p>  }
+}
+```</p>
+
+<h3>Scss (Saccy Css)</h3>
+
+<p>インデントで階層を表現
+```
+table.hl
+  margin: 2em 0
+  td.ln</p>
+
+<pre><code>text-align: right
+</code></pre>
+
+<h2>```</h2>
+
+<h2>Sass(Scss) 変数 Variables</h2>
+
+<p>```
+/<em> var  </em>/
+$color-base:#fff;
+$color-sub:#333;
+$color-key:#666;</p>
+
+<p>$fontsize-base:16px;
+$fontsize-title:30px;</p>
+
+<p>/<em> Scss </em>/</p>
+
+<p>body{
+  color: $color-base;
+  $fontsize-base:16px;
+}
+```</p>
+
+<hr />
+
+<h2>Sass(Scss) 関数 ミックスイン Mixins</h2>
+
+<p>関数というよりも、Cssスニペッドに名前を付けていつでも呼び出せるイメージ。<br/>
+名前とその中で使える変数名(ローカル変数)を指定する。<br/>
+ベンダーブレフィックスとか便利</p>
+
+<p>```
+/*
+@mixin 名前($変数1,$変数2,&hellip;){</p>
+
+<pre><code>プロパティ1:$変数1;
+プロパティ2:$変数2;
+プロパティ3:$変数1 $変数2 ...;
+</code></pre>
+
+<p>}
+*/</p>
+
+<p>@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;</p>
+
+<pre><code> -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+      border-radius: $radius;
+</code></pre>
+
+<p>}</p>
+
+<p>.box { @include border-radius(10px); }</p>
+
+<h2>```</h2>
+
+<h2>Sass(Scss) ネスト 入れ子 Nesting</h2>
+
+<p>```
+.box{
+  background-color: #000;
+  ul{</p>
+
+<pre><code>margin: 3px;
+li{
+  padding: 3px;
+  a{
+    background-color: #333;
+
+    &amp;:hover{
+      background-color: #666;
+    }
+  }
+}
+</code></pre>
+
+<p>  }
+  div{</p>
+
+<pre><code>color: #999;
+</code></pre>
+
+<p>  }
+}</p>
+
+<h2>```</h2>
+
+<h2>Sass(Scss) 継承 Extend</h2>
+
+<p>h1、h2、スタイルは同じだけど、色だけ変えたい時など
+```
+h1{
+  font-size: 30px;
+  color: #333;
+  font-family: ヒラギノ角ゴ Pro W3, Hiragino Kaku Gothic Pro, ＭＳ Ｐゴシック
+}</p>
+
+<p>h2{
+  @extend h1;
+  font-size: 20px;
+}</p>
+
+<h2>```</h2>
+
+<h2>Sass(Scss) インポート Import</h2>
+
+<p>他のscssのデータを全部読み込む
+reset.scss を base.scss に取り込む
+<code>
+//reset.scss
+html,body,ul,ol{
+  margin: 0;
+  padding: 0;
+}
+</code></p>
+
+<p>```
+//base.scss
+@import &lsquo;reset&rsquo;;
+body{
+  background-color: #333;
+}</p>
+
+<h2>```</h2>
+
+<h2>Sass(Scss) Operators</h2>
+
+<p>ファイル内で四則演算ができる。<br/>
+細かい計算とかしないで済む
+```
+.container { width: 100%; }</p>
+
+<p>article[role=&ldquo;main&rdquo;] {
+  float: left;
+  width: 600px / 960px * 100%;
+}</p>
+
+<p>aside[role=&ldquo;complimentary&rdquo;] {
+  float: right;
+  width: 300px / 960px * 100%;
+}</p>
+
+<h2>```</h2>
+
+<h2>Sass(Scss) &amp;</h2>
+
+<p>親参照セレクタ
+```
+a{
+  background-color: #000;
+  &amp;.hover{</p>
+
+<pre><code>background-color: #333;
+</code></pre>
+
+<p>  }
+  .hover &amp;{</p>
+
+<pre><code>background-color: #666;
+</code></pre>
+
+<p>  }
+}
+```</p>
+
+<p>```
+a {
+  background-color: #000;
+}
+a.hover{
+  background-color: #000;
+}
+.hover a {
+  background-color: #000;
+}</p>
+
+<h2>```</h2>
+
+<h2>参考サイト</h2>
+
+<h2>&ndash; <a href="http://sass-lang.com/">http://sass-lang.com/</a>  </h2>
+
+<h2>&ndash; </h2>
+
+<h2>&ndash; </h2>
+
+<p><a href="http://wp.yat-net.com/?p=2344">http://wp.yat-net.com/?p=2344</a>
+<a href="http://css-happylife.com/archives/2012/0107_0000.php">http://css-happylife.com/archives/2012/0107_0000.php</a>
+<a href="http://liginc.co.jp/designer/archives/11623">http://liginc.co.jp/designer/archives/11623</a>
+<a href="http://designup.jp/sass-compass-install-86/">http://designup.jp/sass-compass-install-86/</a></p>
 ]]></content>
   </entry>
   
